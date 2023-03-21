@@ -21,13 +21,13 @@ The result is a docker container that acts as a node.js server and serves the bu
 ### Shell script
 
 ```bash
-build-and-deploy.sh
+./build-and-deploy.sh
 ```
 
 ### Powershell script
 
 ```cmd
-build-and-deploy.bat
+.\build-and-deploy.bat
 ```
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
