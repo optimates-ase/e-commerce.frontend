@@ -15,16 +15,19 @@ npm run dev -- --open
 
 ## Building && Deploying
 
-To create a production version of your app:
+To create a production version of your app, you need to have docker installed.
+The result is a docker container that acts as a node.js server and serves the built files.
+
+### Shell script
 
 ```bash
 build-and-deploy.sh
 ```
 
-```powershell
+### Powershell script
+
+```cmd
 build-and-deploy.bat
 ```
-
-You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
