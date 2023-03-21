@@ -1,11 +1,11 @@
 <script>
-	// Your selected Skeleton theme:
+	// The selected Skeleton theme:
 	import '@skeletonlabs/skeleton/themes/theme-seafoam.css';
 
 	// This contains the bulk of Skeletons required styles:
 	import '@skeletonlabs/skeleton/styles/all.css';
 
-	// Finally, your application's global stylesheet (sometimes labeled 'app.css')
+	// Finally, your application's global stylesheet
 	import '../app.postcss';
 </script>
 
