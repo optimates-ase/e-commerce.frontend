@@ -30,15 +30,18 @@
 			<svelte:fragment slot="content">
 				<ListBox>
 					<ListBoxItem bind:group={valueSingle} name="medium" value="skdoc">
-						<a href="https://kit.svelte.dev/docs/introduction" target="_blank"
-							>Sveltekit Documentation</a
-						>
+						<a href="https://kit.svelte.dev/docs/introduction" target="_blank">
+							Sveltekit Documentation
+						</a>
 					</ListBoxItem>
 					<ListBoxItem bind:group={valueSingle} name="medium" value="sdoc">
 						<a href="https://svelte.dev/docs" target="_blank">Svelte Documentation</a>
 					</ListBoxItem>
 					<ListBoxItem bind:group={valueSingle} name="medium" value="stut">
 						<a href="https://svelte.dev/tutorial/basics" target="_blank">Svelte Tutorial</a>
+					</ListBoxItem>
+					<ListBoxItem bind:group={valueSingle} name="medium" value="sfaq">
+						<a href="https://svelte.dev/faq" target="_blank">FAQ</a>
 					</ListBoxItem>
 				</ListBox>
 			</svelte:fragment>
