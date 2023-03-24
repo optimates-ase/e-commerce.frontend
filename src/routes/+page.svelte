@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AppBar, Accordion, AccordionItem, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
-
+	
 	let valueSingle: string = 'books';
 </script>
 
@@ -18,6 +18,9 @@
 
 <div>
 	<a href="/about">Click me to go to About section</a>
+</div>
+<div>
+	<a href="/home">Click me to go to Home Testing section</a>
 </div>
 
 <div class="flex justify-center w-full">
