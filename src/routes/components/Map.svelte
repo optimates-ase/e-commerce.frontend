@@ -1,7 +1,9 @@
 <script>
     import { onMount, onDestroy } from 'svelte'
     import { Map, NavigationControl, Marker } from 'maplibre-gl';
-    import 'maplibre-gl/dist/maplibre-gl.css';
+    import 'maplibre-gl/dist/maplibre-gl.css';    
+    import { AppShell } from '@skeletonlabs/skeleton';
+
   
     let map;
     let mapContainer;
@@ -28,11 +30,11 @@
       map.remove();
     });
   </script>
-  
-  <div class="flex justify-center m-10">
-    <div class="map shadow-2xl rounded-2xl " id="map" bind:this={mapContainer}></div>
+  <AppShell class="flex justify-center">
+  <div class="map-wrap flex justify-center my-20 ">
+      <div class="map shadow-xl rounded-2xl " id="map" bind:this={mapContainer}></div>
   </div>
-  
+</AppShell>
 
 
   <style>
@@ -40,23 +42,17 @@
     .map-wrap {
       position: relative;
       width: 100%;
-      height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
+      height: calc(47.5vh); /* calculate height of the screen minus the heading */
     }
   
     .map {
       position: absolute;
       width: 60%;
-      height: 50%;
+      height: 100%;
     }
   
-    .watermark {
-      position: absolute;
-      left: 100px;
-      bottom: 10px;
-      z-index: 999;
-    }
-
-
+  
     
+
     
   </style>
