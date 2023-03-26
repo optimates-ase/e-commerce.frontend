@@ -5,8 +5,8 @@
 <div class="mb-32">
     <div class="flex justify-center">
         <div class="w-3/4">
-            <h1 class="mb-2 flex justify-left">Popular Activity</h1>
-            <div class="flex justify-left">
+            <h1 class="mb-2 flex justify-start">Popular Activity</h1>
+            <div class="flex justify-start">
             Vacations to make your experience enjoyable in Belize!
             </div>
         </div>

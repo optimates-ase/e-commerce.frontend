@@ -1,4 +1,4 @@
-<div class=" flex justify-center items-center mt-10 ">
+<div class=" flex justify-center items-center my-10 ">
 
     <a  href="./" class="text-2xl font-mono no-underline hover:underline">Logo</a>
     <div class="w-3/4">
