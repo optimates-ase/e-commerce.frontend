@@ -18,6 +18,7 @@
 
 <div>
 	<a href="/about">Click me to go to About section</a>
+	<a href="/welcome">Click me to go to Welcome section</a>
 </div>
 
 <div class="flex justify-center w-full">
