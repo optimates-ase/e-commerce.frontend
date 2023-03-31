@@ -47,7 +47,7 @@
 	onMount(() => {
 		const apiKey = 'R7SWIU6LxTG0LcVb5eyr';
 
-		const initialState = { lng: -88.3596575, lat: 17.5, zoom: 9 };
+		const initialState = { lng: -88.3596575, lat: 17.15, zoom: 7.5 };
 
 		map = new Map({
 			container: mapContainer,
@@ -56,7 +56,6 @@
 			zoom: initialState.zoom
 		});
 		map.addControl(new NavigationControl(), 'top-right');
-		new Marker({ color: '#FF0000' }).setLngLat([-88.2, 17.5]).addTo(map);
 
 		map.on('load', () => {
 			addDistricts();
@@ -94,7 +93,7 @@
 	.map-wrap {
 		position: relative;
 		width: 100%;
-		height: calc(47.5vh); /* calculate height of the screen minus the heading */
+		height: calc(75vh); /* calculate height of the screen minus the heading */
 	}
 
 	.map {
