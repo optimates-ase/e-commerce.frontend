@@ -40,6 +40,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"aframe": "^1.4.1",
+		"aframe-svelte": "^1.0.1",
+		"keycloak-js": "^21.0.1",
 		"maplibre-gl": "^2.4.0"
 	}
 }
