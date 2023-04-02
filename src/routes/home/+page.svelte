@@ -10,12 +10,12 @@
 
 <div class="app">
 	<AppShell>
-		<!-- <svelte:fragment slot="header">
+		<svelte:fragment slot="header">
 			<Navbar />
-		</svelte:fragment> -->
+		</svelte:fragment>
 		<!-- Router Slot -->
 		<div class="app">
-			<Map countryName={data.countryName} features={data.districts}/>
+			<!-- <Map countryName={data.countryName} features={data.districts}/> -->
 			<!-- <CardsComponent />
 			<CardsComponent /> -->
 		</div>

@@ -26,7 +26,7 @@
 			layout: {},
 			paint: {
 				'fill-color': '#FFAA01',
-				'fill-opacity': 1
+				'fill-opacity': 0.5
 			}
 		};
 
