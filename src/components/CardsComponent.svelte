@@ -1,5 +1,5 @@
 <script>
-    import CardSmall from '../components/CardSmall.svelte';
+    import CardSmall from './CardSmall.svelte';
 </script>
 
 <div class="mb-32">
