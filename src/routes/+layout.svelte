@@ -9,24 +9,27 @@
 	import '../app.postcss';
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
 
-	import { signIn } from '@auth/sveltekit/client';
-	import { page } from '$app/stores';
 	import Navigation from '$lib/Navigation/Navigation.svelte';
+	import BarNav from '$lib/Navigation/BarNav.svelte';
 </script>
 
-<AppShell>
+<AppShell class="app-shell">
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead"><a href="/">(Home)</a></svelte:fragment>
 			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarLeft" > <Navigation /></svelte:fragment>
-	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
+	<!-- <svelte:fragment slot="sidebarLeft">
+		<Navigation />
+	</svelte:fragment> -->
+	<!-- <svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment> -->
 	<!-- <svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
-	<!-- <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment> -->
+	<svelte:fragment slot="pageFooter">
+		<BarNav />
+	</svelte:fragment>
 	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>
