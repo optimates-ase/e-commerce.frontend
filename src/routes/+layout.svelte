@@ -16,7 +16,7 @@
 <AppShell class="app-shell">
 	<svelte:fragment slot="header">
 		<AppBar>
-			<svelte:fragment slot="lead"><a href="/">(Home)</a></svelte:fragment>
+			<svelte:fragment slot="lead"><a href="/">(OptiMates)</a></svelte:fragment>
 			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>

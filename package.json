@@ -47,6 +47,7 @@
 		"aframe-svelte": "^1.0.1",
 		"keycloak-js": "^21.0.1",
 		"maplibre-gl": "^2.4.0",
+		"swiper": "^9.2.0",
 		"uuid": "^9.0.0"
 	}
 }

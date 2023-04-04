@@ -1,7 +1,7 @@
 /** @type {import('./$types').PageLoad} */
 
 import type { DistrictProperties } from '$lib/types';
-import districtData from '$lib/data/Districts.geo.json';
+import districtData from '$lib/data/Belize.gadm1.geo.json';
 
 export const load = async () => {
 	const countryName = districtData.features[0].properties.COUNTRY;

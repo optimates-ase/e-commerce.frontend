@@ -54,7 +54,6 @@
 	onMount(() => {
         const apiKey = 'R7SWIU6LxTG0LcVb5eyr';
 		const initialState = { lng: -88.65292533421297, lat: 16.95, zoom: 6 };
-        console.log("instantiating map")
 
 		map = new Map({
 			container: mapContainer1,
@@ -69,15 +68,12 @@
 		});
 
 		map.on('click', 'polygons', function (e) {
-			console.log(map.getZoom(), map.getCenter());
-			map.setFilter(borderLayer.id, ['all', ['==', 'id', e.features[0].properties.id]]);
+			let districtId = e.features[0].properties.id
+			map.setFilter(borderLayer.id, ['all', ['==', 'id', districtId]]);
+			activeDis.set(districtId);
 		});
 	});
 
-	// map.on('click', 'polygons', function (e) {
-	// 	console.log(map.getZoom(), map.getCenter());
-	// 	map.setFilter(borderLayer.id, ['all', ['==', 'id', e.features[0].properties.id]]);
-	// });
 </script>
 	<div class="map-wrap flex ">
 		<div class="map" id="map" bind:this={mapContainer1} />

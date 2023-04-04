@@ -1,45 +1,69 @@
 <script lang="ts">
 	import SmallMap from '$lib/Map/SmallMap.svelte';
-	import { signIn, signOut } from '@auth/sveltekit/client';
-	import { page } from '$app/stores';
-	
+	import Carousel from '$lib/UIUX/Carousel.svelte';
+
+	import landingData from '$lib/data/Belize.json';
+
 	import 'aframe';
 	import 'aframe-svelte';
 
+	import { cardContent, cardTitle } from '$lib/stores/TextPrompts/Home';
+
+	import { onMount } from 'svelte';
+	import { activeDis } from '$lib/stores/Districts';
 
 	export let data;
+
+	let ct;
+	let cc;
+
+	let ad_srcs = ['home/home.jpg'];
+
+	onMount(() => {
+		cardTitle.set(landingData.country);
+		cardContent.set(landingData.keyphrases.home);
+	});
+
+	cardContent.subscribe((val) => {
+		cc = val;
+	});
+
+	cardTitle.subscribe((val) => {
+		ct = val;
+	});
+
+	activeDis.subscribe((val) => {
+		if (landingData.pictures[val].src.length > 0) {
+			ad_srcs = landingData.pictures[val].src;
+			cc = landingData.keyphrases[val];
+			ct = val;
+		} else {
+			// resetting doesn't work yet
+			console.log("attempting to reset ct cc", cc, ct);
+			ct = landingData.country;
+			cc = landingData.keyphrases.home;
+			console.log("after", cc, ct);
+		}
+	});
 </script>
 
-<div class="h-3/5">
-	<a-scene embedded>
-		<a-sky src="bg/secret_beach_v1.jpg" rotation="0 -65 0" />
-		<a-text
-			font="kelsonsans"
-			value="Welcome to\nSecret Beach, Belize"
-			width="6"
-			position="-1 3.5 -3.25"
-			rotation="0 15 0"
-		/>
-	</a-scene>
+<div class="ml-6 mr-6 mt-4 h-3/5">
+	<Carousel srcs={ad_srcs} />
+	<!-- <img src="bg/Candidate1.jpg" /> -->
 </div>
 
 <div class="grid gap-4 grid-cols-6 m-4 p-2 h-1/3 ">
-	<div class="card col-span-4 p-2" ><h2>Hello World</h2></div>
-	<div class="card col-span-2"><SmallMap countryName={data.countryName} features={data.districts} /></div>
+	<div class="card col-span-4 p-2">
+		<div class="grid gap-2 grid-cols-3">
+			<div class="col-span-2">
+				<h2>{ct}</h2>
+			</div>
+		</div>
+		<p>
+			{cc}
+		</p>
+	</div>
+	<div class="card col-span-2">
+		<SmallMap countryName={data.countryName} features={data.districts} />
+	</div>
 </div>
-
-<!-- <p>
-	{#if $page.data.session}
-		{#if $page.data.session.user?.image}
-			<span style="background-image: url('{$page.data.session.user.image}')" class="avatar" />
-		{/if}
-		<span class="signedInText">
-			<small>Signed in as</small><br />
-			<strong>{$page.data.session.user?.name ?? 'User'}</strong>
-		</span>
-		<button on:click={() => signOut()} class="button">Sign out</button>
-	{:else}
-		<span class="notSignedInText">You are not signed in</span>
-		<button class="btn bg-primary-900 btn-lg"on:click={() => signIn('github')}>Sign In with GitHub</button>
-	{/if}
-</p> -->

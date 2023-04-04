@@ -1,608 +1,451 @@
 {
     "country": "Belize",
-    "districts": [
-        "Belize District",
-        "Stann Creek",
-        "Toledo",
-        "Cayo",
-        "Orange Walk",
-        "Corozal"
+    "formerName": [
+        "British Honduras"
     ],
-    "mainInfluence": "rain",
-    "temperatures": [
+    "keyphrases": {
+        "home": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
+        "BLZ.1_1": "",
+        "BLZ.2_1": "Are you yearning to escape the hustle and bustle of modern life? Come experience the unspoiled nature of the west Belizean district Cayo, where lush tropical jungles meet ancient Mayan ruins. Immerse yourself in the vibrant culture of local spice farms, and try your hand at river fishing in some of the most pristine waters in the world. In Cayo, you'll feel a sense of peace and wonder like nowhere else. So take a step back in time and connect with nature in this truly magical destination.",
+        "BLZ.3_1": "Ready for an adventure like no other? Come to the Belizean district of Corozal and discover its world-famous Barrier Reef, teeming with vibrant fish colonies. Cruise around the stunning Caribbean Sea in a golf cart and take in the incredible views. Immerse yourself in the rich melting pot of cultures that make Corozal so unique. Experience the thrill of snorkeling and get up close and personal with the stunning underwater world. Come and be swept away by the magic of Corozal, where adventure awaits around every corner.",
+        "BLZ.4_1": "",
+        "BLZ.5_1": "",
+        "BLZ.6_1": ""
+    },
+    "pictures": {
+        "home": {
+            "src": [
+                "home/home.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.1_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.2_1": {
+            "src": [
+                "san-ignacio/si_1.jpg",
+                "san-ignacio/si_3.jpg",
+                "san-ignacio/si_3.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.3_1": {
+            "src": [
+                "san-pedro/sp_1.jpg",
+                "san-pedro/sp_2.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.4_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.5_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.6_1": {
+            "src": [],
+            "alt-text": ""
+        }
+    },
+    "keywords": [
+        "authentic",
+        "genuinely friendly",
+        "warm and hospital people",
+        "Mother nature's best kept secret",
+        "Experience the real sound of life",
+        "unspoiled environment",
+        "melting pot of cultures",
+        "tropical jungle",
+        "lush rainforest",
+        "ancient Mayan ruins",
+        "archeological sites",
+        "jungle hiking",
+        "Guatemala",
+        "Snorkeling",
+        "jungle zip lining",
+        "Cave Tubing",
+        "River Tubing",
+        "Spice farms",
+        "river fishing",
+        "Blue hole",
+        "'You just don't wanna be on the Islands when a hurricane hits.'",
+        "English-speaking country",
+        "Carribean Sea",
+        "beatiful beaches",
+        "astonishing coral reefs",
+        "world-famous Barrier Reef",
+        "endless opportunities for the adventureous traveller"
+    ],
+    "languages": [
         {
-            "max": {
-                "maxAvg": "27",
-                "month": "july",
-                "temperature": {
-                    "unit": "Celsius",
-                    "value": 27
-                }
-            }
+            "name": "English",
+            "type": "Official language",
+            "spokenBy": ""
         },
         {
-            "min": {
-                "minAvg": "24",
-                "month": "january",
-                "temperature": {
-                    "unit": "Celsius",
-                    "value": 24
-                }
-            }
-        },
-        {
-            "detailed": [
-                {
-                    "location": "Belize",
-                    "month": "January",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 21.6,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 26.2,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 134,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 13,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "45%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 198,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "San Ignacio, Belize",
-                    "month": "February",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 22.4,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 26.9,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 66,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 8,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "moderate",
-                            "description": "Intensity of rainfall (in this case, moderate)"
-                        },
-                        "chance": {
-                            "value": "29%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 205,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "March",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 23.3,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 27.8,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 46,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 6,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "moderate",
-                            "description": "Intensity of rainfall (in this case, moderate)"
-                        },
-                        "chance": {
-                            "value": "21%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 241,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "April",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 24.9,
-                            "description": "Average minimum temperature for the month (often noted at night)"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.4,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 51,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 4,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "moderate",
-                            "description": "Intensity of rainfall"
-                        },
-                        "chance": {
-                            "value": "16%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 258,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "May",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 25.3,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.5,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 115,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 7,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "25%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 255,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "June",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 25.5,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.2,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 250,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 16,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "55%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 195,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "July",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 25.5,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.3,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 211,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 18,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "moderate",
-                            "description": "Intensity of rainfall (in this case, moderate)"
-                        },
-                        "chance": {
-                            "value": "62%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 228,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize, Belize",
-                    "month": "August",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 25.4,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.7,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 186,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 17,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "moderate",
-                            "description": "Intensity of rainfall (in this case, moderate)"
-                        },
-                        "chance": {
-                            "value": "60%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 235,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "September",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 25.2,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 29.3,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 262,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 17,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "59%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 181,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "October",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 23.9,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 28.4,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 279,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 17,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "57%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 199,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize",
-                    "month": "November",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 22.5,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 27.0,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 205,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 14,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "",
-                            "description": "Intensity of rainfall"
-                        },
-                        "chance": {
-                            "value": "48%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 182,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                },
-                {
-                    "location": "Belize, Belize",
-                    "month": "December",
-                    "temperature": {
-                        "min": {
-                            "unit": "celsius",
-                            "value": 22.1,
-                            "description": "Average minimum temperature for the month"
-                        },
-                        "max": {
-                            "unit": "celsius",
-                            "value": 26.5,
-                            "description": "Average maximum daytime temperature for the month"
-                        }
-                    },
-                    "rainfall": {
-                        "amount": {
-                            "unit": "mm",
-                            "value": 167,
-                            "description": "Average total rainfall for the month"
-                        },
-                        "days": {
-                            "unit": "",
-                            "value": 13,
-                            "description": "Average number of rainy days for the month"
-                        },
-                        "intensity": {
-                            "value": "high",
-                            "description": "Intensity of rainfall (in this case, high)"
-                        },
-                        "chance": {
-                            "value": "46%",
-                            "description": "Chance of rain for the month"
-                        }
-                    },
-                    "sunshine": {
-                        "hours": {
-                            "unit": "hrs",
-                            "value": 192,
-                            "description": "Average total sunshine hours for the month"
-                        }
-                    }
-                }
+            "name": "Kriol",
+            "type": "Dialect",
+            "info": "sing song language",
+            "spokenBy": [
+                "Creole",
+                "Mestizo",
+                "Mennonite"
             ]
+        },
+        {
+            "name": "Spanish",
+            "type": "",
+            "spokenBy": [
+                "Mayan",
+                "Mestizo",
+                "Mennonite"
+            ]
+        },
+        {
+            "name": "Mayan",
+            "type": "DialectCollection",
+            "spokenBy": ""
         }
     ],
-    "rain": [
+    "activities": [
+        "kayaking",
+        "birding",
+        "monkey sighting",
+        "mantee seeing",
+        "waterfall",
+        "original chocolate",
+        "Mountain Pine Ridge Forest Resort",
+        "Xunantunich Archeological Reserve",
+        "Actun Tunichil Muknal",
+        "Cockscomb Basin Wildlife Sanctuary",
+        "Nohoch Che'en Caves Branch Archeological Reserve",
+        "Mayflower Bacawina National Park",
+        "Chaa Creek Nature Reserve",
+        "Lamanai Archeological Reserve",
+        "St. Herman's Blue National Park",
+        "Caracol Archeological Reserve",
+        "Gallon Jug Estate",
+        "Outback trail horse back riding",
+        "scuba diving",
+        "inner reef fishing",
+        "deep sea fishing",
+        "salt water fly fishing",
+        "catamaran sailing"
+    ],
+    "majorHolidays": [
         {
-            "outliersMax": {
-                "region": "south",
-                "lowerBound": {
-                    "unit": "mm",
-                    "value": 4000
-                },
-                "upperBound": {
-                    "unit": "mm",
-                    "value": 5000
+            "occurence": "March 9",
+            "name": "Baron Bliss Day Parada",
+            "placeToBe": [
+                ""
+            ],
+            "enjoy": [
+                "fishing",
+                "sailing"
+            ],
+            "originStory": {
+                "honorary": "Baron Henry Edward Ernest Victor Bliss",
+                "niceToKnow": [
+                    "fell in love with Belize, donated Belizean government large sum of money"
+                ]
+            }
+        },
+        {
+            "occurence": "easter",
+            "name": "easter",
+            "placeToBe": [
+                ""
+            ],
+            "enjoy": [
+                "colorful festivals"
+            ],
+            "highlights": {
+                "longest": {
+                    "name": "Benque Viejo del Carmen",
+                    "duration": "Palm Sunday to Good Friday"
                 }
-            },
-            "outlierMin": {
-                "region": "north",
-                "lowerBound": {
-                    "unit": "mm",
-                    "value": 1300
-                },
-                "upperBound": {
-                    "unit": "mm",
-                    "value": 2000
-                }
+            }
+        },
+        {
+            "occurence": "September 10",
+            "name": "St. George's Caye Day",
+            "placeToBe": [
+                "Belize City"
+            ],
+            "enjoy": [
+                "music",
+                "cooking",
+                "drinking"
+            ],
+            "originStory": {
+                "honorary": "Battle at St. George's Caye in 1798",
+                "niceToKnow": [
+                    "British settlers resided near the coast to harvest threes for lumber",
+                    "they defeated Spanish forces and secured Belize's freedom"
+                ]
+            }
+        },
+        {
+            "occurence": [
+                "between",
+                "St. George's Caye Day",
+                "Belize Independence Day"
+            ],
+            "knownFor": "Belize's msot festive time of the year.",
+            "name": "Belize City Carnival",
+            "placeToBe": [
+                "Belize City"
+            ],
+            "enjoy": [
+                "elaborate costumes",
+                "Caribbean music",
+                "seaside concerts"
+            ],
+            "highlights": {}
+        },
+        {
+            "occurence": "September 21",
+            "name": "Belize Independence Day",
+            "enjoy": [
+                "festive parades",
+                "joyful concerts"
+            ],
+            "originStory": {
+                "honorary": "Belize gaining independence from Great Britain in 1981",
+                "niceToKnow": [
+                    "friendly relations maintained with Great Britain and joined British Commonwealth",
+                    "Queen is featured on Belizean currency"
+                ]
+            }
+        },
+        {
+            "occurence": "November 19",
+            "name": "Garífuna Settlement Day",
+            "placeToBe": [
+                "Punta Gorda",
+                "Belize City",
+                "Hopkins"
+            ],
+            "enjoy": [
+                "fast-paced drumming",
+                "dancing",
+                "traditional food and drink"
+            ],
+            "originStory": {
+                "honorary": "Garífuna's arrival in Belize in 1823",
+                "niceToKnow": [
+                    "migrated to Belize after shipwreck on St. Vincent Island"
+                ]
+            }
+        },
+        {
+            "occurence": "December 26",
+            "name": "Junkanu parade",
+            "placeToBe": "EASTER_EGG",
+            "enjoy": [
+                "masks with pink skin and red lips",
+                "choreography",
+                "mocking European slave owners"
+            ],
+            "originStory": {
+                "honorary": "",
+                "niceToKnow": [
+                    "tolerated slave 'rebellion'",
+                    "slaves celebrated amongst themselves",
+                    "Junkanu parades were held",
+                    "participants wore 'white'-faces and performed choreographies to mock European slave owners"
+                ]
             }
         }
     ],
-    "seasons": [
+    "demography": {
+        "population": 380000,
+        "populationDensity": {
+            "unit": "people/kilometers^2",
+            "value": 17.64
+        },
+        "eductation": ""
+    },
+    "optimates": {
+        "marketingEvents": [
+            "La Ruta Maya Canoe Race",
+            "Cruise Ship arrivals"
+        ],
+        "NPOs": [
+            {
+                "url": "https://www.marlashouseofhope.org/",
+                "mission": "Marla's House of Hope provides safe, loving, nurturing care for God's Children who have been removed from an abusive environment.",
+                "problem": "Belize's population is approximately 380,000. 36.8% of the population is under the age of 15 years old.\nThe laws of Belize require that a child complete primary school. Unfortunately, only about 80% continue to secondary school, with approximately half completing High school"
+            }
+        ],
+        "companies": [
+            {
+                "url": "https://www.chamberlainbelize.com",
+                "mission": "Our mission is to inspire and motivate those who we train to deliver at the level of their true potential. ",
+                "valueAdded": [
+                    "Train tour guides' to softskills"
+                ]
+            }
+        ]
+    },
+    "neighbouringCountries": [
+        "Mexico",
+        "Guatemala"
+    ],
+    "religions": [
         {
-            "name": "dry",
-            "start": [
+            "name": "Christianity",
+            "share": 0.876
+        },
+        {
+            "name": "Atheist",
+            "share": 0.097
+        },
+        {
+            "name": "Folk Religions",
+            "share": 0.015
+        },
+        {
+            "name": "Other",
+            "share": 0.012
+        }
+    ],
+    "ethnicities": [
+        {
+            "name": "Mestizo",
+            "share": 0.529,
+            "moreInfo": [
+                "Mayan European Ancestory"
+            ]
+        },
+        {
+            "name": "Creole",
+            "share": 0.259,
+            "moreInfo": [
+                "decendants of African slaves and Europeans"
+            ]
+        },
+        {
+            "name": "Maya",
+            "share": 0.113
+        },
+        {
+            "name": "Garifuna",
+            "share": 0.061,
+            "moreInfo": "Afro-Amerindians"
+        },
+        {
+            "name": "Indian",
+            "share": 0.039
+        },
+        {
+            "name": "Mennonite",
+            "share": 0.036,
+            "moreInfo": [
+                "Dutch-German",
+                "Plattdeutsch",
+                "Produce much of country's agriculture",
+                "live in tradidional isolated communities"
+            ],
+            "communities": [
                 {
-                    "month": "dec",
-                    "spec": "end"
+                    "name": "Barton Creek Mennonites",
+                    "ethnicity": "Mennonite",
+                    "type": "isolated",
+                    "location": "",
+                    "trivia": "",
+                    "produce": [
+                        "honey",
+                        "milk",
+                        "eggs",
+                        "poultry",
+                        "beans",
+                        "stable crops"
+                    ]
                 },
                 {
-                    "month": "jan",
-                    "spec": "beginning"
+                    "name": "San Antonio's Womens Goup",
+                    "ethnicity": "Mennonite",
+                    "type": "isolated",
+                    "location": "San Antonio",
+                    "holidays": {
+                        "occurence": "June 13",
+                        "name": "St. Anthony Day",
+                        "enjoy": [
+                            "traditional Mayan music",
+                            {
+                                "foods": [
+                                    "Tamales"
+                                ]
+                            }
+                        ]
+                    },
+                    "trivia": {
+                        "name": {
+                            "namedAfter": "St. Anthony of Padua",
+                            "reason": "Spanish Priest who visited regularly from the town of Benque Viejo del Carmen brought a statue of St. Anthony to the Village",
+                            "previousName": "Osh Multun Kakab",
+                            "language": "Mayan Yucatec",
+                            "previousNameTranslation": "Three Mound Virgin Forest",
+                            "referedAs": {
+                                "name": "Tanah",
+                                "translation": "our home"
+                            }
+                        }
+                    },
+                    "produce": [
+                        "peanuts",
+                        "corn",
+                        "squash",
+                        "bakery",
+                        "beans",
+                        "pottery",
+                        "local jewelry",
+                        "embroidery",
+                        "hammocks",
+                        "embroidery",
+                        "clothing"
+                    ]
                 }
             ]
         },
         {
-            "name": "wet",
-            "start": [
-                {
-                    "month": "may",
-                    "spec": "end"
-                },
-                {
-                    "month": "july",
-                    "spec": "beginning"
-                }
-            ]
+            "name": "Caucasian",
+            "share": 0.012
+        },
+        {
+            "name": "Chinese",
+            "share": 0.01
+        },
+        {
+            "name": "Other",
+            "share": 0.015
+        }
+    ],
+    "populationHotspots": [
+        {
+            "name": "Belize City",
+            "population": 70000
+        },
+        {
+            "name": "San Ignacio",
+            "population": 30000
+        },
+        {
+            "name": "Belmopan",
+            "population": 20000
+        },
+        {
+            "name": "Orange Walk Town",
+            "population": 17000
+        },
+        {
+            "name": "Corazal Town",
+            "population": 13000
         }
     ]
 }
