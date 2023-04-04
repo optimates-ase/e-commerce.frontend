@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <div class="mt-10">
     <div class="flex justify-end">
     <div class="shadow-xl rounded-l-3xl bg-white  w-11/12 p-5">
@@ -13,15 +17,19 @@
             <div class="w-1/5">
                 <div >
                     <div class="flex justify-start text-gray-600 text-sm">Person</div>
-                    <h3 class="flex justify-start mb-4">3 Person</h3>
-                    <div class="flex justify-start">2 adults, 1 child</div>
+                    
+                    <h3 class="flex justify-start mb-4">2 adults, 0 child</h3>
+                    <div class="flex justify-start">Lorem ipsum dolor sit amet</div>
                     
                 </div>
             </div>
             <div class="w-1/5">
                 <div >
                     <div class="flex justify-start text-gray-600 text-sm">Period</div>
-                    <h3 class="flex justify-start mb-4">22-24 July 2023</h3>
+                    <h3 class="flex justify-start mb-4">
+                        <input type="date" 
+                        />
+                    </h3>
                     <div class="flex justify-start">Select date</div>
                     
                 </div>
