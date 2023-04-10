@@ -1,6 +1,8 @@
 <script lang="ts">
+	//svelte
 	import SmallMap from '$lib/Map/SmallMap.svelte';
 	import Carousel from '$lib/UIUX/Carousel.svelte';
+	import { onMount } from 'svelte';
 
 	import landingData from '$lib/data/Belize.json';
 
@@ -9,7 +11,6 @@
 
 	import { cardContent, cardTitle } from '$lib/stores/TextPrompts/Home';
 
-	import { onMount } from 'svelte';
 	import { activeDis } from '$lib/stores/Districts';
 
 	export let data;
@@ -39,10 +40,10 @@
 			ct = val;
 		} else {
 			// resetting doesn't work yet
-			console.log("attempting to reset ct cc", cc, ct);
+			console.log('attempting to reset ct cc', cc, ct);
 			ct = landingData.country;
 			cc = landingData.keyphrases.home;
-			console.log("after", cc, ct);
+			console.log('after', cc, ct);
 		}
 	});
 </script>
