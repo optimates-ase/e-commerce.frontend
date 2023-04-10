@@ -22,6 +22,9 @@
 <div>
 	<a href="/home">Click me to go to Home Testing section</a>
 </div>
+<div>
+	<a href="/mypage">Click me to go to MyPage Testing section</a>
+</div>
 
 <div class="flex justify-center w-full">
 	<Accordion autocollapse>

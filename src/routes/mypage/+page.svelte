@@ -9,22 +9,19 @@
 
 
 <div class="app">
-    <AppShell>
-        <svelte:fragment slot="header">
+    <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
+        <svelte:fragment slot="pageHeader">
             <Navbar />
         </svelte:fragment>
         <!-- Router Slot -->
         <div class="app">
-            <Selection />
+              
+            <CardsComponent title="Favourite" subtitle="Section with locations saved by you "/>
             <Map />
-            <CardsComponent title="Title" subtitle="Subtitle"/>
-            <ChooseUs />
+            <CardsComponent title="Past" subtitle="Your past adventures"/>
+            
             
         </div>
-        <!-- ---- / ---- -->
-        <svelte:fragment slot="footer">
-            <Navbar />
-        </svelte:fragment>
     </AppShell>
     
   </div>
