@@ -1,83 +1,70 @@
 <script lang="ts">
-	import { AppBar, Accordion, AccordionItem, ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
-	
-	let valueSingle: string = 'books';
+	//svelte
+	import SmallMap from '$lib/Map/SmallMap.svelte';
+	import Carousel from '$lib/UIUX/Carousel.svelte';
+	import { onMount } from 'svelte';
+
+	import landingData from '$lib/data/Belize.json';
+
+	import 'aframe';
+	import 'aframe-svelte';
+
+	import { cardContent, cardTitle } from '$lib/stores/TextPrompts/Home';
+
+	import { activeDis } from '$lib/stores/Districts';
+
+	export let data;
+
+	let ct;
+	let cc;
+
+	let ad_srcs = ['home/home.jpg'];
+
+	onMount(() => {
+		cardTitle.set(landingData.country);
+		cardContent.set(landingData.keyphrases.home);
+	});
+
+	cardContent.subscribe((val) => {
+		cc = val;
+	});
+
+	cardTitle.subscribe((val) => {
+		ct = val;
+	});
+
+	activeDis.subscribe((val) => {
+		if (landingData.pictures[val].src.length > 0) {
+			ad_srcs = landingData.pictures[val].src;
+			cc = landingData.keyphrases[val];
+			ct = val;
+		} else {
+			// resetting doesn't work yet
+			console.log('attempting to reset ct cc', cc, ct);
+			ct = landingData.country;
+			cc = landingData.keyphrases.home;
+			console.log('after', cc, ct);
+		}
+	});
 </script>
 
-<AppBar>
-	<svelte:fragment slot="lead">(icon)</svelte:fragment>
-	<svelte:fragment slot="trail">(actions)</svelte:fragment>
-	<svelte:fragment slot="headline">Welcome to SvelteKit</svelte:fragment>
-</AppBar>
-<p>
-	Welcome Optimates, this is our frontend. You'll find the documentation and usefull links, of all
-	technologies. below in some Skeleton components
-</p>
-
-<div class="border border-b border-black" />
-
-<div>
-	<a href="/about">Click me to go to About section</a>
-</div>
-<div>
-	<a href="/home">Click me to go to Home Testing section</a>
+<div class="ml-6 mr-6 mt-4 h-3/5">
+	<Carousel srcs={ad_srcs} />
+	<!-- <img src="bg/Candidate1.jpg" /> -->
 </div>
 
-<div class="flex justify-center w-full">
-	<Accordion autocollapse>
-		<AccordionItem open>
-			<svelte:fragment slot="lead">
-				<img src="/svelte.png" alt="" class="aspect-square h-8" />
-			</svelte:fragment>
-			<svelte:fragment slot="summary">Sveltekit</svelte:fragment>
-			<svelte:fragment slot="content">
-				<ListBox>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="skdoc">
-						<a href="https://kit.svelte.dev/docs/introduction" target="_blank">
-							Sveltekit Documentation
-						</a>
-					</ListBoxItem>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="sdoc">
-						<a href="https://svelte.dev/docs" target="_blank">Svelte Documentation</a>
-					</ListBoxItem>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="stut">
-						<a href="https://svelte.dev/tutorial/basics" target="_blank">Svelte Tutorial</a>
-					</ListBoxItem>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="sfaq">
-						<a href="https://svelte.dev/faq" target="_blank">FAQ</a>
-					</ListBoxItem>
-				</ListBox>
-			</svelte:fragment>
-		</AccordionItem>
-		<AccordionItem>
-			<svelte:fragment slot="lead">
-				<img src="/tailwindcss.png" alt="" class="aspect-square h-8" />
-			</svelte:fragment>
-			<svelte:fragment slot="summary">TailwindCSS</svelte:fragment>
-			<svelte:fragment slot="content">
-				<ListBox>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="tdoc">
-						<a href="https://tailwindcss.com/docs/guides/sveltekit" target="_blank">Documentation</a
-						>
-					</ListBoxItem>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="tcs">
-						<a href="https://nerdcave.com/tailwind-cheat-sheet" target="_blank">Cheat Sheet</a>
-					</ListBoxItem>
-				</ListBox>
-			</svelte:fragment>
-		</AccordionItem>
-		<AccordionItem>
-			<svelte:fragment slot="lead">
-				<img src="/skeleton.png" alt="" class="aspect-square h-8" />
-			</svelte:fragment>
-			<svelte:fragment slot="summary">Skeleton UI</svelte:fragment>
-			<svelte:fragment slot="content">
-				<ListBox>
-					<ListBoxItem bind:group={valueSingle} name="medium" value="sdoc">
-						<a href="https://www.skeleton.dev/docs/introduction" target="_blank">Documentation</a>
-					</ListBoxItem>
-				</ListBox>
-			</svelte:fragment>
-		</AccordionItem>
-	</Accordion>
+<div class="grid gap-4 grid-cols-6 m-4 p-2 h-1/3 ">
+	<div class="card col-span-4 p-2">
+		<div class="grid gap-2 grid-cols-3">
+			<div class="col-span-2">
+				<h2>{ct}</h2>
+			</div>
+		</div>
+		<p>
+			{cc}
+		</p>
+	</div>
+	<div class="card col-span-2">
+		<SmallMap countryName={data.countryName} features={data.districts} />
+	</div>
 </div>
