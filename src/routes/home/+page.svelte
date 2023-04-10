@@ -1,16 +1,14 @@
 <script>
-	import Map from '../components/Map.svelte';
-	import Navbar from '../components/Navbar.svelte';
-	import Selection from '../components/Selection.svelte';
-	import ChooseUs from '../components/ChooseUs.svelte';
-	import CardsComponent from '../components/CardsComponent.svelte';
+	import Map from '$comp/Map.svelte';
+	import Navbar from '$comp/Navbar.svelte';
+	import Selection from '$comp/Selection.svelte';
+	import ChooseUs from '$comp/ChooseUs.svelte';
+	import CardsComponent from '$comp/CardsComponent.svelte';
 	import { AppShell } from '@skeletonlabs/skeleton';
-	import Map from '../../components/Map.svelte';
-	import Navbar from '../../components/Navbar.svelte';
-	import { AppShell, dataTableHandler } from '@skeletonlabs/skeleton';
-	import CardsComponent from '../../components/CardsComponent.svelte';
 
 	export let data;
+	let countryName = 'Belize';
+	let features = 'something';
 </script>
 
 <div class="app">
@@ -21,7 +19,7 @@
 		<!-- Router Slot -->
 		<div class="app">
 			<Selection />
-			<Map />
+			<Map {countryName} {features} />
 			<CardsComponent />
 			<CardsComponent />
 			<ChooseUs />

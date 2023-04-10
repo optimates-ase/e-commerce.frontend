@@ -11,6 +11,7 @@
 
 	import Navigation from '$lib/Navigation/Navigation.svelte';
 	import BarNav from '$lib/Navigation/BarNav.svelte';
+	import Navbar from '$comp/Navbar.svelte';
 </script>
 
 <AppShell class="app-shell">
@@ -25,11 +26,13 @@
 	</svelte:fragment> -->
 	<!-- <svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment> -->
 	<!-- <svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
+
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
+
 	<svelte:fragment slot="pageFooter">
-		<BarNav />
+		<Navbar />
 	</svelte:fragment>
 	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>

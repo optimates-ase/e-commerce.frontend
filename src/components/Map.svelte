@@ -62,19 +62,21 @@
 		});
 
 		map.on('click', 'polygons', function (e) {
-			new Popup().setLngLat(e.lngLat)
-			.setHTML(
-				'<h3>' +
-					'District' +
-					'</h3><p>' +
-					e.features[0].properties.name +
-					'</p>' +
+			new Popup()
+				.setLngLat(e.lngLat)
+				.setHTML(
 					'<h3>' +
-					'Tours' +
-					'</h3><p>' +
-					e.features[0].properties.tours +
-					'</p>'
-			).addTo(map);
+						'District' +
+						'</h3><p>' +
+						e.features[0].properties.name +
+						'</p>' +
+						'<h3>' +
+						'Tours' +
+						'</h3><p>' +
+						e.features[0].properties.tours +
+						'</p>'
+				)
+				.addTo(map);
 		});
 	});
 
