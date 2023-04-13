@@ -32,7 +32,7 @@
 	<!-- ---- / ---- -->
 
 	<svelte:fragment slot="pageFooter">
-		<Navbar />
+		<BarNav />
 	</svelte:fragment>
 	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>

@@ -1,12 +1,11 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
-	import { redirect } from '@sveltejs/kit';
-	let tabsBottomNav = 0;
 
-	function redirectTo(link: string) {
-		console.log('redirecting to ', link);
-		throw redirect(307, link);
-	}
+	import { writable, type Writable } from 'svelte/store';
+
+	const tabSet: Writable<number> = writable(0);
+
 </script>
 
 <TabGroup
@@ -18,26 +17,17 @@
 	border=""
 	class="bg-surface-100-800-token w-full"
 >
-	<Tab bind:group={tabsBottomNav} name="Home" value={0}>
+	<Tab bind:group={$tabSet} name="Home" value={0} on:click={() => goto('/')}>
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		Home
 	</Tab>
-	<Tab bind:group={tabsBottomNav} name="Explore" value={1}>
+	<Tab bind:group={$tabSet} name="Explore" value={1} on:click={() => goto('/login')}>
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		Explore
 	</Tab>
-	<Tab bind:group={tabsBottomNav} name="My" value={2}>
+	<Tab bind:group={$tabSet} name="My" value={2} on:click={() => goto('/profile')}>
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		My
 	</Tab>
-	<!-- ... -->
-	<svelte:fragment slot="panel">
-		{#if tabsBottomNav === 0}
-			{redirectTo('/')}
-		{:else if tabsBottomNav === 1}
-			{redirectTo('/explore')}
-		{:else if tabsBottomNav === 2}
-			{redirectTo('/profile')}
-		{/if}
-	</svelte:fragment>
+
 </TabGroup>

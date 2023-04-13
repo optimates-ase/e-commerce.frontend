@@ -48,12 +48,13 @@
 	});
 </script>
 
-<div class="ml-6 mr-6 mt-4 h-3/5">
+<div class="ml-6 mr-6 mt-4 max-w-2xl">
+	<!-- <div class="card m-4 max-w-2xl"> -->
 	<Carousel srcs={ad_srcs} />
 	<!-- <img src="bg/Candidate1.jpg" /> -->
 </div>
 
-<div class="grid gap-4 grid-cols-6 m-4 p-2 h-1/3 ">
+<div class="grid gap-4 grid-cols-6 m-4 p-2 max-w-2xl">
 	<div class="card col-span-4 p-2">
 		<div class="grid gap-2 grid-cols-3">
 			<div class="col-span-2">
