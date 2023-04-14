@@ -1,9 +1,9 @@
 <script lang="ts">
+	import type { CarouselImg } from '$lib/types';
 	import { onMount } from 'svelte';
 	import { register } from 'swiper/element/bundle';
 
-	export let srcs: string[];
-
+	export let srcs: CarouselImg;
 	register();
 
 	const spaceBetween = 10;
@@ -18,6 +18,8 @@
 
 {#if srcs}
 <swiper-container
+	loop={true}
+	class="max-w-sm"
 	slides-per-view={1}
 	space-between={spaceBetween}
 	centered-slides={true}
@@ -27,8 +29,11 @@
 	on:progress={onProgress}
 	on:slidechange={onSlideChange}
 >
-	{#each srcs as src}
-		<swiper-slide><img {src} /></swiper-slide>
+	{#each srcs.imgs as src}
+	{#if src.src !== ""}
+		<swiper-slide><img src={src.src} alt={src.altText}/></swiper-slide>
+		<!-- <div><p>{src.altText}</p></div> -->
+	{/if}
 	{/each}
 </swiper-container>
 {:else}

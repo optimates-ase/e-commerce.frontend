@@ -1,26 +1,108 @@
-import type { Feature } from "maplibre-gl"
+interface Tour {
+	id: string;
+	description: string;
+	price: number;
+}
 
 interface Coordinate {
-    [0]: number,
-    [1]: number,
+	lng: number;
+	lat: number;
+}
+
+interface MapConfig {
+	coordinates: Coordinate;
+	zoom: number;
+}
+
+interface MinorInfluence {
+	avg: number;
+	month: string;
+	unit: string;
+}
+
+interface Img {
+	src: string;
+	altText: string;
+}
+
+interface Motto {
+	catchPhrase: string;
+}
+
+export interface ClimateInfluenceMinor {
+	name: string,
+	max: MinorInfluence;
+	min: MinorInfluence;
+}
+
+export interface MapMarker {
+	name: string;
+	population: number;
+	capital: boolean;
+	coordinates: Coordinate;
+}
+
+export interface CarouselImg {
+	id: string;
+	imgs: Img[];
+}
+
+export interface Feature {
+	type: string;
+	properties: {
+		GID_1: string;
+		GID_0: string;
+		COUNTRY: string;
+		NAME_1: string;
+		TYPE_1: string;
+		HASC_1: string;
+		ISO_1: string;
+	};
+	geometry: {
+		type: string;
+		coordinates: number[][][][];
+	};
+}
+
+export interface FeatureCollection {
+	type: string;
+	name: string;
+	crs: any;
+	features: Feature[];
+}
+
+export interface District {
+	id: string;
+	name: string;
+	keyphrase: string;
 }
 
 
-interface Tour{
-    id: string,
-    description: string,
-    price: number
+export interface Country {
+	name: string;
+	hook: string;
+	catchPhrase: string;
+	districts: District[];
+	keywords: string[];
+	keyphrase: string;
+	mapConfig: MapConfig;
+	geoJSON: FeatureCollection;
+	carouselImg: CarouselImg[];
+	climateInfluenceMinor: ClimateInfluenceMinor;
+	markedCities: MapMarker[];
 }
 
 export interface DistrictProperties {
-    id: string,
-    name: string,
-    tours: Tour[] | [],
+	id: string;
+	name: string;
+	tours: Tour[] | [];
 }
 
 export interface DistrictNavProperties {
-    id: string
-    slug: string,
-    dispName : string,
-    keywords: string[],
+	id: string;
+	slug: string;
+	dispName: string;
+	keywords: string[];
 }
+
+export interface Marker {}

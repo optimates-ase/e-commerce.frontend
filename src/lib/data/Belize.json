@@ -1,8 +1,48 @@
 {
-    "country": "Belize",
+    "name": "Belize",
     "formerName": [
         "British Honduras"
     ],
+    "hook": "Are you yearning to escape the hustle and bustle of modern life and ready for an adventure like no other?",
+    "catchPhrase": "Look no further! Explore Belize, the gateway of the Carribeans and the Central American region. Listen to the real sound of life and dive into astonishing water scenery.",
+    "mapConfig": {
+        "lng": -88.65292533421297,
+        "lat": 17.2,
+        "zoom": 5.8
+    },
+    "districts": [
+        {
+            "id": "BLZ.1_1",
+            "name": "Belize",
+            "keyphrase": ""
+        },
+        {
+            "id": "BLZ.5_1",
+            "name": "Stann Creek",
+            "keyphrase": ""
+        },
+        {
+            "id": "BLZ.6_1",
+            "name": "Toledo",
+            "keyphrase": ""
+        },
+        {
+            "id": "BLZ.2_1",
+            "name": "Cayo",
+            "keyphrase": "Are you yearning to escape the hustle and bustle of modern life? Come experience the unspoiled nature of the west Belizean district Cayo, where lush tropical jungles meet ancient Mayan ruins. Immerse yourself in the vibrant culture of local spice farms, and try your hand at river fishing in some of the most pristine waters in the world. In Cayo, you'll feel a sense of peace and wonder like nowhere else. So take a step back in time and connect with nature in this truly magical destination."
+        },
+        {
+            "id": "BLZ.4_1",
+            "name": "Orange Walk",
+            "keyphrase": ""
+        },
+        {
+            "id": "BLZ.3_1",
+            "name": "Corozal",
+            "keyphrase": "Ready for an adventure like no other? Come to the Belizean district of Corozal and discover its world-famous Barrier Reef, teeming with vibrant fish colonies. Cruise around the stunning Caribbean Sea in a golf cart and take in the incredible views. Immerse yourself in the rich melting pot of cultures that make Corozal so unique. Experience the thrill of snorkeling and get up close and personal with the stunning underwater world. Come and be swept away by the magic of Corozal, where adventure awaits around every corner."
+        }
+    ],
+    "keyphrase": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
     "keyphrases": {
         "home": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
         "BLZ.1_1": "",
@@ -12,9 +52,66 @@
         "BLZ.5_1": "",
         "BLZ.6_1": ""
     },
+    "carouselImages": [
+        {
+            "id": "home",
+            "imgs": [
+                {
+                    "src": "",
+                    "altText": ""
+                }
+            ]
+        },
+        {
+            "id": "BLZ.1_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.2_1",
+            "imgs": [
+                {
+                    "src": "san-ignacio/si_1.jpg",
+                    "altText": "Are you yearning to escape the hustle and bustle of modern life?"
+                },
+                {
+                    "src": "san-ignacio/si_3.jpg",
+                    "altText": "Ready for an adventure like no other?"
+                },
+                {
+                    "src": "san-ignacio/si_3.jpg",
+                    "altText": "some alt text"
+                }
+            ]
+        },
+        {
+            "id": "BLZ.3_1",
+            "imgs": [
+                {
+                    "src": "san-pedro/sp_1.jpg",
+                    "altText": "some alt text"
+                },
+                {
+                    "src": "san-pedro/sp_2.jpg",
+                    "altText": "some alt text"
+                }
+            ]
+        },
+        {
+            "id": "BLZ.4_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.5_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.6_1",
+            "imgs": []
+        }
+    ],
     "pictures": {
         "home": {
-            "src": [
+            "img": [
                 "home/home.jpg"
             ],
             "alt-text": ""
@@ -320,27 +417,36 @@
             "share": 0.529,
             "moreInfo": [
                 "Mayan European Ancestory"
-            ]
+            ],
+            "communities": []
         },
         {
             "name": "Creole",
             "share": 0.259,
             "moreInfo": [
                 "decendants of African slaves and Europeans"
-            ]
+            ],
+            "communities": []
         },
         {
             "name": "Maya",
-            "share": 0.113
+            "share": 0.113,
+            "moreInfo": [],
+            "communities": []
         },
         {
             "name": "Garifuna",
             "share": 0.061,
-            "moreInfo": "Afro-Amerindians"
+            "moreInfo": [
+                "Afro-Amerindians"
+            ],
+            "communities": []
         },
         {
             "name": "Indian",
-            "share": 0.039
+            "share": 0.039,
+            "moreInfo": [],
+            "communities": []
         },
         {
             "name": "Mennonite",
@@ -415,37 +521,68 @@
         },
         {
             "name": "Caucasian",
-            "share": 0.012
+            "share": 0.012,
+            "moreInfo": [],
+            "communities": []
         },
         {
             "name": "Chinese",
-            "share": 0.01
+            "share": 0.01,
+            "moreInfo": [],
+            "communities": []
         },
         {
             "name": "Other",
-            "share": 0.015
+            "share": 0.015,
+            "moreInfo": [],
+            "communities": []
         }
     ],
     "populationHotspots": [
         {
             "name": "Belize City",
-            "population": 70000
+            "population": 70000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.1962,
+                "lat": 17.5046
+            } 
         },
         {
             "name": "San Ignacio",
-            "population": 30000
+            "population": 30000,
+            "capital": false,
+            "coordinates": {
+                "lng": -89.08,
+                "lat": 17.1523
+            } 
         },
         {
             "name": "Belmopan",
-            "population": 20000
+            "population": 20000,
+            "capital": true,
+            "coordinates": {
+                "lng": -88.759,
+                "lat": 17.251
+            } 
         },
         {
             "name": "Orange Walk Town",
-            "population": 17000
+            "population": 17000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.57103,
+                "lat": 18.08428
+            } 
         },
         {
             "name": "Corazal Town",
-            "population": 13000
+            "population": 13000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.38849,
+                "lat": 18.39375
+            } 
         }
     ]
 }
