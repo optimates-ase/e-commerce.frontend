@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Teaser from '$lib/UIUX/VR/360Degree.svelte';
 </script>
 
 <div class="h-full flex items-center justify-center">

@@ -8,7 +8,7 @@
     "mapConfig": {
         "lng": -88.65292533421297,
         "lat": 17.2,
-        "zoom": 5.8
+        "zoom": 5
     },
     "districts": [
         {
@@ -29,7 +29,7 @@
         {
             "id": "BLZ.2_1",
             "name": "Cayo",
-            "keyphrase": "Are you yearning to escape the hustle and bustle of modern life? Come experience the unspoiled nature of the west Belizean district Cayo, where lush tropical jungles meet ancient Mayan ruins. Immerse yourself in the vibrant culture of local spice farms, and try your hand at river fishing in some of the most pristine waters in the world. In Cayo, you'll feel a sense of peace and wonder like nowhere else. So take a step back in time and connect with nature in this truly magical destination."
+            "keyphrase": " destination."
         },
         {
             "id": "BLZ.4_1",

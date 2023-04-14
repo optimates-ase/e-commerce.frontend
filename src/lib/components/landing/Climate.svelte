@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { ClimateInfluenceMinor } from '$lib/types';
-    import VideoPlayer from '$lib/UIUX/VideoPlayer.svelte'
+    import VideoPlayer from '$comp/UIUX/VideoPlayer.svelte'
 
 	export let minorInfluence: ClimateInfluenceMinor;
 
 </script>
 
-<div id="climateOverview" class="w-[90%] mx-auto mt-2 bg-black">
-	<div id="climateOverviewHeader" class=" bg-gray-700 grid grid-cols-7">
-		<div id="climateTitle" class="col-span-2 bg-green-600">
+<div id="climateOverview" class="w-[90%] mx-auto mt-6">
+	<div id="climateOverviewHeader" class="grid grid-cols-7">
+		<div id="climateTitle" class="col-span-2">
 			<h1>Climate</h1>
 		</div>
 		<div id="climateChartCompletion" class="col-span-5 grid grid-cols-2">
