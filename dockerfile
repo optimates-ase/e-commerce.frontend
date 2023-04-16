@@ -16,7 +16,7 @@ FROM node:lts-slim as deploy-node
 WORKDIR /app
 COPY --from=build /app/package.json .
 COPY --from=build /app/build ./build
-RUN npm install --production
+RUN npm install -omit:dev
 
 EXPOSE 8080
 ENTRYPOINT ["npm", "run", "start"]
