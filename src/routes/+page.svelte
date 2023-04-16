@@ -1,7 +1,7 @@
 <script lang="ts">
 	//svelte
-	import SmallMap from '$lib/Map/SmallMap.svelte';
-	import Carousel from '$lib/UIUX/Carousel.svelte';
+	import SmallMap from '$comp/Map/SmallMap.svelte';
+	import Carousel from '$comp/UIUX/Carousel.svelte';
 	import { onMount } from 'svelte';
 
 	import landingData from '$lib/data/Belize.json';
