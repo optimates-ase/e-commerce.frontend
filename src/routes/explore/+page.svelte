@@ -1,26 +1,16 @@
 <script lang="ts">
-	import Explore from '$comp/Explore/Explore.svelte';
+	import Explore from '$comp/Explore/ExploreCard.svelte';
+	import ExploreContainer from '$comp/Explore/ExploreContainer.svelte';
+
 	import type { Tour } from '$lib/types';
 
-	//swiper
-	import Swiper from 'swiper';
-	import 'swiper/css';
-	//
-
-	export let data: Tour[];
-	$: tours = data;
+	export let data;
+	let tours: Tour[] | [];
+	$: tours = data.tours;
 	console.log('page: explore');
 </script>
 
-<div class="swiper-container">
-	<div class="swiper-wrapper">
-		{#each tours as tour}
-			<div class="swiper-slide">
-				<Explore {tour} />
-			</div>
-		{/each}
-	</div>
-</div>
+<ExploreContainer {tours} />
 
 <style>
 </style>

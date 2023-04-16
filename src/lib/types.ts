@@ -1,9 +1,3 @@
-interface Tour {
-	id: string;
-	description: string;
-	price: number;
-}
-
 interface Coordinate {
 	lng: number;
 	lat: number;
@@ -30,7 +24,7 @@ interface Motto {
 }
 
 export interface ClimateInfluenceMinor {
-	name: string,
+	name: string;
 	max: MinorInfluence;
 	min: MinorInfluence;
 }
@@ -77,7 +71,6 @@ export interface District {
 	keyphrase: string;
 }
 
-
 export interface Country {
 	name: string;
 	hook: string;
@@ -90,6 +83,16 @@ export interface Country {
 	carouselImg: CarouselImg[];
 	climateInfluenceMinor: ClimateInfluenceMinor;
 	markedCities: MapMarker[];
+}
+export interface Tour {
+	id: number;
+	name: string;
+	description: string;
+	price: number;
+	currency: string;
+	rating: string;
+	minimum: number;
+	images: string[];
 }
 
 export interface DistrictProperties {
