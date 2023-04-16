@@ -6,14 +6,14 @@ interface Coordinate {
 }
 
 export interface Tour {
-	id: string;
+	id: number;
 	name: string;
 	description: string;
 	price: number;
 	currency: string;
 	rating: string;
 	minimum: number;
-	images: [string];
+	images: string[];
 }
 
 export interface DistrictProperties {
