@@ -1,6 +1,8 @@
 /** @type {import('./$types').PageLoad} */
 
 import type { DistrictProperties } from '$lib/types';
+
+// maybe use in store, this data is loaded twice.
 import districtData from '$lib/data/Belize.gadm1.geo.json';
 
 export const load = async () => {
@@ -20,6 +22,6 @@ export const load = async () => {
 
 		return district;
 	});
-	
+
 	return { countryName: countryName, districts: districts };
 };

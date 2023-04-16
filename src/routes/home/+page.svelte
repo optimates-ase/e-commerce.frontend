@@ -1,9 +1,9 @@
 <script>
-	import Map from '$comp/Map.svelte';
-	import Navbar from '$comp/Navbar.svelte';
+	import Map from '$comp/Map/Map.svelte';
+	import Navbar from '$comp/Navigation/Navbar.svelte';
 	import Selection from '$comp/Selection.svelte';
 	import ChooseUs from '$comp/ChooseUs.svelte';
-	import CardsComponent from '$comp/CardsComponent.svelte';
+	import CardsComponent from '$comp/Cards/CardsComponent.svelte';
 	import { AppShell } from '@skeletonlabs/skeleton';
 
 	export let data;
