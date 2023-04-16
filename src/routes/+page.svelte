@@ -5,7 +5,9 @@
 
 	export let data;
 </script>
+
 <div class="max-w-md mx-auto">
+	
 	<CountryLanding country={data.country} />
 	<ClimateLanding minorInfluence={data.country.climateInfluenceMinor} />
 	<!-- {#each data.country.districts as district} -->
