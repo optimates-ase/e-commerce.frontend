@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Tour } from '$lib/types';
-	import ExploreCard from './ExploreCard.svelte';
+	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
 
 	export let tours: Tour[] | [];
 

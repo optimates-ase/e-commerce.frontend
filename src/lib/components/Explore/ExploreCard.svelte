@@ -8,9 +8,11 @@
 <div class="card">
 	<div class="title">{tour.name}</div>
 	<div class="descr">
-		<div>{tour.description}</div>
-		<div>
-			<ul>
+		<div class="w-2/3">
+			{tour.description}
+		</div>
+		<div class="w-1/3">
+			<ul class="gap-2">
 				<li>
 					Price: {tour.price}
 					{tour.currency}
@@ -31,7 +33,7 @@
 
 <style>
 	.card {
-		@apply mx-5 px-5 mt-5;
+		@apply mx-5 p-5 mt-5;
 		@apply flex flex-col gap-1 items-center;
 	}
 	.title {
