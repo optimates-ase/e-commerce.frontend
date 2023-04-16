@@ -1,7 +1,7 @@
 <script lang="ts">
 	//svelte
-	import SmallMap from '$lib/Map/SmallMap.svelte';
-	import Carousel from '$lib/UIUX/Carousel.svelte';
+	import SmallMap from '$comp/Map/SmallMap.svelte';
+	import Carousel from '$comp/UIUX/Carousel.svelte';
 	import { onMount } from 'svelte';
 
 	import landingData from '$lib/data/Belize.json';
@@ -48,12 +48,10 @@
 	});
 </script>
 
-<div class="ml-6 mr-6 mt-4 h-3/5">
-	<Carousel srcs={ad_srcs} />
-	<!-- <img src="bg/Candidate1.jpg" /> -->
-</div>
+<Carousel srcs={ad_srcs} />
+<!-- <img src="bg/Candidate1.jpg" /> -->
 
-<div class="grid gap-4 grid-cols-6 m-4 p-2 h-1/3 ">
+<div class="grid gap-4 grid-cols-6 m-4 p-2 h-1/3 lg:h-2/3">
 	<div class="card col-span-4 p-2">
 		<div class="grid gap-2 grid-cols-3">
 			<div class="col-span-2">
