@@ -1,6 +1,6 @@
 <script>
 	// The selected Skeleton theme:
-	import '@skeletonlabs/skeleton/themes/theme-seafoam.css';
+	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
 
 	// This contains the bulk of Skeletons required styles:
 	import '@skeletonlabs/skeleton/styles/all.css';
@@ -8,31 +8,19 @@
 	// Finally, your application's global stylesheet
 	import '../app.postcss';
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
-
-	import Navigation from '$comp/Navigation/Navigation.svelte';
 	import BarNav from '$comp/Navigation/BarNav.svelte';
-	import Navbar from '$comp/Navigation/Navbar.svelte';
 </script>
 
-<AppShell class="app-shell">
+<AppShell >
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead"><a href="/">(OptiMates)</a></svelte:fragment>
 			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<!-- <svelte:fragment slot="sidebarLeft">
-		<Navigation />
-	</svelte:fragment> -->
-	<!-- <svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment> -->
-	<!-- <svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
-
-	<!-- Router Slot -->
 	<slot />
-	<!-- ---- / ---- -->
+	<svelte:fragment slot="footer">
 
-	<svelte:fragment slot="pageFooter">
-		<Navbar />
+		<BarNav />
 	</svelte:fragment>
-	<!-- <svelte:fragment slot="footer">Footer</svelte:fragment> -->
 </AppShell>
