@@ -11,7 +11,7 @@
 	import BarNav from '$comp/Navigation/BarNav.svelte';
 </script>
 
-<AppShell >
+<AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead"><a href="/">(OptiMates)</a></svelte:fragment>
@@ -20,7 +20,6 @@
 	</svelte:fragment>
 	<slot />
 	<svelte:fragment slot="footer">
-
 		<BarNav />
 	</svelte:fragment>
 </AppShell>
