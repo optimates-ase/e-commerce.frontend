@@ -7,6 +7,8 @@
 	const tabSet: Writable<number> = writable(0);
 </script>
 
+<!-- TODO highlighting of current does not fully work, when user is being redirected -->
+
 <TabGroup
 	justify="justify-center"
 	active="variant-filled-primary"

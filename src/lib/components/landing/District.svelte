@@ -3,7 +3,6 @@
 	import { Step, Stepper } from '@skeletonlabs/skeleton';
 
 	export let districts: District[];
-	console.log(districts);
 </script>
 
 <div class="mt-12">

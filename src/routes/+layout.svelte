@@ -9,13 +9,26 @@
 	import '../app.postcss';
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
 	import BarNav from '$comp/Navigation/BarNav.svelte';
+
+	import { page } from '$app/stores';
+	import { signIn, signOut } from '@auth/sveltekit/client';
 </script>
 
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead"><a href="/">(OptiMates)</a></svelte:fragment>
-			<svelte:fragment slot="trail"><LightSwitch /></svelte:fragment>
+			<svelte:fragment slot="trail">
+				{#if $page.data.session}
+					<button type="button" class="btn variant-filled-primary" on:click={() => {
+						signOut();
+					}}> Logout </button>
+				{:else}
+					<button type="button" class="btn variant-filled-primary" on:click={() => {
+						signIn();
+					}}> Login </button>
+				{/if}
+			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<slot />
