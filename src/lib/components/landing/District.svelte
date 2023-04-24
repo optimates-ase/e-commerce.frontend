@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Country, District, Highlight } from '$lib/types';
-	import HighlightEl from '$comp/landing/Highlight.svelte';
 	import {
 		RadioGroup,
 		RadioItem,

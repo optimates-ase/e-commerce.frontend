@@ -5,7 +5,6 @@
 	import { writable, type Writable } from 'svelte/store';
 
 	const tabSet: Writable<number> = writable(0);
-
 </script>
 
 <TabGroup
@@ -21,7 +20,7 @@
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		Home
 	</Tab>
-	<Tab bind:group={$tabSet} name="Explore" value={1} on:click={() => goto('/login')}>
+	<Tab bind:group={$tabSet} name="Explore" value={1} on:click={() => goto('/explore')}>
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		Explore
 	</Tab>
@@ -29,5 +28,4 @@
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>
 		My
 	</Tab>
-
 </TabGroup>

@@ -16,7 +16,6 @@
 	import { signIn, signOut } from '@auth/sveltekit/client';
 </script>
 
-<Modal />
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
@@ -48,7 +47,6 @@
 	</svelte:fragment>
 	<slot />
 	<svelte:fragment slot="footer">
-
 		<BarNav />
 	</svelte:fragment>
 </AppShell>

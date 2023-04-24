@@ -1,9 +1,3 @@
-interface Tour {
-	id: string;
-	description: string;
-	price: number;
-}
-
 interface Coordinate {
 	lng: number;
 	lat: number;
@@ -34,7 +28,7 @@ export interface Highlight {
 }
 
 export interface ClimateInfluenceMinor {
-	name: string,
+	name: string;
 	max: MinorInfluence;
 	min: MinorInfluence;
 }
@@ -82,7 +76,6 @@ export interface District {
 	keyphrase: string;
 	highlights: Highlight[];
 }
-
 
 export interface Country {
 	name: string;

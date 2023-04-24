@@ -2,7 +2,7 @@
 	import { onDestroy, onMount } from 'svelte';
 
 	import { Map } from 'maplibre-gl';
-	import { PUBLIC_MAPTILER_STYLES } from '$env/static/public';
+	//import { PUBLIC_MAPTILER_STYLES } from '$env/static/public';
 	import type { FeatureCollection, MapMarker } from '$lib/types';
 	import { addFeatures, addMarkers } from '$comp/Map/utils';
 
@@ -20,7 +20,8 @@
 	onMount(() => {
 		let map: Map = new Map({
 			container: mapContainer,
-			style: PUBLIC_MAPTILER_STYLES,
+			style: 'https://api.maptiler.com/maps/streets-v2/style.json?key=R7SWIU6LxTG0LcVb5eyr',
+			//style: 'PUBLIC_MAPTILER_STYLES',
 			center: center,
 			zoom: zoom,
 			dragPan: false,

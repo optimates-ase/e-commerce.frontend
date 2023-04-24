@@ -5,6 +5,7 @@
 
 	export let data;
 </script>
+
 <div class="max-w-md mx-auto">
 	<CountryLanding country={data.country} geoJSON={data.countryMap}/>
 	<ClimateLanding minorInfluence={data.country.climateInfluenceMinor} />
