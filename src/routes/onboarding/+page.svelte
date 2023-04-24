@@ -1,27 +1,33 @@
-<script>
-	import { FileDropzone } from '@skeletonlabs/skeleton';
-	let files;
+<script lang="ts">
 </script>
 
-<label class="label p-4">
+<h1>Register</h1>
+
+<form action="?/register" method="POST">
     <div>
-        <h1>Welcome, name</h1>
-        <p>Choose a user name upload an avatar picture</p>
+        <label for="phone">Phone</label>
+        <input class="input" id="phone" name="phone" type="text" required />
     </div>
-	<div class="grid items-center">
-		<div class="justify-center p-4">
-			<span>Username</span>
-			<input type="text" id="username" />
-		</div>
-		<div class="m-4">
-			<FileDropzone bind:files>
-				<svelte:fragment slot="lead">(icon)</svelte:fragment>
-				<svelte:fragment slot="message">(message)</svelte:fragment>
-				<svelte:fragment slot="meta">(meta)</svelte:fragment>
-			</FileDropzone>
-		</div>
-		<div class="grid justify-end">
-			<button type="button" class="btn variant-filled">Explore</button>
-		</div>
+
+    <div>
+		<label for="streetAddress">Street</label>
+		<input class="input" id="streetAddress" name="streetAddress" type="text" required />
 	</div>
-</label>
+
+    <div>
+		<label for="streetNumber">Street Number</label>
+		<input class="input" id="streetNumber" name="streetNumber" type="text" required />
+	</div>
+
+    <div>
+		<label for="zipCode">Zip Code or Postal Code</label>
+		<input class="input" id="zipCode" name="zipCode" type="text" required />
+	</div>
+
+    <div>
+		<label for="country">Country</label>
+		<input class="input" id="country" name="country" type="text" required />
+	</div>
+
+	<button class="btn " type="submit">Register</button>
+</form>

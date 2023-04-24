@@ -7,7 +7,6 @@
 	export let data;
 	let tours: Tour[] | [];
 	$: tours = data.tours;
-	console.log('page: explore');
 </script>
 
 <ExploreContainer {tours} />

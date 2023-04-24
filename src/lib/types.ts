@@ -19,10 +19,6 @@ interface Img {
 	altText: string;
 }
 
-interface Motto {
-	catchPhrase: string;
-}
-
 export interface ClimateInfluenceMinor {
 	name: string;
 	max: MinorInfluence;
