@@ -1,7 +1,4 @@
 export const load = () => {
-	console.log(
-		'load functing is called! This is only visible on node.js server, and not in FE console'
-	);
 
 	return {
 		tours: [

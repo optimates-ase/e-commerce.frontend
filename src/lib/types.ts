@@ -19,6 +19,7 @@ interface Img {
 	altText: string;
 }
 
+<<<<<<< HEAD
 export interface Highlight {
 	id: number;
 	name: string;
@@ -27,6 +28,8 @@ export interface Highlight {
 	keyExpression: string[];
 }
 
+=======
+>>>>>>> d058d5c72b1893bf665971faf17b047b940e325d
 export interface ClimateInfluenceMinor {
 	name: string;
 	max: MinorInfluence;
