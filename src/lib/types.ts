@@ -25,8 +25,12 @@ interface Img {
 	altText: string;
 }
 
-interface Motto {
-	catchPhrase: string;
+export interface Highlight {
+	id: number;
+	name: string;
+	icon: string;
+	thumbnail: string;
+	keyExpression: string[];
 }
 
 export interface ClimateInfluenceMinor {
@@ -74,7 +78,9 @@ export interface FeatureCollection {
 export interface District {
 	id: string;
 	name: string;
+	map: string;
 	keyphrase: string;
+	highlights: Highlight[];
 }
 
 
@@ -86,23 +92,17 @@ export interface Country {
 	keywords: string[];
 	keyphrase: string;
 	mapConfig: MapConfig;
-	geoJSON: FeatureCollection;
 	carouselImg: CarouselImg[];
 	climateInfluenceMinor: ClimateInfluenceMinor;
 	markedCities: MapMarker[];
 }
-
-export interface DistrictProperties {
-	id: string;
+export interface Tour {
+	id: number;
 	name: string;
-	tours: Tour[] | [];
+	description: string;
+	price: number;
+	currency: string;
+	rating: string;
+	minimum: number;
+	images: string[];
 }
-
-export interface DistrictNavProperties {
-	id: string;
-	slug: string;
-	dispName: string;
-	keywords: string[];
-}
-
-export interface Marker {}

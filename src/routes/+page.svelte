@@ -6,13 +6,7 @@
 	export let data;
 </script>
 <div class="max-w-md mx-auto">
-	<CountryLanding country={data.country} />
+	<CountryLanding country={data.country} geoJSON={data.countryMap}/>
 	<ClimateLanding minorInfluence={data.country.climateInfluenceMinor} />
-	<!-- {#each data.country.districts as district} -->
-	<DistrictLanding districts={data.country.districts} />
-	<!-- <DistrictLanding district={district} /> -->
-	
-	<!-- {/each} -->
-	<!-- <DistrictLanding -->
-
+	<DistrictLanding country={data.country} districts={data.country.districts} />
 </div>
