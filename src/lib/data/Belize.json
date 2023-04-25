@@ -5,41 +5,267 @@
     ],
     "hook": "Are you yearning to escape the hustle and bustle of modern life and ready for an adventure like no other?",
     "catchPhrase": "Look no further! Explore Belize, the gateway of the Carribeans and the Central American region. Listen to the real sound of life and dive into astonishing water scenery.",
+    "socialProof": [
+        {
+            "name": "Leonardo DiCaprio",
+            "quote": "It was like heaven on earth",
+            "source": "https://www.nytimes.com/2015/04/05/realestate/an-idea-hits-the-beach.html"
+        }
+    ],
     "mapConfig": {
         "lng": -88.65292533421297,
         "lat": 17.2,
-        "zoom": 5
+        "zoom": 5.85
     },
     "districts": [
         {
             "id": "BLZ.1_1",
             "name": "Belize",
-            "keyphrase": ""
-        },
-        {
-            "id": "BLZ.5_1",
-            "name": "Stann Creek",
-            "keyphrase": ""
-        },
-        {
-            "id": "BLZ.6_1",
-            "name": "Toledo",
-            "keyphrase": ""
-        },
-        {
-            "id": "BLZ.2_1",
-            "name": "Cayo",
-            "keyphrase": " destination."
+            "keyphrase": "The main street of Belize City is usually home to banks, shops and offices, while entrepreneurs like fruit, fast food or jewellery vendors swarm for the scarce space on the pavements. In September, the commercial capital becomes steadily more colorful until the festivities errupt to celebrate Belize's independence on September, 21.",
+            "map": "districts/Belize_in_Belize.png",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Museum of Belize",
+                    "thumbnail": "https://d1ay7qnb0dqwzm.cloudfront.net/300230.900.2e30ff8218.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Built as Her Majesty's Prision between 1854 and 1857",
+                        "Repurposed as the Museum of Belize in 2002",
+                        "Documents the City's history of the last 370 years",
+                        "Gallery with well-preserved ancient Mayan masterpieces"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Belize Zoo",
+                    "thumbnail": "https://www.belizezoo.org/wp-content/uploads/2020/01/baby-tapir.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Zoo originally housed semi-tamed animals from the documentary 'Path of the Rain God' Sharon Matola decided to start a zoo and hung sings out the road",
+                        "Capture astonishing close-ups of wildlife in their natural habitat",
+                        "Spot Baird's tapir, scarlet macaws, tucans and even jaguars"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Monkey Bay Wildlife",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Explore and learn how to preserve the Belizean wilderness",
+                        "Specializes in natural history and watershed ecology",
+                        "Experience real sustainable living",
+                        "Camping with an amazing mountain-view"
+                    ]
+                }
+            ]
         },
         {
             "id": "BLZ.4_1",
             "name": "Orange Walk",
-            "keyphrase": ""
+            "map": "districts/Orange_Walk_in_Belize.png",
+            "keyphrase": "Belize's north remains off the tourist trail the most. Culturally more closely tied to Mexico, this district encompases secluded lagoons, savannahs, swamps and lush rainforests",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Lamanai",
+                    "thumbnail": "https://belizecruiseexcursions.com/wp-content/uploads/2016/04/lamanaimask5.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Extensively restored Mayan Site",
+                        "Original Mayan name 'Lama'an ayin' translates to 'submerged crocodile'",
+                        "Home to black howler monkey",
+                        "Climb the 35m Late Preclassic temple 'The High Temple' for a gazebo above the rain forest"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Río Bravo",
+                    "thumbnail": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/t/n/tnc_93530698_4000x2200.jpg?crop=240%2C0%2C3520%2C2200&wid=824&hei=515&scl=4.271844660194175",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Conservation and Management Area",
+                        "This enormous tract of land spanning more than a quarter million acres has defied Coca-Cola's efforts of deforestation to grow citrus crops",
+                        "Dazzling landscapes including tropical limestone escarpments, river valleys and swamps"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Todo",
+                    "thumbnail": "https://i.imgur.com/WOgTG96.gif",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
         },
         {
             "id": "BLZ.3_1",
             "name": "Corozal",
-            "keyphrase": "Ready for an adventure like no other? Come to the Belizean district of Corozal and discover its world-famous Barrier Reef, teeming with vibrant fish colonies. Cruise around the stunning Caribbean Sea in a golf cart and take in the incredible views. Immerse yourself in the rich melting pot of cultures that make Corozal so unique. Experience the thrill of snorkeling and get up close and personal with the stunning underwater world. Come and be swept away by the magic of Corozal, where adventure awaits around every corner."
+            "map": "districts/Corozal_in_Belize.png",
+            "keyphrase": "Belize's pristine marine ecosystem on the cayes is a paradise for scuba divers, snorkellers and beach lovers, especially. Here, you can experience the captivating vibe that Madonna raves in 'La Isla Bonita' about. With a sailing trip in Corazol, you can catch a glorious sunset in the Carribeans, swim with nurse sharks and the colonies of brilliantly coloured fishes.",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "The Blue Hole",
+                    "thumbnail": "https://lp-cms-production.imgix.net/features/2015/08/GettyImages-451852-001_full_cs.png",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "This 300m wide and 135m deep kast-eroded sinkhole flows into a complex underwater network",
+                        "Caves, crevices, stalactites and stalagmites",
+                        "Swim in the perceived nothingness of it deep blue colour"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Hol Chan",
+                    "thumbnail": "https://cdn.projectexpedition.com/photos/560c13f6ab4cb_large.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Its Mayan name translates into 'little channel'",
+                        "Marine Reserve",
+                        "Get amazed by vivid underwater scenery including coral reefs, seagrass bed and mangroves",
+                        "Encounter nurse sharks and watch gigantic stingrays glide effortlessly through the water"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Leonardo DiCaprio",
+                    "thumbnail": "https://static01.nyt.com/images/2015/04/05/realestate/20150405COVER-slide-OMAO/20150405COVER-slide-OMAO-superJumbo.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Eco-resort Blackadore Cay",
+                        "Fully powered by renewable energy"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.5_1",
+            "name": "Stann Creek",
+            "map": "districts/Stann_Creek_in_Belize.png",
+            "keyphrase": "TODO",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.6_1",
+            "name": "Toledo",
+            "map": "districts/Toledo_in_Belize.png",
+            "keyphrase": "This district is home to traditional Maya farming villages. TODO",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.2_1",
+            "name": "Cayo",
+            "map": "districts/Cayo_in_Belize.png",
+            "keyphrase": "This district truly is an island encircled by impregnable rain forest teeming with wildlife. Tranquil kayak rides allow you to watch the jaw-dropping scenery slide by and don't forget to experience the best the Mayan culture has to offer.",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Actun Tunichil Muknal",
+                    "thumbnail": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/c6/98/b4.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Xunantunich",
+                    "thumbnail": "https://belize.com/wp-content/uploads/2021/08/xunantunich-belize-maya-temple.webp",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Mountain Pine Ridge Forest Reserve",
+                    "thumbnail": "https://i1.wp.com/www.superbelize.com/wp-content/uploads/2013/10/Rio-On-Pools.jpg?fit=1600%2C1010",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
         }
     ],
     "keyphrase": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
@@ -368,6 +594,9 @@
         "eductation": ""
     },
     "optimates": {
+        "competitors": [
+            "https://belizing.com/"
+        ],
         "marketingEvents": [
             "La Ruta Maya Canoe Race",
             "Cruise Ship arrivals"
@@ -546,7 +775,7 @@
             "coordinates": {
                 "lng": -88.1962,
                 "lat": 17.5046
-            } 
+            }
         },
         {
             "name": "San Ignacio",
@@ -555,7 +784,7 @@
             "coordinates": {
                 "lng": -89.08,
                 "lat": 17.1523
-            } 
+            }
         },
         {
             "name": "Belmopan",
@@ -564,7 +793,7 @@
             "coordinates": {
                 "lng": -88.759,
                 "lat": 17.251
-            } 
+            }
         },
         {
             "name": "Orange Walk Town",
@@ -573,7 +802,7 @@
             "coordinates": {
                 "lng": -88.57103,
                 "lat": 18.08428
-            } 
+            }
         },
         {
             "name": "Corazal Town",
@@ -582,7 +811,7 @@
             "coordinates": {
                 "lng": -88.38849,
                 "lat": 18.39375
-            } 
+            }
         }
     ]
 }

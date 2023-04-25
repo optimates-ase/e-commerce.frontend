@@ -19,6 +19,17 @@ interface Img {
 	altText: string;
 }
 
+<<<<<<< HEAD
+export interface Highlight {
+	id: number;
+	name: string;
+	icon: string;
+	thumbnail: string;
+	keyExpression: string[];
+}
+
+=======
+>>>>>>> d058d5c72b1893bf665971faf17b047b940e325d
 export interface ClimateInfluenceMinor {
 	name: string;
 	max: MinorInfluence;
@@ -64,7 +75,9 @@ export interface FeatureCollection {
 export interface District {
 	id: string;
 	name: string;
+	map: string;
 	keyphrase: string;
+	highlights: Highlight[];
 }
 
 export interface Country {
@@ -75,7 +88,6 @@ export interface Country {
 	keywords: string[];
 	keyphrase: string;
 	mapConfig: MapConfig;
-	geoJSON: FeatureCollection;
 	carouselImg: CarouselImg[];
 	climateInfluenceMinor: ClimateInfluenceMinor;
 	markedCities: MapMarker[];
@@ -90,18 +102,3 @@ export interface Tour {
 	minimum: number;
 	images: string[];
 }
-
-export interface DistrictProperties {
-	id: string;
-	name: string;
-	tours: Tour[] | [];
-}
-
-export interface DistrictNavProperties {
-	id: string;
-	slug: string;
-	dispName: string;
-	keywords: string[];
-}
-
-export interface Marker {}

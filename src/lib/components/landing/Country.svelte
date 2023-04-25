@@ -1,9 +1,11 @@
 <script lang="ts">
 	import StaticMap from '$comp/landing/StaticMap.svelte';
-	import type { Country } from '$lib/types';
+	import type { Country, FeatureCollection } from '$lib/types';
 	import VRPic from '$comp/UIUX/VR/360Degree.svelte';
 
 	export let country: Country;
+	export let geoJSON: FeatureCollection;
+
 </script>
 
 <div id="countryOverview" class="w-[90%] max-w-screen-xl mx-auto mt-2">
@@ -14,7 +16,7 @@
 		<div class="col-span-3 h-">
 			<StaticMap
 				countryName={country.name}
-				countryGeoJSON={country.geoJSON}
+				countryGeoJSON={geoJSON}
 				center={[country.mapConfig.coordinates.lng, country.mapConfig.coordinates.lat]}
 				zoom={country.mapConfig.zoom}
 				markers={country.markedCities}
