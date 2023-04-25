@@ -1,0 +1,817 @@
+{
+    "name": "Belize",
+    "formerName": [
+        "British Honduras"
+    ],
+    "hook": "Are you yearning to escape the hustle and bustle of modern life and ready for an adventure like no other?",
+    "catchPhrase": "Look no further! Explore Belize, the gateway of the Carribeans and the Central American region. Listen to the real sound of life and dive into astonishing water scenery.",
+    "socialProof": [
+        {
+            "name": "Leonardo DiCaprio",
+            "quote": "It was like heaven on earth",
+            "source": "https://www.nytimes.com/2015/04/05/realestate/an-idea-hits-the-beach.html"
+        }
+    ],
+    "mapConfig": {
+        "lng": -88.65292533421297,
+        "lat": 17.2,
+        "zoom": 5.85
+    },
+    "districts": [
+        {
+            "id": "BLZ.1_1",
+            "name": "Belize",
+            "keyphrase": "The main street of Belize City is usually home to banks, shops and offices, while entrepreneurs like fruit, fast food or jewellery vendors swarm for the scarce space on the pavements. In September, the commercial capital becomes steadily more colorful until the festivities errupt to celebrate Belize's independence on September, 21.",
+            "map": "districts/Belize_in_Belize.png",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Museum of Belize",
+                    "thumbnail": "https://d1ay7qnb0dqwzm.cloudfront.net/300230.900.2e30ff8218.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Built as Her Majesty's Prision between 1854 and 1857",
+                        "Repurposed as the Museum of Belize in 2002",
+                        "Documents the City's history of the last 370 years",
+                        "Gallery with well-preserved ancient Mayan masterpieces"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Belize Zoo",
+                    "thumbnail": "https://www.belizezoo.org/wp-content/uploads/2020/01/baby-tapir.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Zoo originally housed semi-tamed animals from the documentary 'Path of the Rain God' Sharon Matola decided to start a zoo and hung sings out the road",
+                        "Capture astonishing close-ups of wildlife in their natural habitat",
+                        "Spot Baird's tapir, scarlet macaws, tucans and even jaguars"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Monkey Bay Wildlife",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Explore and learn how to preserve the Belizean wilderness",
+                        "Specializes in natural history and watershed ecology",
+                        "Experience real sustainable living",
+                        "Camping with an amazing mountain-view"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.4_1",
+            "name": "Orange Walk",
+            "map": "districts/Orange_Walk_in_Belize.png",
+            "keyphrase": "Belize's north remains off the tourist trail the most. Culturally more closely tied to Mexico, this district encompases secluded lagoons, savannahs, swamps and lush rainforests",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Lamanai",
+                    "thumbnail": "https://belizecruiseexcursions.com/wp-content/uploads/2016/04/lamanaimask5.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Extensively restored Mayan Site",
+                        "Original Mayan name 'Lama'an ayin' translates to 'submerged crocodile'",
+                        "Home to black howler monkey",
+                        "Climb the 35m Late Preclassic temple 'The High Temple' for a gazebo above the rain forest"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Río Bravo",
+                    "thumbnail": "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/t/n/tnc_93530698_4000x2200.jpg?crop=240%2C0%2C3520%2C2200&wid=824&hei=515&scl=4.271844660194175",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Conservation and Management Area",
+                        "This enormous tract of land spanning more than a quarter million acres has defied Coca-Cola's efforts of deforestation to grow citrus crops",
+                        "Dazzling landscapes including tropical limestone escarpments, river valleys and swamps"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Todo",
+                    "thumbnail": "https://i.imgur.com/WOgTG96.gif",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.3_1",
+            "name": "Corozal",
+            "map": "districts/Corozal_in_Belize.png",
+            "keyphrase": "Belize's pristine marine ecosystem on the cayes is a paradise for scuba divers, snorkellers and beach lovers, especially. Here, you can experience the captivating vibe that Madonna raves in 'La Isla Bonita' about. With a sailing trip in Corazol, you can catch a glorious sunset in the Carribeans, swim with nurse sharks and the colonies of brilliantly coloured fishes.",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "The Blue Hole",
+                    "thumbnail": "https://lp-cms-production.imgix.net/features/2015/08/GettyImages-451852-001_full_cs.png",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "This 300m wide and 135m deep kast-eroded sinkhole flows into a complex underwater network",
+                        "Caves, crevices, stalactites and stalagmites",
+                        "Swim in the perceived nothingness of it deep blue colour"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Hol Chan",
+                    "thumbnail": "https://cdn.projectexpedition.com/photos/560c13f6ab4cb_large.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Its Mayan name translates into 'little channel'",
+                        "Marine Reserve",
+                        "Get amazed by vivid underwater scenery including coral reefs, seagrass bed and mangroves",
+                        "Encounter nurse sharks and watch gigantic stingrays glide effortlessly through the water"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Leonardo DiCaprio",
+                    "thumbnail": "https://static01.nyt.com/images/2015/04/05/realestate/20150405COVER-slide-OMAO/20150405COVER-slide-OMAO-superJumbo.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "Eco-resort Blackadore Cay",
+                        "Fully powered by renewable energy"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.5_1",
+            "name": "Stann Creek",
+            "map": "districts/Stann_Creek_in_Belize.png",
+            "keyphrase": "TODO",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.6_1",
+            "name": "Toledo",
+            "map": "districts/Toledo_in_Belize.png",
+            "keyphrase": "This district is home to traditional Maya farming villages. TODO",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "TODO",
+                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BLZ.2_1",
+            "name": "Cayo",
+            "map": "districts/Cayo_in_Belize.png",
+            "keyphrase": "This district truly is an island encircled by impregnable rain forest teeming with wildlife. Tranquil kayak rides allow you to watch the jaw-dropping scenery slide by and don't forget to experience the best the Mayan culture has to offer.",
+            "highlights": [
+                {
+                    "id": 0,
+                    "name": "Actun Tunichil Muknal",
+                    "thumbnail": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/c6/98/b4.jpg",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 1,
+                    "name": "Xunantunich",
+                    "thumbnail": "https://belize.com/wp-content/uploads/2021/08/xunantunich-belize-maya-temple.webp",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Mountain Pine Ridge Forest Reserve",
+                    "thumbnail": "https://i1.wp.com/www.superbelize.com/wp-content/uploads/2013/10/Rio-On-Pools.jpg?fit=1600%2C1010",
+                    "icon": "(icon)",
+                    "keyExpression": [
+                        "TODO",
+                        "TODO",
+                        "TODO"
+                    ]
+                }
+            ]
+        }
+    ],
+    "keyphrase": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
+    "keyphrases": {
+        "home": "Welcome to Belize, a tropical paradise with warm and hospitable people. Explore the lush rainforest with its exotic wildlife and captivating waterfalls. Immerse yourself in the authentic culture of this vibrant country and experience its rich history and traditions. Discover the astonishing coral reefs of the Caribbean Sea, where you can snorkel or dive and witness the beauty of the underwater world. With its perfect blend of adventure and relaxation, Belize offers a unique vacation experience. Come and be enchanted by the natural wonders of this breathtaking destination, where the warmth of the people will make you feel right at home.",
+        "BLZ.1_1": "",
+        "BLZ.2_1": "Are you yearning to escape the hustle and bustle of modern life? Come experience the unspoiled nature of the west Belizean district Cayo, where lush tropical jungles meet ancient Mayan ruins. Immerse yourself in the vibrant culture of local spice farms, and try your hand at river fishing in some of the most pristine waters in the world. In Cayo, you'll feel a sense of peace and wonder like nowhere else. So take a step back in time and connect with nature in this truly magical destination.",
+        "BLZ.3_1": "Ready for an adventure like no other? Come to the Belizean district of Corozal and discover its world-famous Barrier Reef, teeming with vibrant fish colonies. Cruise around the stunning Caribbean Sea in a golf cart and take in the incredible views. Immerse yourself in the rich melting pot of cultures that make Corozal so unique. Experience the thrill of snorkeling and get up close and personal with the stunning underwater world. Come and be swept away by the magic of Corozal, where adventure awaits around every corner.",
+        "BLZ.4_1": "",
+        "BLZ.5_1": "",
+        "BLZ.6_1": ""
+    },
+    "carouselImages": [
+        {
+            "id": "home",
+            "imgs": [
+                {
+                    "src": "",
+                    "altText": ""
+                }
+            ]
+        },
+        {
+            "id": "BLZ.1_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.2_1",
+            "imgs": [
+                {
+                    "src": "san-ignacio/si_1.jpg",
+                    "altText": "Are you yearning to escape the hustle and bustle of modern life?"
+                },
+                {
+                    "src": "san-ignacio/si_3.jpg",
+                    "altText": "Ready for an adventure like no other?"
+                },
+                {
+                    "src": "san-ignacio/si_3.jpg",
+                    "altText": "some alt text"
+                }
+            ]
+        },
+        {
+            "id": "BLZ.3_1",
+            "imgs": [
+                {
+                    "src": "san-pedro/sp_1.jpg",
+                    "altText": "some alt text"
+                },
+                {
+                    "src": "san-pedro/sp_2.jpg",
+                    "altText": "some alt text"
+                }
+            ]
+        },
+        {
+            "id": "BLZ.4_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.5_1",
+            "imgs": []
+        },
+        {
+            "id": "BLZ.6_1",
+            "imgs": []
+        }
+    ],
+    "pictures": {
+        "home": {
+            "img": [
+                "home/home.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.1_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.2_1": {
+            "src": [
+                "san-ignacio/si_1.jpg",
+                "san-ignacio/si_3.jpg",
+                "san-ignacio/si_3.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.3_1": {
+            "src": [
+                "san-pedro/sp_1.jpg",
+                "san-pedro/sp_2.jpg"
+            ],
+            "alt-text": ""
+        },
+        "BLZ.4_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.5_1": {
+            "src": [],
+            "alt-text": ""
+        },
+        "BLZ.6_1": {
+            "src": [],
+            "alt-text": ""
+        }
+    },
+    "keywords": [
+        "authentic",
+        "genuinely friendly",
+        "warm and hospital people",
+        "Mother nature's best kept secret",
+        "Experience the real sound of life",
+        "unspoiled environment",
+        "melting pot of cultures",
+        "tropical jungle",
+        "lush rainforest",
+        "ancient Mayan ruins",
+        "archeological sites",
+        "jungle hiking",
+        "Guatemala",
+        "Snorkeling",
+        "jungle zip lining",
+        "Cave Tubing",
+        "River Tubing",
+        "Spice farms",
+        "river fishing",
+        "Blue hole",
+        "'You just don't wanna be on the Islands when a hurricane hits.'",
+        "English-speaking country",
+        "Carribean Sea",
+        "beatiful beaches",
+        "astonishing coral reefs",
+        "world-famous Barrier Reef",
+        "endless opportunities for the adventureous traveller"
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "type": "Official language",
+            "spokenBy": ""
+        },
+        {
+            "name": "Kriol",
+            "type": "Dialect",
+            "info": "sing song language",
+            "spokenBy": [
+                "Creole",
+                "Mestizo",
+                "Mennonite"
+            ]
+        },
+        {
+            "name": "Spanish",
+            "type": "",
+            "spokenBy": [
+                "Mayan",
+                "Mestizo",
+                "Mennonite"
+            ]
+        },
+        {
+            "name": "Mayan",
+            "type": "DialectCollection",
+            "spokenBy": ""
+        }
+    ],
+    "activities": [
+        "kayaking",
+        "birding",
+        "monkey sighting",
+        "mantee seeing",
+        "waterfall",
+        "original chocolate",
+        "Mountain Pine Ridge Forest Resort",
+        "Xunantunich Archeological Reserve",
+        "Actun Tunichil Muknal",
+        "Cockscomb Basin Wildlife Sanctuary",
+        "Nohoch Che'en Caves Branch Archeological Reserve",
+        "Mayflower Bacawina National Park",
+        "Chaa Creek Nature Reserve",
+        "Lamanai Archeological Reserve",
+        "St. Herman's Blue National Park",
+        "Caracol Archeological Reserve",
+        "Gallon Jug Estate",
+        "Outback trail horse back riding",
+        "scuba diving",
+        "inner reef fishing",
+        "deep sea fishing",
+        "salt water fly fishing",
+        "catamaran sailing"
+    ],
+    "majorHolidays": [
+        {
+            "occurence": "March 9",
+            "name": "Baron Bliss Day Parada",
+            "placeToBe": [
+                ""
+            ],
+            "enjoy": [
+                "fishing",
+                "sailing"
+            ],
+            "originStory": {
+                "honorary": "Baron Henry Edward Ernest Victor Bliss",
+                "niceToKnow": [
+                    "fell in love with Belize, donated Belizean government large sum of money"
+                ]
+            }
+        },
+        {
+            "occurence": "easter",
+            "name": "easter",
+            "placeToBe": [
+                ""
+            ],
+            "enjoy": [
+                "colorful festivals"
+            ],
+            "highlights": {
+                "longest": {
+                    "name": "Benque Viejo del Carmen",
+                    "duration": "Palm Sunday to Good Friday"
+                }
+            }
+        },
+        {
+            "occurence": "September 10",
+            "name": "St. George's Caye Day",
+            "placeToBe": [
+                "Belize City"
+            ],
+            "enjoy": [
+                "music",
+                "cooking",
+                "drinking"
+            ],
+            "originStory": {
+                "honorary": "Battle at St. George's Caye in 1798",
+                "niceToKnow": [
+                    "British settlers resided near the coast to harvest threes for lumber",
+                    "they defeated Spanish forces and secured Belize's freedom"
+                ]
+            }
+        },
+        {
+            "occurence": [
+                "between",
+                "St. George's Caye Day",
+                "Belize Independence Day"
+            ],
+            "knownFor": "Belize's msot festive time of the year.",
+            "name": "Belize City Carnival",
+            "placeToBe": [
+                "Belize City"
+            ],
+            "enjoy": [
+                "elaborate costumes",
+                "Caribbean music",
+                "seaside concerts"
+            ],
+            "highlights": {}
+        },
+        {
+            "occurence": "September 21",
+            "name": "Belize Independence Day",
+            "enjoy": [
+                "festive parades",
+                "joyful concerts"
+            ],
+            "originStory": {
+                "honorary": "Belize gaining independence from Great Britain in 1981",
+                "niceToKnow": [
+                    "friendly relations maintained with Great Britain and joined British Commonwealth",
+                    "Queen is featured on Belizean currency"
+                ]
+            }
+        },
+        {
+            "occurence": "November 19",
+            "name": "Garífuna Settlement Day",
+            "placeToBe": [
+                "Punta Gorda",
+                "Belize City",
+                "Hopkins"
+            ],
+            "enjoy": [
+                "fast-paced drumming",
+                "dancing",
+                "traditional food and drink"
+            ],
+            "originStory": {
+                "honorary": "Garífuna's arrival in Belize in 1823",
+                "niceToKnow": [
+                    "migrated to Belize after shipwreck on St. Vincent Island"
+                ]
+            }
+        },
+        {
+            "occurence": "December 26",
+            "name": "Junkanu parade",
+            "placeToBe": "EASTER_EGG",
+            "enjoy": [
+                "masks with pink skin and red lips",
+                "choreography",
+                "mocking European slave owners"
+            ],
+            "originStory": {
+                "honorary": "",
+                "niceToKnow": [
+                    "tolerated slave 'rebellion'",
+                    "slaves celebrated amongst themselves",
+                    "Junkanu parades were held",
+                    "participants wore 'white'-faces and performed choreographies to mock European slave owners"
+                ]
+            }
+        }
+    ],
+    "demography": {
+        "population": 380000,
+        "populationDensity": {
+            "unit": "people/kilometers^2",
+            "value": 17.64
+        },
+        "eductation": ""
+    },
+    "optimates": {
+        "competitors": [
+            "https://belizing.com/"
+        ],
+        "marketingEvents": [
+            "La Ruta Maya Canoe Race",
+            "Cruise Ship arrivals"
+        ],
+        "NPOs": [
+            {
+                "url": "https://www.marlashouseofhope.org/",
+                "mission": "Marla's House of Hope provides safe, loving, nurturing care for God's Children who have been removed from an abusive environment.",
+                "problem": "Belize's population is approximately 380,000. 36.8% of the population is under the age of 15 years old.\nThe laws of Belize require that a child complete primary school. Unfortunately, only about 80% continue to secondary school, with approximately half completing High school"
+            }
+        ],
+        "companies": [
+            {
+                "url": "https://www.chamberlainbelize.com",
+                "mission": "Our mission is to inspire and motivate those who we train to deliver at the level of their true potential. ",
+                "valueAdded": [
+                    "Train tour guides' to softskills"
+                ]
+            }
+        ]
+    },
+    "neighbouringCountries": [
+        "Mexico",
+        "Guatemala"
+    ],
+    "religions": [
+        {
+            "name": "Christianity",
+            "share": 0.876
+        },
+        {
+            "name": "Atheist",
+            "share": 0.097
+        },
+        {
+            "name": "Folk Religions",
+            "share": 0.015
+        },
+        {
+            "name": "Other",
+            "share": 0.012
+        }
+    ],
+    "ethnicities": [
+        {
+            "name": "Mestizo",
+            "share": 0.529,
+            "moreInfo": [
+                "Mayan European Ancestory"
+            ],
+            "communities": []
+        },
+        {
+            "name": "Creole",
+            "share": 0.259,
+            "moreInfo": [
+                "decendants of African slaves and Europeans"
+            ],
+            "communities": []
+        },
+        {
+            "name": "Maya",
+            "share": 0.113,
+            "moreInfo": [],
+            "communities": []
+        },
+        {
+            "name": "Garifuna",
+            "share": 0.061,
+            "moreInfo": [
+                "Afro-Amerindians"
+            ],
+            "communities": []
+        },
+        {
+            "name": "Indian",
+            "share": 0.039,
+            "moreInfo": [],
+            "communities": []
+        },
+        {
+            "name": "Mennonite",
+            "share": 0.036,
+            "moreInfo": [
+                "Dutch-German",
+                "Plattdeutsch",
+                "Produce much of country's agriculture",
+                "live in tradidional isolated communities"
+            ],
+            "communities": [
+                {
+                    "name": "Barton Creek Mennonites",
+                    "ethnicity": "Mennonite",
+                    "type": "isolated",
+                    "location": "",
+                    "trivia": "",
+                    "produce": [
+                        "honey",
+                        "milk",
+                        "eggs",
+                        "poultry",
+                        "beans",
+                        "stable crops"
+                    ]
+                },
+                {
+                    "name": "San Antonio's Womens Goup",
+                    "ethnicity": "Mennonite",
+                    "type": "isolated",
+                    "location": "San Antonio",
+                    "holidays": {
+                        "occurence": "June 13",
+                        "name": "St. Anthony Day",
+                        "enjoy": [
+                            "traditional Mayan music",
+                            {
+                                "foods": [
+                                    "Tamales"
+                                ]
+                            }
+                        ]
+                    },
+                    "trivia": {
+                        "name": {
+                            "namedAfter": "St. Anthony of Padua",
+                            "reason": "Spanish Priest who visited regularly from the town of Benque Viejo del Carmen brought a statue of St. Anthony to the Village",
+                            "previousName": "Osh Multun Kakab",
+                            "language": "Mayan Yucatec",
+                            "previousNameTranslation": "Three Mound Virgin Forest",
+                            "referedAs": {
+                                "name": "Tanah",
+                                "translation": "our home"
+                            }
+                        }
+                    },
+                    "produce": [
+                        "peanuts",
+                        "corn",
+                        "squash",
+                        "bakery",
+                        "beans",
+                        "pottery",
+                        "local jewelry",
+                        "embroidery",
+                        "hammocks",
+                        "embroidery",
+                        "clothing"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Caucasian",
+            "share": 0.012,
+            "moreInfo": [],
+            "communities": []
+        },
+        {
+            "name": "Chinese",
+            "share": 0.01,
+            "moreInfo": [],
+            "communities": []
+        },
+        {
+            "name": "Other",
+            "share": 0.015,
+            "moreInfo": [],
+            "communities": []
+        }
+    ],
+    "populationHotspots": [
+        {
+            "name": "Belize City",
+            "population": 70000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.1962,
+                "lat": 17.5046
+            }
+        },
+        {
+            "name": "San Ignacio",
+            "population": 30000,
+            "capital": false,
+            "coordinates": {
+                "lng": -89.08,
+                "lat": 17.1523
+            }
+        },
+        {
+            "name": "Belmopan",
+            "population": 20000,
+            "capital": true,
+            "coordinates": {
+                "lng": -88.759,
+                "lat": 17.251
+            }
+        },
+        {
+            "name": "Orange Walk Town",
+            "population": 17000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.57103,
+                "lat": 18.08428
+            }
+        },
+        {
+            "name": "Corazal Town",
+            "population": 13000,
+            "capital": false,
+            "coordinates": {
+                "lng": -88.38849,
+                "lat": 18.39375
+            }
+        }
+    ]
+}

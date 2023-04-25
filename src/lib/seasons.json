@@ -1,0 +1,129 @@
+{
+    "country": "Belize",
+    "mainInfluence": "rain",
+    "rain": {
+        "outliersMax": {
+            "region": "south",
+            "lowerBound": {
+                "unit": "mm",
+                "value": 4000
+            },
+            "upperBound": {
+                "unit": "mm",
+                "value": 5000
+            }
+        },
+        "outlierMin": {
+            "region": "north",
+            "lowerBound": {
+                "unit": "mm",
+                "value": 1300
+            },
+            "upperBound": {
+                "unit": "mm",
+                "value": 2000
+            }
+        }
+    },
+    "seasons": [
+        {
+            "name": "dry",
+            "start": [
+                "between",
+                {
+                    "month": "dec",
+                    "spec": "end"
+                },
+                {
+                    "month": "jan",
+                    "spec": "beginning"
+                }
+            ],
+            "celebrations": []
+        },
+        {
+            "name": "wet",
+            "start": [
+                "between",
+                {
+                    "month": "may",
+                    "spec": "end"
+                },
+                {
+                    "month": "july",
+                    "spec": "beginning"
+                }
+            ],
+            "celebrations": [
+                {
+                    "occurence": "June",
+                    "name": "El Día de San Pedro",
+                    "placeToBe": [
+                        "San Pedro"
+                    ],
+                    "enjoy": [
+                        "school dance recitals"
+                    ],
+                    "originStory": {
+                        "honorary": "Saint Peter",
+                        "niceToKnow": [
+                            "patron saint of fishing"
+                        ]
+                    }
+                },
+                {
+                    "occurence": "July",
+                    "name": "Benque Fiesta",
+                    "placeToBe": [
+                        "Benque Viejo del Carmen"
+                    ],
+                    "enjoy": [
+                        "vibrant summer celebration",
+                        "joyful parades",
+                        "traditonal food",
+                        "carnival rides",
+                        "beauty contest",
+                        "soccer games",
+                        "DJ sets",
+                        "music concerts",
+                        "Flor de la Feria Beauty Pageant",
+                        "marimba music",
+                        "La Reina de La Costa Maya"
+                    ],
+                    "originStory": {
+                        "honorary": "Lady of Mount Carmel",
+                        "niceToKnow": [
+                            "3-day long festival to honor the patron saint of the community"
+                        ]
+                    }
+                },
+                {
+                    "occurence": "August",
+                    "name": "Costa Maya Festiva",
+                    "placeToBe": [
+                        "Flor de la Feria Pageant"
+                    ],
+                    "enjoy": [
+                        "vibrant summer celebration",
+                        "joyful parades",
+                        "traditonal food",
+                        "carnival rides",
+                        "beauty contest",
+                        "soccer games",
+                        "DJ sets",
+                        "music concerts",
+                        "Flor de la Feria Beauty Pageant",
+                        "marimba music",
+                        "La Reina de La Costa Maya"
+                    ],
+                    "originStory": {
+                        "honorary": "Lady of Mount Carmel",
+                        "niceToKnow": [
+                            "3-day long festival to honor the patron saint of the community"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
