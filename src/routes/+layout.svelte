@@ -18,7 +18,7 @@
 
 <Modal />
 
-<AppShell>
+<AppShell class="bg-[url('./images/BGLine.svg')]">
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead"><a href="/">(OptiMates)</a></svelte:fragment>

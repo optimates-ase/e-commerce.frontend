@@ -53,4 +53,4 @@
 	})
 </script>
 
-<div class="h-full" bind:this={mapContainer} />
+<div class="h-full " bind:this={mapContainer} />

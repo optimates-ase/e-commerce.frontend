@@ -25,6 +25,8 @@
 		</header>
 
 		<div id="authControls" class="m-auto">
+
+			
 			<button type="button" class="btn variant-filled-surface w-56" on:click={() => signIn()}>
 				<span>Login with Google</span>
 				<span>(icon1)</span>
