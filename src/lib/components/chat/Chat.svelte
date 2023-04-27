@@ -1,6 +1,5 @@
 <script>
 	import ChatMessage from '$comp/chat/ChatMessage.svelte';
-	import TodayDivider from '$comp/chat/TodayDivider.svelte';
 
 	let nameMe='Me';
 	let profilePicMe='https://p0.pikist.com/photos/474/706/boy-portrait-outdoors-facial-men-s-young-t-shirt-hair-person-thumbnail.jpg';
@@ -47,7 +46,7 @@ let todayMessages =[
             {/each}
             <div class="m-2 mt-4">
                 <div class="flex justify-center ">
-                    <TodayDivider/>
+                    <div class="card variant-filled-primary p-2 px-4 text-xs m-2">Today</div>
                 </div>
 					
 					 {#each todayMessages as todayMessage}
