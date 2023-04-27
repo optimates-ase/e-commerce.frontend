@@ -34,7 +34,7 @@
 
 </script>
 
-<div class="mb-10">
+<div class="mb-10 max-w-md">
     <div class="flex justify-center">
         <div class="w-3/4">
             <h1 class="mb-2 flex justify-start">{title}</h1>

@@ -3,5 +3,7 @@
 </script>
 
 
+<div class="flex items-center w-full">
 
 <Login />
+</div>
