@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Carousel from '$comp/UIUX/Carousel.svelte';
 	import CardsComponent from '$comp/Cards/CardsComponent.svelte';
 </script>
 

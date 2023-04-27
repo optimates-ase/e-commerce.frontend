@@ -9,8 +9,7 @@
 	import '../app.postcss';
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
 	import BarNav from '$comp/Navigation/BarNav.svelte';
-	import { Modal, modalStore } from '@skeletonlabs/skeleton';
-	// import  type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+	import { Modal } from '@skeletonlabs/skeleton';
 
 	import { page } from '$app/stores';
 	import { signIn, signOut } from '@auth/sveltekit/client';

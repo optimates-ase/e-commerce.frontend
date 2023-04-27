@@ -11,6 +11,6 @@
 <div class="max-w-md mx-auto p-3">
 	<CountryLanding country={data.country} geoJSON={data.countryMap}/>
 	<ClimateLanding minorInfluence={data.country.climateInfluenceMinor} />
-	<DistrictLanding country={data.country} districts={data.country.districts} />
+	<DistrictLanding districts={data.country.districts} />
 	<Chat/>
 </div>

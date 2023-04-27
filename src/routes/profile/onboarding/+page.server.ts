@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ locals, parent }) => {
 
     console.log(locals.user)
 
-    if(locals.user) throw redirect(301, "/profile")
+    if(locals.user) throw redirect(301, "/my")
 }
 
 export const actions: Actions = {
@@ -65,6 +65,6 @@ export const actions: Actions = {
 
         console.log(locals.user)
                 
-        throw redirect(301, "/profile");
+        throw redirect(301, "/my");
     }
 }

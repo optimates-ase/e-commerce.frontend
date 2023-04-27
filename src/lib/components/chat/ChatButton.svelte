@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import SubChat from '$comp/chat/ChatSubComponent.svelte';
+    import SubChat from '$comp/chat/ChatMessage.svelte';
     import { Modal, modalStore } from '@skeletonlabs/skeleton';
     import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
 
