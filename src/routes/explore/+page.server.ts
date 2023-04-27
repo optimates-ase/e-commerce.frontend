@@ -1,3 +1,4 @@
+// need to make it infinite, not entirely sure how
 export const load = async () => {
 	const tours = await fetch('http://localhost:8000/tours/randomize/?page=1');
 	return tours.json();

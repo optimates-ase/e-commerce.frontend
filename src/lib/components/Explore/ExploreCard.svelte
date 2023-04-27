@@ -1,15 +1,13 @@
 <script lang="ts">
 	import Carousel from '$comp/UIUX/Carousel.svelte';
 	import Rating from '$comp/Tours/Rating.svelte';
+	import Favorite from '$comp/Tours/Favorite.svelte';
 	import type { Tour } from '$lib/types';
 
 	// representation
 	export let tour: Tour;
 	let { rating, num_of_ratings } = tour;
 
-	//favorites
-	let favorites: number[] = [];
-	const addFav = () => {};
 </script>
 
 <div class="card">
@@ -17,6 +15,9 @@
 	<div class="descr">
 		<div class="w-2/3">
 			{tour.description}
+		</div>
+		<div class="flex justify-end w-full">
+			<Favorite />
 		</div>
 		<div class="w-1/3">
 			<ul class="gap-5">
@@ -35,6 +36,7 @@
 	<div class="w-full">
 		<Carousel srcs={tour.images} />
 	</div>
+
 </div>
 
 <style>
