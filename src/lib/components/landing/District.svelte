@@ -43,31 +43,33 @@
 	};
 </script>
 
-<div class="mt-4 mb-8">
-	<div class="mb-8 w-full">
-		<h2>Districts</h2>
+<div class="mt-4 mb-8 p-6">
+	<div class="mb-8 w-full p-2">
+		<h1>Districts</h1>
 	</div>
 
 	<Stepper>
 		{#each districts as district}
 			<Step on:next={handleNext}>
 				<svelte:fragment slot="header">
+					<div class="mx-4 my-3">
 					{district.name}
+					</div>
 				</svelte:fragment>
-				<div class="h-[550px] card grid grid-cols-7 gap-2">
-					<div class="variant-glass-secondary col-span-7 h-60 w-full p-2">
+				<div class="h-4/5 card grid grid-cols-7 ">
+					<div class=" col-span-7 h-70 w-full p-2">
 						<div class="p-4">
 							{district.keyphrase}
 						</div>
 					</div>
-					<div class="col-span-4 h-60 w-full">
+					<div class="col-span-4 h-60 w-full p-3 ">
 						<img
-							class="h-full mx-auto"
+							class="h-full mx-auto rounded-xl"
 							src={district.map}
 							alt={'Map of Belize with ' + district.name + 'highlighted.'}
 						/>
 					</div>
-					<div class="variant-glass-secondary col-span-3 items-center h-60 w-full">
+					<div class=" col-span-3 flex items-center h-60 w-full pr-3">
 						<!-- TODO probably switch to buttons since, I don't know how to unselect the radiobuttons when changing the step -->
 						<RadioGroup display="flex-col" rounded="rounded-container-token">
 							{#each district.highlights as highlight}
@@ -77,7 +79,7 @@
 									value={highlight.id}
 									on:click={handleClick}
 								>
-									<div class="h-14">
+									<div class="h-18">
 										{highlight.name}
 									</div>
 								</RadioItem>
