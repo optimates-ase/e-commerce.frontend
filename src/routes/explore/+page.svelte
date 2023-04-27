@@ -5,6 +5,7 @@
 	import type { Tour } from '$lib/types';
 
 	export let data;
+	console.log(data);
 	let tours: Tour[] | [];
 	$: tours = data.tours;
 </script>

@@ -3,7 +3,7 @@
 	import 'aframe-svelte';
 </script>
 
-<a-scene embedded>
+<a-scene embedded >
 	<a-sky src="aframe/san-pedro-beach.jpg" rotation="0 0 0" />
 	<a-text
 		font="kelsonsans"

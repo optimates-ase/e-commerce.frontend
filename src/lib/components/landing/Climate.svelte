@@ -6,12 +6,16 @@
 
 </script>
 
-<div id="climateOverview" class="w-[90%] mx-auto mt-6">
-	<div id="climateOverviewHeader" class="grid grid-cols-7">
-		<div id="climateTitle" class="col-span-2">
-			<h1>Climate</h1>
-		</div>
-		<div id="climateChartCompletion" class="col-span-5 grid grid-cols-2">
+<div id="climateOverview" class=" w-[90%] mx-auto my-6 mt-10">
+	<div id="climateTitle" class="col-span-2 my-3 p-2">
+		<h1>Climate</h1>
+	</div>
+
+	<div class="card p-5">
+	
+	<div id="climateOverviewHeader" class="grid grid-cols-7 mt-2">
+		
+		<div id="climateChartCompletion" class="col-span-7 grid grid-cols-2">
 			<div id="climateMinorMin" class="col-span-1">
 				<p>Min {minorInfluence.name}</p>
                 in {minorInfluence.min.month}
@@ -24,8 +28,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="climateOverviewBody" class="mt-4 h- w-[100%] bg-white">
-		<VideoPlayer src={"videos/caye-caulker.mp4"}/>
+	
+	<div id="climateOverviewBody" class="mt-4 h-[100%] w-[100%] bg-white">
+		<VideoPlayer src={"videos/caye-caulker.mp4"} />
 	</div>
+</div>
+	
 </div>
 
