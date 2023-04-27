@@ -1,8 +1,15 @@
 <script lang="ts">
 	import Carousel from '$comp/UIUX/Carousel.svelte';
+	import Rating from '$comp/Tours/Rating.svelte';
 	import type { Tour } from '$lib/types';
 
+	// representation
 	export let tour: Tour;
+	let { rating, num_of_ratings } = tour;
+
+	//favorites
+	let favorites: number[] = [];
+	const addFav = () => {};
 </script>
 
 <div class="card">
@@ -12,13 +19,12 @@
 			{tour.description}
 		</div>
 		<div class="w-1/3">
-			<ul class="gap-2">
+			<ul class="gap-5">
 				<li>
-					Price: {tour.price}
-					{tour.currency}
+					<Rating {rating} {num_of_ratings} />
 				</li>
 				<li>
-					Rating: {tour.rating}
+					Price: {tour.price}{tour.currency}
 				</li>
 				<li>
 					Minimum: {tour.minimum}

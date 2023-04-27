@@ -98,7 +98,8 @@ export interface Tour {
 	description: string;
 	price: number;
 	currency: string;
-	rating: string;
+	rating: number;
+	num_of_ratings: number;
 	minimum: number;
 	images: string[];
 }
