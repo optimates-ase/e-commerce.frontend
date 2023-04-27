@@ -17,10 +17,10 @@
 	const toggle = () => {
 		favorite = !favorite;
 		alert(favorite);
-		dispatch('favorited')
+		//dispatch('favorited')
 	};
 </script>
 
-<div on:click={toggle} class="hover:bg-black">
-	<Star fill={getStyling()} />
+<div class="hover:bg-black">
+	<Star on:click={toggle} fill={getStyling()} />
 </div>

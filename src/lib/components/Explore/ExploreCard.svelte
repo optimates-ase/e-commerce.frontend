@@ -36,7 +36,6 @@
 	<div class="w-full">
 		<Carousel srcs={tour.images} />
 	</div>
-
 </div>
 
 <style>
