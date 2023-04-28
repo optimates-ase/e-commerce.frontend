@@ -1,13 +1,25 @@
-interface Coordinate {
+export interface Coordinate {
 	lng: number;
 	lat: number;
 }
 
+export interface MapBoundries {
+	maxLng: number,
+	minLng: number,
+	maxLat: number,
+	minLat: number
+}
+
 interface MapConfig {
 	coordinates: Coordinate;
+	boundaries: MapBoundries;
 	zoom: number;
 }
 
+export interface Activity {
+	name: string;
+	icon: string;
+}
 interface MinorInfluence {
 	avg: number;
 	month: string;
@@ -19,7 +31,6 @@ interface Img {
 	altText: string;
 }
 
-<<<<<<< HEAD
 export interface Highlight {
 	id: number;
 	name: string;
@@ -28,8 +39,6 @@ export interface Highlight {
 	keyExpression: string[];
 }
 
-=======
->>>>>>> d058d5c72b1893bf665971faf17b047b940e325d
 export interface ClimateInfluenceMinor {
 	name: string;
 	max: MinorInfluence;
@@ -77,6 +86,7 @@ export interface District {
 	name: string;
 	map: string;
 	keyphrase: string;
+	activities: Activity;
 	highlights: Highlight[];
 }
 
@@ -103,3 +113,4 @@ export interface Tour {
 	minimum: number;
 	images: string[];
 }
+

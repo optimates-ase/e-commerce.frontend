@@ -25,6 +25,7 @@ export const load = async () => {
 				lat: countryData.mapConfig.lat,
 				lng: countryData.mapConfig.lng
 			},
+			boundaries: countryData.mapConfig.mapBoundaries,
 			zoom: countryData.mapConfig.zoom
 		},
 		carouselImg: countryData.carouselImages,
@@ -37,6 +38,7 @@ export const load = async () => {
 	};
 
 	let countryMap = fetchMapCountryData();
+	
 	
 	return { country: country, countryName: countryName, countryMap: countryMap };
 };

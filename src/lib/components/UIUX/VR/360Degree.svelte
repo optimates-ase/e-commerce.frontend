@@ -1,8 +1,7 @@
 <script lang="ts">
-	import 'aframe';
-	import 'aframe-svelte';
+	import { browser } from "$app/environment";
 </script>
-
+{#if browser}
 <a-scene embedded >
 	<a-sky src="aframe/san-pedro-beach.jpg" rotation="0 0 0" />
 	<a-text
@@ -13,3 +12,4 @@
 		rotation="0 -15 0"
 	/>
 </a-scene>
+{/if}
