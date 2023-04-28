@@ -56,7 +56,7 @@
 					</div>
 				</svelte:fragment>
 				<div class="h-4/5 card grid grid-cols-7 ">
-					<div class=" col-span-7 h-70 w-full p-2">
+					<div class=" col-span-7 h-72 w-full p-2">
 						<div class="p-4">
 							{district.keyphrase}
 						</div>
