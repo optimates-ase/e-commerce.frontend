@@ -2,55 +2,90 @@
 	import { onDestroy, onMount } from 'svelte';
 
 	import { Map } from 'maplibre-gl';
-	//import { PUBLIC_MAPTILER_STYLES } from '$env/static/public';
-	import type { FeatureCollection, MapMarker } from '$lib/types';
-	import { addFeatures, addMarkers } from '$comp/Map/utils';
+	import { PUBLIC_MAPTILER_STYLES } from '$env/static/public';
+	import type { FeatureCollection, MapBoundries, MapMarker } from '$lib/types';
+	import {
+		addFeatures,
+		easeInOutElastic,
+		easeInOutSine,
+		filterMap,
+		inBound,
+		resetFilter,
+		resetMap
+	} from '$comp/Map/utils';
+	import { writable, type Writable } from 'svelte/store';
+	import { selectedDistrict } from '$lib/stores';
 
 	export let countryName: string;
 	export let countryGeoJSON: FeatureCollection;
-	export let center: [number, number]
+	export let mapBoundaries: MapBoundries;
+	export let center: [number, number];
 	export let zoom: number;
 	export let markers: MapMarker[];
 
 	let mapContainer: string | HTMLElement;
-	let map: Map | undefined
+	let map: Map | undefined;
+	let loading: boolean = true;
+	let dId: string;
+
+	const handleMapReset = async (
+		resMap: Map,
+		easingAnimation: (_: number) => number,
+		speed: number
+	) => {
+		resetMap(resMap, center, zoom, speed, easingAnimation);
+	};
+
+	const unsubscribeToHighlightId = selectedDistrict.subscribe((val: string) => {
+		dId = val;
+	});
 
 	// TODO Add markers for Belize City, San Ignacio, Belmopan, Orange Walk Town and Corazol Town
-
 	onMount(() => {
 		let map: Map = new Map({
 			container: mapContainer,
-			style: 'https://api.maptiler.com/maps/streets-v2/style.json?key=R7SWIU6LxTG0LcVb5eyr',
-			//style: 'PUBLIC_MAPTILER_STYLES',
-			center: center,
+			style: PUBLIC_MAPTILER_STYLES,
+			center: [8.55, 47.36667],
 			zoom: zoom,
-			dragPan: false,
+			dragPan: true,
 			dragRotate: false,
-			doubleClickZoom: false,
 			touchZoomRotate: false,
-			scrollZoom: false,
-			attributionControl: false			
+			attributionControl: false
 		});
 
-		map.on('load', () => {
+		map.on('load', async () => {
 			addFeatures(map, countryName, countryGeoJSON.features);
-			// addMarkers(map, markers);
-			// map.resize();
-		});
-		// if(highlighted !== '') map.setFilter(borderLayer.id, ["all", ["==", "id", highlighted]]);
-
-		map.on('click', 'polygons', function (e) {
-			// let districtId = e.features[0].properties.id;
-			// map.setFilter(borderLayer.id, ['all', ['==', 'id', districtId]]);
-			// activeDis.set(districtId);
-			// console.log(e.features[0].properties);
+			handleMapReset(map, easeInOutSine, 2.5);
+			loading = false;
 		});
 
+		map.on('zoom', () => {
+			if (!(inBound(map, mapBoundaries) || map.isEasing())) {
+				setTimeout(() => handleMapReset(map, easeInOutElastic, 2.5), 300);
+			}
+		});
+
+		map.on('move', () => {
+			if (!(inBound(map, mapBoundaries) || map.isEasing())) {
+				setTimeout(() => handleMapReset(map, easeInOutElastic, 0.5), 300);
+			}
+		});
+
+		map.on('click', (e) => {
+			resetFilter(map);
+			selectedDistrict.set('');
+		});
+		map.on('click', 'polygons', (e) => {
+			let districtId = e.features[0].properties.GID_1;
+			filterMap(map, countryName, districtId);
+			selectedDistrict.set(districtId);
+		});
 	});
 
 	onDestroy(() => {
-		map = undefined;
-	})
+		map?.remove();
+		unsubscribeToHighlightId();
+	});
 </script>
 
-<div class="h-full " bind:this={mapContainer} />
+<div class="h-full" bind:this={mapContainer} />

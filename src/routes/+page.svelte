@@ -3,6 +3,7 @@
 	import DistrictLanding from '$comp/landing/District.svelte';
 	import ClimateLanding from '$comp/landing/Climate.svelte';
     import Chat from '$comp/chat/Chat.svelte';
+	
 
 
 	export let data;
