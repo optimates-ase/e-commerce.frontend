@@ -22,7 +22,7 @@
 	<div class="card p-5">
 		<div id="countryOverviewHeader" class="h-60 grid grid-cols-7">
 			<div class="col-span-4 w-[90%] m-auto">			
-					<p class="text-center">{@html country.hook}</p>
+					<p class="text-center">HERE SHOULD BE DISTRICT ATTRACTIONS{@html country.hook}</p>
 			</div>
 			<div class="col-span-3 h- ">
 				<StaticMap
