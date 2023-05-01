@@ -5,22 +5,26 @@
 	const dispatch = createEventDispatcher();
 
 	export let favorite = false;
+	let starStyle: string;
 
-	const getStyling = () => {
-		if (!favorite) {
-			return 'fill-white stroke-slate-400';
-		} else {
-			return 'fill-yellow-500 stroke-yellow-600';
-		}
-	};
+	$: {
+		starStyle = favorite ? 'fill-yellow-500 stroke-yellow-600' : 'fill-white stroke-slate-400';
+	}
 
 	const toggle = () => {
 		favorite = !favorite;
-		alert(favorite);
-		//dispatch('favorited')
+		dispatch('favorited');
 	};
 </script>
 
-<div class="hover:bg-black">
-	<Star on:click={toggle} fill={getStyling()} />
+<div class="has-pointer-event">
+	<button on:click={toggle} class="has-pointer-event">
+		<Star fill={starStyle} />
+	</button>
 </div>
+
+<style>
+	.has-pointer-event {
+		pointer-events: fill;
+	}
+</style>

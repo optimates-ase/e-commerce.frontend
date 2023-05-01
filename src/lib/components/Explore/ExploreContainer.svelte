@@ -1,11 +1,11 @@
 <script lang="ts">
+	//svelte-swiper
+	import { Swipe, SwipeItem } from 'svelte-swipe';
+
 	import type { Tour } from '$lib/types';
 	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
 
 	export let tours: Tour[] | [];
-
-	//svelte-swiper
-	import { Swipe, SwipeItem } from 'svelte-swipe';
 
 	const swipeConfig = {
 		autoplay: false,
@@ -14,21 +14,13 @@
 		transitionDuration: 500,
 		defaultIndex: 0
 	};
-
-	//favorites
-	let favorites: number[] = [];
-
-	const addFav = (id) => {
-		favorites = [...favorite, id]
-	};
-
 </script>
 
 <div class="swipe-holder">
-	<Swipe {...swipeConfig}>
+	<Swipe {...swipeConfig} is_vertical={true}>
 		{#each tours as tour}
 			<SwipeItem>
-				<ExploreCard {tour} on:favorited={addFav(tour.id)}/>
+				<ExploreCard {tour} />
 			</SwipeItem>
 		{/each}
 	</Swipe>
