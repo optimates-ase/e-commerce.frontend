@@ -1,15 +1,28 @@
 <script lang="ts">
 	import Carousel from '$comp/UIUX/Carousel.svelte';
 	import Rating from '$comp/Tours/Rating.svelte';
+	import Favorite from '$comp/Tours/Favorite.svelte';
 	import type { Tour } from '$lib/types';
+	import { favorites } from '$lib/stores';
 
 	// representation
 	export let tour: Tour;
 	let { rating, num_of_ratings } = tour;
 
-	//favorites
-	let favorites: number[] = [];
-	const addFav = () => {};
+	const favoriteToggle = () => {
+		favorites.update((arr) => {
+			if (arr.some((f) => JSON.stringify(f) === JSON.stringify(tour))) {
+				arr = arr.filter((item) => item.id != tour.id);
+			} else {
+				arr = [...arr, tour];
+			}
+			return arr;
+		});
+	};
+
+	const isFavorited = () => {
+		return $favorites.some((f) => JSON.stringify(f) === JSON.stringify(tour));
+	};
 </script>
 
 <div class="card">
@@ -18,6 +31,7 @@
 		<div class="w-2/3">
 			{tour.description}
 		</div>
+		<div class="flex justify-end w-full" />
 		<div class="w-1/3">
 			<ul class="gap-5">
 				<li>
@@ -35,6 +49,7 @@
 	<div class="w-full">
 		<Carousel srcs={tour.images} />
 	</div>
+	<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
 </div>
 
 <style>
@@ -45,7 +60,6 @@
 	.title {
 		@apply text-3xl;
 	}
-
 	.descr {
 		@apply flex flex-row gap-1 justify-between w-full;
 	}
