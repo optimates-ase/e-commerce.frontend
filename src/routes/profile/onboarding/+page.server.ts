@@ -2,12 +2,18 @@ import { signupSchema } from "$comp/forms/schemas/signupSchema";
 import { fail, type Actions, redirect } from "@sveltejs/kit"
 import type { PageServerLoad } from "./$types";
 
-export const load: PageServerLoad = async ({ locals, parent }) => {
+export const load: PageServerLoad = async ({ cookies, locals, parent }) => {
     await parent();
+    const auth = await locals.getSession()
+    if(!auth) throw redirect(301, "/login")
 
-    console.log(locals.user)
+    const uid = cookies.get("uid")
+    if(uid) throw redirect(301, "/profile")
 
-    if(locals.user) throw redirect(301, "/my")
+    console.log("aasd", cookies.getAll())
+
+
+    
 }
 
 export const actions: Actions = {
@@ -44,7 +50,7 @@ export const actions: Actions = {
             billing_city: formData.get("billingCity"),
             billing_country: formData.get("billingCountry")
         }
-        console.log(createUser)
+        // console.log(createUser)
 
         const req = await fetch("http://localhost:8000/customers/create/", {
             method: "POST",
@@ -56,15 +62,8 @@ export const actions: Actions = {
         });
 
         const resp = await req.json();
-
-        locals.user = {
-            id: resp.data["_id"],
-            firstname: String(createUser.firstname),
-            lastname: String(createUser.lastname)
-        }
-
-        console.log(locals.user)
+        cookies.set("uid", resp.data["_id"], { path: '/' });
                 
-        throw redirect(301, "/my");
+        throw redirect(301, "/profile");
     }
 }

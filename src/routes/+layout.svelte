@@ -13,6 +13,8 @@
 
 	import { page } from '$app/stores';
 	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { goto } from '$app/navigation';
+
 </script>
 
 <Modal />
@@ -28,6 +30,7 @@
 						class="btn variant-filled-primary"
 						on:click={() => {
 							signOut();
+							goto("/logout");
 						}}
 					>
 						Logout

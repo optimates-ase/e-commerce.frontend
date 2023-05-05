@@ -15,7 +15,6 @@
 		console.log('slide changed');
 	};
 
-	console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBB",srcs)
 </script>
 
 {#if srcs}
