@@ -19,15 +19,15 @@
 	class="bg-surface-100-800-token w-full"
 >
 	<Tab bind:group={$tabSet} name="Home" value={0} on:click={() => goto('/')}>
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
+		<svelte:fragment slot="lead"><img src="/icons/home.svg" alt="home icon" /></svelte:fragment>
 		Home
 	</Tab>
 	<Tab bind:group={$tabSet} name="Explore" value={1} on:click={() => goto('/explore')}>
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
+		<svelte:fragment slot="lead"><img src="/icons/compass.svg" alt="home icon" /></svelte:fragment>
 		Explore
 	</Tab>
 	<Tab bind:group={$tabSet} name="My" value={2} on:click={() => goto('/profile')}>
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
+		<svelte:fragment slot="lead"><img src="/icons/users.svg" alt="home icon" /></svelte:fragment>
 		My
 	</Tab>
 </TabGroup>

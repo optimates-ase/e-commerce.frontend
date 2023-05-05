@@ -103,14 +103,16 @@ export interface Country {
 	markedCities: MapMarker[];
 }
 export interface Tour {
-	id: number;
+	id: string;
 	name: string;
 	description: string;
 	price: number;
 	currency: string;
 	rating: number;
 	num_of_ratings: number;
+	min_of_participants: number;
 	minimum: number;
+	language_offered: string;
 	images: string[];
 }
 
