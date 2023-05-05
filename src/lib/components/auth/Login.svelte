@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { signIn } from '@auth/sveltekit/client';
 </script>
 
 <div class="h-full flex items-center justify-center w-full max-w-md">
@@ -12,19 +12,7 @@
 			<div class="w-max">
 				<h1 class="m-8">Login</h1>
 			</div>
-			<img src="illustration/LoginImg.svg" class="m-8"/>
-
-			{#if $page.data.session}
-				<span class="signedInText">
-					<small>Signed in as</small><br />
-					<strong>{$page.data.session.user?.name ?? 'User'}</strong>
-				</span>
-			{:else}
-				<div class="mx-8 text-center">
-
-					<p>Currently not signed in</p>
-				</div>
-			{/if}
+			<img src="/illustration/LoginImg.svg" class="m-8"/>
 		</header>
 
 		<div id="authControls" class="m-auto">

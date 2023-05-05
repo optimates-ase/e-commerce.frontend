@@ -10,7 +10,6 @@
 	} from '@skeletonlabs/skeleton';
 	import { writable, type Writable } from 'svelte/store';
 
-	export let country: Country;
 	export let districts: District[];
 
 	let radioSet: Writable<number> | null = writable();
