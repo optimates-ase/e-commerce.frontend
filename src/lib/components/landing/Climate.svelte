@@ -30,7 +30,7 @@
 	</div>
 	
 	<div id="climateOverviewBody" class="mt-4 h-[100%] w-[100%] bg-white">
-		<VideoPlayer src={"videos/caye-caulker.mp4"} />
+		<VideoPlayer src={"/videos/HomepageHighlight_V0.mp4"} />
 	</div>
 </div>
 	

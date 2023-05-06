@@ -41,23 +41,23 @@
 </script>
 
 <div id="countryOverview" class="w-[90%] max-w-screen-xl mx-auto mt-2">
-	<div class="mt-20 mb-12 w-full p-2 text-center">
+	<div class="hero py-12 text-center">
 		<div class="text-5xl">(OptiMates)</div>
-		<div class="text-4xl mt-4">Explore Belize</div>
-		<p class="mt-8">{@html country.hook}</p>
-		<button class="btn variant-filled-primary text-xl mt-12"> explore tours </button>
+		<div class="py-4 text-4xl mt-4">Explore Belize</div>
+		<p class="mx-12 py-4 px-8">{@html country.hook}</p>
+		<button class="btn variant-glass-primary text-xl mt-12"> view tours </button>
 	</div>
 
-	<div class="card p-5">
-		<div id="countryOverviewHeader" class="h-60 grid grid-cols-7">
-			<div class="col-span-4 w-[90%] mx-auto">
+	<div class="card mt-4 p-5">
+		<div id="countryOverviewHeader" class="mt-4 py-2 grid grid-cols-7">
+			<div class="col-span-4 py-18 w-[90%]">
 				{#if countryMode}
-					<p class="text-center my-auto">
+					<p class="text-center my-auto ">
 						{@html country.hook}
 					</p>
 				{:else}
 					<div class="h-12">
-						<p class="text-center my-auto">Join us in {highlighdDistrict} for:</p>
+						<p class="text-center py-auto">Join us in {highlighdDistrict} for:</p>
 					</div>
 					<ul class="list">
 						{#each activities as act}
@@ -73,7 +73,7 @@
 					</ul>
 				{/if}
 			</div>
-			<div class="col-span-3 h-">
+			<div class="col-span-3 h-64 my-auto">
 				{#if browser}
 					<StaticMap
 						countryName={country.name}
@@ -99,3 +99,13 @@
 		<p class="text-center">{@html country.catchPhrase}</p>
 	</div>
 </div>
+
+<style>
+
+	.hero {
+		/* TODO optimize background image size */
+		background-image: url('/san-pedro/sp_2.jpg');
+		background-size: cover;
+	}
+
+</style>

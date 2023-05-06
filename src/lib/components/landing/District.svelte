@@ -68,9 +68,9 @@
 							alt={'Map of Belize with ' + district.name + 'highlighted.'}
 						/>
 					</div>
-					<div class=" col-span-3 flex items-center h-60 w-full pr-3">
+					<div class="col-span-3 items-center h-60 w-full py-6">
 						<!-- TODO probably switch to buttons since, I don't know how to unselect the radiobuttons when changing the step -->
-						<RadioGroup display="flex-col" rounded="rounded-container-token">
+						<RadioGroup display="flex-col" rounded="rounded-container-token" class="h-full">
 							{#each district.highlights as highlight}
 								<RadioItem
 									bind:group={$radioSet}
