@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
-	import type { Page } from '@sveltejs/kit';
 	import { page } from '$app/stores';
 	import { onDestroy } from 'svelte';
 
@@ -16,7 +15,7 @@
 			case 'profile':
 				return 2;
 			default:
-				return -1;
+				return undefined;
 		}
 	};
 
