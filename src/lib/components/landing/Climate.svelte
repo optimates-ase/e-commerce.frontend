@@ -11,8 +11,7 @@
 		<h1>Climate</h1>
 	</div>
 
-	<div class="card p-5">
-	
+	<div class="p-5">
 	<div id="climateOverviewHeader" class="grid grid-cols-7 mt-2">
 		
 		<div id="climateChartCompletion" class="col-span-7 grid grid-cols-2">

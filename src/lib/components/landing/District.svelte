@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { Country, District, Highlight } from '$lib/types';
 	import {
 		RadioGroup,
@@ -16,8 +17,8 @@
 	const icon: Writable<string> = writable();
 	const keyExpr: Writable<string[] | undefined> = writable();
 
-	const handleNext = (e) => {
-		radioSet = writable();
+	const handleStep = () => {
+		radioSet?.set(-1);
 	};
 
 	const handleClick = (e) => {
@@ -47,40 +48,48 @@
 		<h1>Districts</h1>
 	</div>
 
-	<Stepper>
+	<Stepper
+		on:next={handleStep}
+		on:back={handleStep}
+		on:complete={() => goto('/explore')}
+		buttonCompleteLabel="explore tours ↪"
+		buttonNextLabel="next district →"
+		buttonBackLabel="← prev district"
+	>
 		{#each districts as district}
-			<Step on:next={handleNext}>
+			<Step>
 				<svelte:fragment slot="header">
 					<div class="mx-4 my-3">
-					{district.name}
+						{district.name}
 					</div>
 				</svelte:fragment>
-				<div class="h-4/5 card grid grid-cols-7 ">
+				<div class="h-4/5 grid grid-cols-7">
 					<div class=" col-span-7 h-72 w-full p-2">
 						<div class="p-4">
 							{district.keyphrase}
 						</div>
 					</div>
-					<div class="col-span-4 h-60 w-full p-3 ">
+					<div class="col-span-4 h-60 w-full p-3">
 						<img
 							class="h-full mx-auto rounded-xl"
 							src={district.map}
 							alt={'Map of Belize with ' + district.name + 'highlighted.'}
 						/>
 					</div>
-					<div class="col-span-3 items-center h-60 w-full py-6">
-						<!-- TODO probably switch to buttons since, I don't know how to unselect the radiobuttons when changing the step -->
-						<RadioGroup display="flex-col" rounded="rounded-container-token" class="h-full">
+					<div class="col-span-3 items-center h-full py-6">
+						<RadioGroup display="flex-col" class="border">
 							{#each district.highlights as highlight}
 								<RadioItem
 									bind:group={$radioSet}
 									name={district.id + '_' + String(highlight.id)}
 									value={highlight.id}
 									on:click={handleClick}
-								>
-									<div class="h-18">
+								><div class="h-12">
+									<p class="text-left">
 										{highlight.name}
-									</div>
+									</p>
+
+								</div>
 								</RadioItem>
 							{/each}
 						</RadioGroup>

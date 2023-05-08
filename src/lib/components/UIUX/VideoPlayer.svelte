@@ -55,7 +55,7 @@
 	<video
 		src={src}
 		loop={true}
-		autoplay={true}
+		autoplay={false}
 		on:mousemove={handleMove}
 		on:touchmove|preventDefault={handleMove}
 		on:mousedown={handleMousedown}
