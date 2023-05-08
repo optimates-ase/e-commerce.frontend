@@ -28,7 +28,7 @@
             "id": "BLZ.1_1",
             "name": "Belize",
             "keyphrase": "The main street of Belize City is usually home to banks, shops and offices, while entrepreneurs like fruit, fast food or jewellery vendors swarm for the scarce space on the pavements. In September, the commercial capital becomes steadily more colorful until the festivities errupt to celebrate Belize's independence on September, 21.",
-            "map": "districts/Belize_in_Belize.png",
+            "map": "/districts/Belize_in_Belize.png",
             "highlights": [
                 {
                     "id": 0,
@@ -36,10 +36,9 @@
                     "thumbnail": "https://d1ay7qnb0dqwzm.cloudfront.net/300230.900.2e30ff8218.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "Built as Her Majesty's Prision between 1854 and 1857",
-                        "Repurposed as the Museum of Belize in 2002",
-                        "Documents the City's history of the last 370 years",
-                        "Gallery with well-preserved ancient Mayan masterpieces"
+                        "This building was originally built as Her Majesty's Prision between 1854 and 1857.",
+                        "However, it was repurposed as the Museum of Belize in 2002.",
+                        "It documents the City's history of the last 370 years and includes a gallery with well-preserved ancient Mayan masterpieces"
                     ]
                 },
                 {
@@ -48,9 +47,10 @@
                     "thumbnail": "https://www.belizezoo.org/wp-content/uploads/2020/01/baby-tapir.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "Zoo originally housed semi-tamed animals from the documentary 'Path of the Rain God' Sharon Matola decided to start a zoo and hung sings out the road",
-                        "Capture astonishing close-ups of wildlife in their natural habitat",
-                        "Spot Baird's tapir, scarlet macaws, tucans and even jaguars"
+                        "The zoo originally housed semi-tamed animals from the documentary 'Path of the Rain God'. Sharon Matola was tasked with 'getting rid' of the animals, but decided to start a zoo.",
+                        "Shareon hung sings out the road to advertise the newly established zoo.",
+                        "Capture astonishing close-ups of wildlife in their natural habitat.",
+                        "Spot Baird's tapir, scarlet macaws, tucans and even jaguars."
                     ]
                 },
                 {
@@ -59,25 +59,25 @@
                     "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "Explore and learn how to preserve the Belizean wilderness",
-                        "Specializes in natural history and watershed ecology",
-                        "Experience real sustainable living",
-                        "Camping with an amazing mountain-view"
+                        "Explore and learn how to preserve the Belizean wilderness.",
+                        "The Monkey Bay Wildlife reservoir specializes in natural history and watershed ecology.",
+                        "Here, you can experience real sustainable living.",
+                        "Highlights include camping with an amazing mountain-view."
                     ]
                 }
             ],
             "activities": [
                 {
-                    "name": "TODO Belize",
-                    "icon": "TODO/kayak.png"
+                    "name": "carnival",
+                    "icon": "/icons/landing/masks.svg"
                 },
                 {
-                    "name": "TODO Belize",
-                    "icon": "TODO/birding.png"
+                    "name": "wildlife",
+                    "icon": "/icons/landing/view.svg"
                 },
                 {
-                    "name": "TODO Belize",
-                    "icon": "TODO/xunantunich.png"
+                    "name": "altun han",
+                    "icon": "/icons/landing/ruin.svg"
                 }
             ]
         },
@@ -124,16 +124,16 @@
             ],
             "activities": [
                 {
-                    "name": "TODO OW",
-                    "icon": "TODO/kayak.png"
+                    "name": "mennonites",
+                    "icon": "/icons/landing/community.svg"
                 },
                 {
-                    "name": "TODO OW",
-                    "icon": "TODO/birding.png"
+                    "name": "mayan sites",
+                    "icon": "/icons/landing/ruin.svg"
                 },
                 {
-                    "name": "TODO OW",
-                    "icon": "TODO/xunantunich.png"
+                    "name": "deep rain forrest",
+                    "icon": "/icons/landing/jungle.svg"
                 }
                 
             ]
@@ -180,16 +180,16 @@
             ],
             "activities": [
                 {
-                    "name": "TODO Corozal",
-                    "icon": "TODO/kayak.png"
+                    "name": "mayan sites",
+                    "icon": "/icons/landing/ruin.svg"
                 },
                 {
-                    "name": "TODO Corozal",
-                    "icon": "TODO/birding.png"
+                    "name": "lagoons",
+                    "icon": " /icons/landing/caye.svg"
                 },
                 {
-                    "name": "TODO Corozal",
-                    "icon": "TODO/xunantunich.png"
+                    "name": "eco tourism",
+                    "icon": "/icons/landing/eco.svg"
                 }                
             ]
         },
@@ -235,16 +235,16 @@
             ],
             "activities": [
                 {
-                    "name": "TODO SC",
-                    "icon": "TODO/kayak.png"
+                    "name": "big creek",
+                    "icon": "/icons/landing/caye.svg"
                 },
                 {
-                    "name": "TODO SC",
-                    "icon": "TODO/birding.png"
+                    "name": "fishing",
+                    "icon": "/icons/landing/fishing.svg"
                 },
                 {
-                    "name": "TODO SC",
-                    "icon": "TODO/xunantunich.png"
+                    "name": "sailing",
+                    "icon": "/icons/landing/sailing.svg"
                 }
             ]
         },
@@ -290,16 +290,16 @@
             ],
             "activities": [
                 {
-                    "name": "TODO Toledo",
-                    "icon": "TODO/kayak.png"
+                    "name": "ancient caves",
+                    "icon": "/icons/landing/cave.svg"
                 },
                 {
-                    "name": "TODO Toledo",
-                    "icon": "TODO/birding.png"
+                    "name": "jungle trecking",
+                    "icon": "/icons/landing/jungle.svg"
                 },
                 {
-                    "name": "TODO Toledo",
-                    "icon": "TODO/xunantunich.png"
+                    "name": "secluded cayes",
+                    "icon": "/icons/landing/caye.svg"
                 }
             ]
         },
@@ -346,15 +346,15 @@
             "activities": [
                 {
                     "name": "kayaking",
-                    "icon": "icons/kayak.png"
+                    "icon": "/icons/landing/kayaking.svg"
                 },
                 {
                     "name": "birding",
-                    "icon": "icons/birding.png"
+                    "icon": "/icons/landing/bird.svg"
                 },
                 {
-                    "name": "sightseeing",
-                    "icon": "icons/xunantunich.png"
+                    "name": "xunantunich",
+                    "icon": "/icons/landing/pyramid.svg"
                 }
             ]
         }

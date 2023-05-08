@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="eco.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="0.93125"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     inkscape:window-x="54"
+     inkscape:window-y="240"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <path
+     d="M0 0h48v48H0z"
+     fill="none"
+     id="path2" />
+  <g
+     id="Shopicon"
+     style="fill:#ffffff">
+    <path
+       d="M17.341,33.487l3.173-3.173c1.028,0.554,2.165,0.835,3.303,0.835c1.783,0,3.566-0.68,4.926-2.04   c4.926-4.926,4.222-14.074,4.222-14.074S32.514,15,31.757,15c-2.649,0-9.034,0.426-12.866,4.257   c-2.229,2.229-2.629,5.591-1.206,8.23l-3.173,3.172L17.341,33.487z"
+       id="path4"
+       style="fill:#ffffff" />
+    <path
+       d="M15.022,17.672l-1.553-3.686l-2.784,1.173C13.612,10.775,18.609,8,24,8c8.822,0,16,7.178,16,16h4c0-11.028-8.972-20-20-20   c-6.978,0-13.42,3.723-17.015,9.542l-0.987-2.92l-3.789,1.281l3.305,9.774L15.022,17.672z"
+       id="path6"
+       style="fill:#ffffff" />
+    <path
+       d="M32.978,30.328l1.553,3.686l2.784-1.173C34.388,37.225,29.391,40,24,40c-8.822,0-16-7.178-16-16H4c0,11.028,8.972,20,20,20   c6.978,0,13.42-3.723,17.015-9.542l0.987,2.92l3.789-1.281l-3.305-9.774L32.978,30.328z"
+       id="path8"
+       style="fill:#ffffff" />
+  </g>
+</svg>

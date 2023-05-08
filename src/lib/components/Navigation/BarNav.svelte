@@ -49,19 +49,19 @@
 >
 	<Tab bind:group={tab} name="Home" value={0} on:click={() => handleRedirect('/')}>
 		<svelte:fragment slot="lead">
-			<img class="block mx-auto" src="icons/home.svg" alt="home icon" />
+			<img class="block mx-auto" src="/icons/home.svg" alt="home icon" />
 		</svelte:fragment>
 		<p class="text-center">Home</p>
 	</Tab>
 	<Tab bind:group={tab} name="Explore" value={1} on:click={() => handleRedirect('/explore')}>
 		<svelte:fragment slot="lead">
-			<img class="block mx-auto" src="icons/compass.svg" alt="compass icon" />
+			<img class="block mx-auto" src="/icons/compass.svg" alt="compass icon" />
 		</svelte:fragment>
 		<p class="text-center">Explore</p>
 	</Tab>
 	<Tab bind:group={tab} name="My" value={2} on:click={() => handleRedirect('/profile')}>
 		<svelte:fragment slot="lead">
-			<img class="block mx-auto" src="icons/users.svg" alt="users icon" />
+			<img class="block mx-auto" src="/icons/users.svg" alt="users icon" />
 		</svelte:fragment>
 		<p class="text-center">My</p>
 	</Tab>

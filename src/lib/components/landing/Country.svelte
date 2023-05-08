@@ -5,6 +5,7 @@
 	import { browser } from '$app/environment';
 	import { selectedDistrict } from '$lib/stores';
 	import { onDestroy, onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	export let country: Country;
 	export let geoJSON: FeatureCollection;
@@ -22,17 +23,17 @@
 		})[0];
 		if (district) {
 			activities = district.activities;
-			// console.log(activities);
 			highlighdDistrict = district.name;
 			countryMode = false;
 		} else {
 			countryMode = true;
+			
 		}
 	}
 
 	onMount(() => {
 		// TODO maybe remove and keep state when switch
-		// countryMode = false;
+		countryMode = true;
 	});
 
 	onDestroy(() => {
@@ -41,39 +42,38 @@
 </script>
 
 <div id="countryOverview" class="w-[90%] max-w-screen-xl mx-auto mt-2">
-	<div class="mt-20 mb-12 w-full p-2 text-center">
-		<div class="text-5xl">(OptiMates)</div>
-		<div class="text-4xl mt-4">Explore Belize</div>
-		<p class="mt-8">{@html country.hook}</p>
-		<button class="btn variant-filled-primary text-xl mt-12"> explore tours </button>
+	<div class="hero py-10 text-center">
+		<div class="py-4 text-4xl mt-4">Explore Belize</div>
+		<p class="mx-12 py-4 px-8">{@html country.hook}</p>
+		<button class="btn variant-glass-primary text-xl mt-12" on:click={() => goto("/explore")}>view tours ↪</button>
 	</div>
 
-	<div class="card p-5">
-		<div id="countryOverviewHeader" class="h-60 grid grid-cols-7">
-			<div class="col-span-4 w-[90%] mx-auto">
+	<div class="mt-4 py-5">
+		<div id="countryOverviewHeader" class="mt-4 py-2 grid gap-2 grid-cols-7">
+			<div class="col-span-4 py-18 w-[100%] h-64">
 				{#if countryMode}
 					<p class="text-center my-auto">
 						{@html country.hook}
 					</p>
 				{:else}
 					<div class="h-12">
-						<p class="text-center my-auto">Join us in {highlighdDistrict} for:</p>
+						<p class="text-left py-auto">{highlighdDistrict} offers:</p>
 					</div>
 					<ul class="list">
 						{#each activities as act}
 							<li>
-								<span>(icon)</span>
+								<span><img class="block mx-auto h-6 w-6" src={act.icon} alt="-" /></span>
 								<span>{act.name}</span>
 							</li>
 						{/each}
 						<li>
-							<span>(icon)</span>
+							<span><img class="block mx-auto h-6 w-6" src="/icons/landing/more.svg" alt="-" /></span>
 							<span>and more</span>
 						</li>
 					</ul>
 				{/if}
 			</div>
-			<div class="col-span-3 h-">
+			<div class="col-span-3 h-64">
 				{#if browser}
 					<StaticMap
 						countryName={country.name}
@@ -95,7 +95,17 @@
 		<VRPic />
 	</div>
 
-	<div class="card mx-auto p-8">
+	<div class="mx-auto p-8">
 		<p class="text-center">{@html country.catchPhrase}</p>
 	</div>
 </div>
+
+<style>
+
+	.hero {
+		/* TODO optimize background image size */
+		background-image: url('/san-pedro/sp_2.jpg');
+		background-size: cover;
+	}
+
+</style>
