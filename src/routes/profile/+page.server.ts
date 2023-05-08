@@ -17,9 +17,10 @@ export const load: PageServerLoad = async ({ locals, parent, cookies, params, re
 			'X-CSRFToken': String(cookies.get('csrftoken'))
 		}
 	});
-	if (req.status == 404) throw redirect(301, '/profile/onboarding');
-
+	if (req.status != 200) throw redirect(301, '/profile/onboarding');
+	console.log(req.status)
 	const resp = await req.json();
+	// console.log(resp)
     cookies.set("uid", resp.data["_id"], { path: '/' });
     
     const user = resp.data["_source"]
