@@ -27,7 +27,6 @@
 			countryMode = false;
 		} else {
 			countryMode = true;
-			
 		}
 	}
 

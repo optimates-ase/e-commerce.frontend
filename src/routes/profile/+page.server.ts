@@ -1,29 +1,43 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ locals, parent, cookies, params, request }) => {
-	await parent();
-	const session = await locals.getSession();
-	if (!session) throw redirect(301, '/login');
-
-    // console.log(request)
-
-	const email = session.user?.email;
-
+const getUser = async (email: string, csrfToken: string) => {
 	const req = await fetch(`http://localhost:8000/customers/?email=${email}`, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
-			'X-CSRFToken': String(cookies.get('csrftoken'))
+			'X-CSRFToken': csrfToken
 		}
 	});
-	if (req.status != 200) throw redirect(301, '/profile/onboarding');
-	console.log(req.status)
-	const resp = await req.json();
-	// console.log(resp)
-    cookies.set("uid", resp.data["_id"], { path: '/' });
-    
-    const user = resp.data["_source"]
+	if (req.status != 200) {
+		throw redirect(301, '/profile/onboarding');
+	}
 
-    return { user: user }
+	const resp = await req.json();
+
+	return {
+		uid: resp['_id'],
+		firstName: resp['firstname'],
+		lastName: resp['lastname'],
+		email: resp['email']
+	};
+};
+
+export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
+	await parent();
+	const session = await locals.getSession();
+
+	if (!session) throw redirect(301, '/login');
+	const email = session.user?.email;
+	
+	// TODO replace with reset onboarding page
+	// Should never reach here
+	if (!email) throw redirect(301, '/logout');
+	
+	const uid = cookies.get('uid');
+
+	if (!uid) {
+		const user = getUser(email, String(cookies.get('csrftoken')));
+		cookies.set('uid', (await user).uid, { path: '/' });
+	}
 };

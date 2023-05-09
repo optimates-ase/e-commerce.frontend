@@ -1,27 +1,10 @@
 <script lang="ts">
-	import type { Snapshot } from './$types';
-
-
-	let formData = {
-		firstName: '',
-		lastName: '',
-		birthdate: '',
-		phone: ''
-	};
-
 	const handleFocusOut = (e) => {
 		e.target.reportValidity();
-		console.log(e.target);
-		// console.log("asd", e, e.target.reportValidity())
 	};
-
-    export const snapshot: Snapshot = {
-        capture: () => formData,
-        restore: (value) => (formData = value)
-    }
 </script>
 
-<div id="contactInfo">
+<div id="contactInfo" class="max-w-md flex flex-col">
 	<label for="firstName">first name</label>
 	<input
 		class="input"
@@ -29,6 +12,7 @@
 		name="firstName"
 		type="text"
 		placeholder="John"
+		autocomplete="false"
 		on:focusout={handleFocusOut}
 		required
 	/>
@@ -39,8 +23,8 @@
 		name="lastName"
 		type="text"
 		placeholder="Doe"
+		autocomplete="false"
 		on:focusout={handleFocusOut}
-		bind:value={formData.lastName}
 		required
 	/>
 	<label for="brithdate">birthdate</label>
@@ -50,8 +34,8 @@
 		type="date"
 		id="birthdate"
 		name="birthdate"
+		autocomplete="false"
 		on:focusout={handleFocusOut}
-		bind:value={formData.birthdate}
 		required
 	/>
 	<label for="phone">phone</label>
@@ -61,8 +45,10 @@
 		id="phone"
 		name="phone"
 		type="tel"
+		autocomplete="false"
 		on:focusout={handleFocusOut}
 		placeholder="012 345 67 89"
 		required
 	/>
+	<button type="submit" class="btn variant-filled-success mt-8 w-36 ml-auto">Sign up</button>
 </div>
