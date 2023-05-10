@@ -10,19 +10,21 @@
 	tours = data.data.data;
 </script>
 
-{#await data}
-	<div class="flex justify-center items-center">
-		<p>Loading...</p>
-	</div>
-{:then data}
-	<ExploreContainer {tours} />
 
-	<div class="fixed bottom-14 right-0 p-4 z-10">
-		<CheckoutButton />
-	</div>
-{:catch error}
-	<p>Error: {error.message}</p>
-{/await}
+	{#await data}
+	
+		<div class="flex justify-center items-center">
+			<p>Loading...</p>
+		</div>
+	{:then data}
+			<ExploreContainer {tours} />
+			
+			<div class="fixed bottom-14 right-0 p-4 z-10">
+				<CheckoutButton />
+			</div>
+	{:catch error}
+		<p>Error: {error.message}</p>
+	{/await}
 
 <style>
 </style>

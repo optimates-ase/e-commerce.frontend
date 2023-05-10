@@ -52,7 +52,9 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
+	
 	<slot />
+	
 	<svelte:fragment slot="footer">
 		<BarNav />
 	</svelte:fragment>

@@ -3,7 +3,7 @@
 </script>
 
 
-<div class="flex items-center w-full">
+<div class="max-w-md mx-auto p-3">
 
 <Login />
 </div>

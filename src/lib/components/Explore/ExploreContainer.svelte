@@ -16,18 +16,17 @@
 	};
 </script>
 
-<div class="swipe-holder">
-	<Swipe {...swipeConfig} is_vertical={true}>
+<div class=" w-full h-full">
+	<Swipe {...swipeConfig} is_vertical={false}>
 		{#each tours as tour}
 			<SwipeItem>
+				<div class="">
 				<ExploreCard {tour} />
+				</div>
 			</SwipeItem>
 		{/each}
 	</Swipe>
 </div>
-
 <style>
-	.swipe-holder {
-		@apply w-full h-full;
-	}
+	
 </style>
