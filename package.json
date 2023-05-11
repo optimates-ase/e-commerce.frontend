@@ -47,10 +47,11 @@
 	"dependencies": {
 		"@auth/core": "^0.5.1",
 		"@auth/sveltekit": "^0.3.0",
+		"@stripe/stripe-js": "^1.52.1",
 		"aframe": "^1.4.1",
 		"maplibre-gl": "^2.4.0",
 		"mongodb": "^5.5.0",
-		"redis": "^4.6.6",
+		"svelte-panorama-component": "^1.0.2",
 		"swiper": "^9.2.0",
 		"zod": "^3.21.4",
 		"zod-form-data": "^2.0.1"

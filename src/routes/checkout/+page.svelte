@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CardSmall from '$comp/Cards/CardSmall.svelte';
+	import Payment from '$comp/Payment/Payment.svelte';
 	import { favorites } from '$lib/stores';
 	import type { Tour } from '$lib/types.js';
 	import { onDestroy } from 'svelte';
@@ -39,11 +40,13 @@
 	</div>
 </div>
 
-<div class="fixed top-20 right-0 w-2/5 m-2">
+<div class="flex flex-col fixed top-20 right-0 w-2/5 m-2">
 	<h3>Purchase Overview</h3>
 	<div>
 		{price} USD
 	</div>
 
-	<button class="btn variant-filled-primary"> Purchase </button>
+	<button class="btn variant-filled-primary w-40"> Purchase </button>
+
+	<Payment />
 </div>
