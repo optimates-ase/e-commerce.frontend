@@ -2,16 +2,14 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { getUserIdByMail } from '$db/collections/users';
 
-const getUser = async (email: string, csrfToken: string) => {
+const getUser = async (email: string) => {
 	const user = await getUserIdByMail(email)
 	if (!user) {
 		throw redirect(301, '/profile/onboarding');
 	}
 
-	
-
 	return {
-		uid: user._id,
+		uid: String(user._id),
 		firstName: user.firstName,
 		lastName: user.lastName,
 		email: user.email,
@@ -33,7 +31,8 @@ export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
 	const uid = cookies.get('uid');
 
 	if (!uid) {
-		const user = getUser(email, String(cookies.get('csrftoken')));
+		const user = getUser(email);
 		cookies.set('uid', (await user).uid, { path: '/' });
+		return {user: user};
 	}
 };
