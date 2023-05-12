@@ -1,6 +1,9 @@
 <script lang="ts">
 	import UserInfo from '$comp/forms/UserInfo.svelte';
 </script>
+<svelte:head>
+	<title>OptiMates - Onboarding</title>
+</svelte:head>
 
 <h1 class="pt-8 text-center">Sign Up Form</h1>
 

@@ -9,6 +9,9 @@
 	export let data;
 	tours = data.data.data;
 </script>
+<svelte:head>
+	<title>OptiMates - Explore Tours</title>
+</svelte:head>
 
 {#await data}
 	<div class="flex justify-center items-center">
