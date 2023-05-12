@@ -1,25 +1,21 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
+import { getUserIdByMail } from '$db/collections/users';
 
 const getUser = async (email: string, csrfToken: string) => {
-	const req = await fetch(`http://localhost:8000/customers/?email=${email}`, {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json',
-			'X-CSRFToken': csrfToken
-		}
-	});
-	if (req.status != 200) {
+	const user = await getUserIdByMail(email)
+	if (!user) {
 		throw redirect(301, '/profile/onboarding');
 	}
 
-	const resp = await req.json();
+	
 
 	return {
-		uid: resp['_id'],
-		firstName: resp['firstname'],
-		lastName: resp['lastname'],
-		email: resp['email']
+		uid: user._id,
+		firstName: user.firstName,
+		lastName: user.lastName,
+		email: user.email,
+		phone: user.phone
 	};
 };
 

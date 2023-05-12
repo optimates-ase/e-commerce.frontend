@@ -49,6 +49,7 @@
 		"@auth/sveltekit": "^0.3.0",
 		"aframe": "^1.4.1",
 		"maplibre-gl": "^2.4.0",
+		"mongodb": "^5.5.0",
 		"redis": "^4.6.6",
 		"swiper": "^9.2.0",
 		"zod": "^3.21.4",

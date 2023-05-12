@@ -1,14 +1,17 @@
 import type { Country } from '$lib/types';
+import { geoJSONCollection } from '$db/collections/geos';
 import countryData from '$lib/data/Belize.json';
 import countryClimate from '$lib/data/Belize.weather.json';
+import { json } from '@sveltejs/kit';
 
 export const load = async () => {
 
 	const fetchMapCountryData = async () => {
-		// TODO use environment variable instead of localhost
-		const geosRes = await fetch("http://localhost:8000/geos/districts/");
-		const geosData = await geosRes.json();
-		return geosData.data;
+
+		const test = (await geoJSONCollection.find({name: "gadm41_BLZ_1"}).toArray()).map((el) =>{
+			let {_id, ...geoJSON} = el 
+			return geoJSON});
+		return test[0];
 	}
 
 	const countryName = countryData.name;

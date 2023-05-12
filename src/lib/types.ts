@@ -1,3 +1,23 @@
+export interface Address {
+	steet: string,
+	streetNo: number,
+	streetNoExtra: string,
+	zipCode: string,
+	country: string,
+	validFrom: Date,
+	validTo?: Date
+}
+
+export interface User {
+	firstName: string,
+	lastName: string,
+	birthdate: Date,
+	email: string,
+	phone: string,
+	billingAddress? : Address,
+	residenceAddress?: Address
+}
+
 export interface Coordinate {
 	lng: number;
 	lat: number;

@@ -1,6 +1,8 @@
 import { signupSchema } from "$comp/forms/schemas/signupSchema";
 import { fail, type Actions, redirect } from "@sveltejs/kit"
 import type { PageServerLoad } from "./$types";
+import type { User } from "$lib/types";
+import { createUser } from "$db/collections/users";
 
 export const load: PageServerLoad = async ({ cookies, locals, parent }) => {
     await parent();
@@ -30,27 +32,18 @@ export const actions: Actions = {
         }
 
         const emailAddress = await locals.getSession().then((sess) => {return sess?.user?.email})
-        const createUser = {
-            session_id: cookies.get("sessionid"),
-            session_token: cookies.get("next-auth.session-token"),
-            firstname: formData.get("firstName"),
-            lastname: formData.get("lastName"),
-            birthdate: formData.get("birthdate"),
-            email_address: emailAddress,
-            phone_number: formData.get("phone")
+        
+        const user: User = {
+            firstName: String(formData.get("firstName")),
+            lastName: String(formData.get("lastName")),
+            birthdate: new Date(String(formData.get("birthdate"))),
+            email: String(emailAddress),
+            phone: String(formData.get("phone"))
         }
 
-        const req = await fetch("http://localhost:8000/customers/create/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRFToken": String(cookies.get("csrftoken"))
-            },
-            body: JSON.stringify(createUser)
-        });
+        const req = await createUser(user);
+        cookies.set("uid", req, {path: "/"})
 
-        const resp = await req.json();
-        cookies.set("uid", resp.data["_id"], { path: '/' });
         throw redirect(301, "/profile");
     }
 }

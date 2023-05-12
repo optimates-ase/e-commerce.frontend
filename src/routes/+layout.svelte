@@ -1,5 +1,5 @@
 <script>
-	// The selected Skeleton theme:
+	// The seslected Skeleton theme:
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
 
 	// This contains the bulk of Skeletons required styles:
