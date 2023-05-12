@@ -1,17 +1,12 @@
 <script lang="ts">
-    import Address from '$comp/forms/Address.svelte'
-    import UserInfo from '$comp/forms/UserInfo.svelte'
-	import { ADDRESS_TYPE } from "$comp/Enums/address";
-
+	import UserInfo from '$comp/forms/UserInfo.svelte';
 </script>
 
-<h1>Sign Up Form</h1>
+<h1 class="pt-8 text-center">Sign Up Form</h1>
 
-<form action="?/register" method="POST">
-	
-    <UserInfo />
-    <Address addressType={ADDRESS_TYPE.BILLING} />
-    <Address addressType={ADDRESS_TYPE.RESIDENT} />
-
-	<button class="btn " type="submit">Register</button>
+<form action="?/addPersonalInfo" method="POST" class="mx-auto pt-4 pb-12 w-[75%]">
+	<p class="pt-6">Enter your details to keep your account secure.</p>
+	<div class="pt-12 h-96">
+		<UserInfo />
+	</div>
 </form>

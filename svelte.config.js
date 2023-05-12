@@ -21,7 +21,8 @@ const config = {
 
 		// add alias to paths here.
 		alias: {
-			$comp: 'src/lib/components'
+			$comp: 'src/lib/components',
+			$db: 'src/db'
 		}
 	}
 };
