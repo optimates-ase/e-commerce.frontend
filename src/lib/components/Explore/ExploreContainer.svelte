@@ -5,7 +5,7 @@
 	import type { Tour } from '$lib/types';
 	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
 
-	export let tours: Tour[] | [];
+	export let tours: Tour[];
 
 	const swipeConfig = {
 		autoplay: false,

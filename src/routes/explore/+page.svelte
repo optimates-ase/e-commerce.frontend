@@ -1,13 +1,10 @@
 <script lang="ts">
 	import CheckoutButton from '$comp/Explore/CheckoutButton.svelte';
-	import Explore from '$comp/Explore/ExploreCard.svelte';
 	import ExploreContainer from '$comp/Explore/ExploreContainer.svelte';
-
 	import type { Tour } from '$lib/types';
 
-	let tours: Tour[] | [];
 	export let data;
-	tours = data.data.data;
+	let tours = data.randomTours;
 </script>
 
 {#await data}
