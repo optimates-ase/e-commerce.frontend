@@ -11,7 +11,5 @@ export const load = async () => {
 		};
 	});
 
-	console.log(typeof randomTours);
-	console.log(randomTours);
 	return { randomTours };
 };

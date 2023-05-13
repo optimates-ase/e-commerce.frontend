@@ -1,9 +1,38 @@
 <script lang="ts">
-	import { stripe_elements } from '$lib/stripe';
+	import { stripe } from '$lib/stripe';
+	import { onMount } from 'svelte';
 
-	console.log(stripe_elements);
+	export let price: number;
+	export let currency: string;
+
+	onMount(() => {
+		const payment = stripe
+			?.elements({
+				mode: 'payment',
+				currency: currency.toLowerCase(),
+				amount: price
+			})
+			.create('payment');
+	});
 </script>
 
-<div class="w-full border">
-	<div>Payment</div>
+<div class="w-full">
+	<h3>Purchase Overview</h3>
+	<div>
+		{price}
+		{currency}
+	</div>
+
+	<div class="flex justify-end">
+		<button
+			class="btn variant-filled-primary w-35"
+			on:click={() => {
+				console.log(price);
+			}}
+		>
+			Purchase
+		</button>
+	</div>
 </div>
+
+<payment />

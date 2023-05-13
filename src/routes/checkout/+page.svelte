@@ -21,6 +21,7 @@
 	});
 
 	let price: number = 0;
+	let currency: string = 'USD';
 	$: {
 		price = 0;
 		tourList.forEach((tour) => {
@@ -29,8 +30,8 @@
 	}
 </script>
 
-<div>
-	<div class="flex flex-col gap-2 w-4/5">
+<div class="flex flex-col h-screen">
+	<div class="flex-grow overflow-y-auto">
 		<h2 class="mt-1">Selected Tours</h2>
 		{#each tourList as tour (tour._id)}
 			<button on:click={() => handleClick(tour)}>
@@ -38,15 +39,7 @@
 			</button>
 		{/each}
 	</div>
-</div>
-
-<div class="flex flex-col fixed top-20 right-0 w-2/5 m-2">
-	<h3>Purchase Overview</h3>
-	<div>
-		{price} USD
+	<div class="sticky bottom-0 p-4 h-1/5">
+		<Payment {price} {currency} />
 	</div>
-
-	<button class="btn variant-filled-primary w-40"> Purchase </button>
-
-	<Payment />
 </div>
