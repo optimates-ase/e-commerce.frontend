@@ -19,6 +19,7 @@
 
 <div class="has-pointer-event">
 	<button on:click={toggle} class="has-pointer-event">
+		
 		<Star fill={starStyle} />
 	</button>
 </div>

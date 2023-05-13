@@ -2,8 +2,10 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ locals, parent, cookies, params, request }) => {
+	
 	await parent();
 	const session = await locals.getSession();
+	
 	if (!session) throw redirect(301, '/login');
 
     // console.log(request)
@@ -25,4 +27,5 @@ export const load: PageServerLoad = async ({ locals, parent, cookies, params, re
     const user = resp.data["_source"]
 
     return { user: user }
+	
 };

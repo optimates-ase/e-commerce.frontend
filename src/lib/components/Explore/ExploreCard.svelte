@@ -58,7 +58,9 @@
 	</div>
 	<div class="flex justify-between items-center">
 	<div class="mx-3"> <Rating {rating} {num_of_ratings} /></div>
-
-	<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} /></div>
+	<div class="mx-4">
+	<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
+</div>
+</div>
 </div>
 

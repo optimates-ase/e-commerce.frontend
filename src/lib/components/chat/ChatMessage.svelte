@@ -19,7 +19,7 @@
 <div class="" >
     <div class="mx-2 flex items-end" class:justify-end={sentByMe} >
         <img
-            class="w-10 h-10 rounded-full mb-2"
+            class="badge-icon w-10 h-10 mb-2"
             src={sentByMe == true ? profilePicMe : profilePicChatPartner}
             alt="ProfilePicture"
             class:order-last={sentByMe} 
@@ -50,7 +50,7 @@
                         </div>
                     {/if}
                     {#if sentByMe === true}
-                    <div class="text-xs">Icon</div>
+                    <div class="text-xs"></div>
                 {/if}
                     
                 </span>

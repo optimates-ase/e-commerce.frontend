@@ -29,7 +29,7 @@
 </script>
 
 
-<div class="max-w-md mx-auto p-3">
+<div class="max-w-md mx-auto p-8">
 	<h2 class="mb-3">Purchase Overview</h2>
 	<div class="card w-full my-3 p-3">
 		<div class="text-gray-500 font-mono mb-5 p-3">
@@ -62,11 +62,15 @@
 			<div class="text-sm text-gray-500">
 			Click on tours to remove them
 		</div>
+		
+		<div class="p-3 max-w-md mx-auto">
 			{#each tourList as tour (tour.id)}
 				<button on:click={() => handleClick(tour)}>
 					<CardSmall {tour} />
 				</button>
 			{/each}
+		</div>
+			
 		</div>
 	</div>
 </div>
