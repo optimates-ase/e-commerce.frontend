@@ -1,7 +1,8 @@
 // need to make it infinite, not entirely sure how
 export const load = async () => {
-	// TODO: use environment variable instead of localhost
+	// TODO: use environment variable instead of hardcode
 	const data = await fetch('http://localhost:8000/tours/randomize/?page=1');
+	// handle no data availble.
 	return data.json();
 };
 
