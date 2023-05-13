@@ -28,11 +28,10 @@
 <div class="card">
 	<div class="title">{tour.name}</div>
 	<div class="descr">
-		<div class="w-2/3">
+		<div class="w-full">
 			{tour.description}
 		</div>
-		<div class="flex justify-end w-full" />
-		<div class="w-1/3">
+		<div class="flex justify-end w-1/3">
 			<ul class="gap-5">
 				<li>
 					<Rating {rating} {num_of_ratings} />
@@ -61,6 +60,6 @@
 		@apply text-3xl;
 	}
 	.descr {
-		@apply flex flex-row gap-1 justify-between w-full;
+		@apply flex flex-row justify-between gap-2 w-full;
 	}
 </style>
