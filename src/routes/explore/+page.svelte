@@ -4,7 +4,7 @@
 	import type { Tour } from '$lib/types';
 
 	export let data;
-	let tours = data.randomTours;
+	let tours: Tour[] = data.randomTours;
 </script>
 
 {#await data}

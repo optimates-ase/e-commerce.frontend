@@ -125,7 +125,7 @@ export interface Country {
 	markedCities: MapMarker[];
 }
 export interface Tour {
-	_id: ObjectId;
+	_id: string;
 	name: string;
 	description: string;
 	price: number;
