@@ -12,7 +12,7 @@
 	const favoriteToggle = () => {
 		favorites.update((arr) => {
 			if (arr.some((f) => JSON.stringify(f) === JSON.stringify(tour))) {
-				arr = arr.filter((item) => item.id != tour.id);
+				arr = arr.filter((item) => item._id != tour._id);
 			} else {
 				arr = [...arr, tour];
 			}

@@ -12,11 +12,18 @@
 		<p>Loading...</p>
 	</div>
 {:then data}
-	<ExploreContainer {tours} />
+	{#if tours.length == 0}
+		<div class="flex flex-col justify-center items-center h-full">
+			<img src="/icons/frown.svg" alt="" />
+			<div>Oops, no tours found!</div>
+		</div>
+	{:else}
+		<ExploreContainer {tours} />
 
-	<div class="fixed bottom-14 right-0 p-4 z-10">
-		<CheckoutButton />
-	</div>
+		<div class="fixed bottom-14 right-0 p-4 z-10">
+			<CheckoutButton />
+		</div>
+	{/if}
 {:catch error}
 	<p>Error: {error.message}</p>
 {/await}
