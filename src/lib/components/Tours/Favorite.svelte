@@ -17,14 +17,11 @@
 	};
 </script>
 
-<div class="has-pointer-event">
-	<button on:click={toggle} class="has-pointer-event">
+<div>
+	<button on:click={toggle} class="pointer-events-auto">
 		<Star fill={starStyle} />
 	</button>
 </div>
 
 <style>
-	.has-pointer-event {
-		pointer-events: fill;
-	}
 </style>

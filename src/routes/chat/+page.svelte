@@ -1,9 +1,7 @@
 <script lang="ts">
-	import Login from '$comp/auth/Login.svelte';
+	import Chat from '$comp/Chat/Chat.svelte';
 </script>
 
-
 <div class="max-w-md mx-auto p-3">
-
-<Login />
+	<Chat/>
 </div>

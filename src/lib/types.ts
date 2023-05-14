@@ -1,21 +1,23 @@
+import type { WithId, Document, ObjectId } from 'mongodb';
+
 export interface Address {
-	steet: string,
-	streetNo: number,
-	streetNoExtra: string,
-	zipCode: string,
-	country: string,
-	validFrom: Date,
-	validTo?: Date
+	steet: string;
+	streetNo: number;
+	streetNoExtra: string;
+	zipCode: string;
+	country: string;
+	validFrom: Date;
+	validTo?: Date;
 }
 
 export interface User {
-	firstName: string,
-	lastName: string,
-	birthdate: Date,
-	email: string,
-	phone: string,
-	billingAddress? : Address,
-	residenceAddress?: Address
+	firstName: string;
+	lastName: string;
+	birthdate: Date;
+	email: string;
+	phone: string;
+	billingAddress?: Address;
+	residenceAddress?: Address;
 }
 
 export interface Coordinate {
@@ -24,10 +26,10 @@ export interface Coordinate {
 }
 
 export interface MapBoundries {
-	maxLng: number,
-	minLng: number,
-	maxLat: number,
-	minLat: number
+	maxLng: number;
+	minLng: number;
+	maxLat: number;
+	minLat: number;
 }
 
 interface MapConfig {
@@ -123,7 +125,7 @@ export interface Country {
 	markedCities: MapMarker[];
 }
 export interface Tour {
-	id: string;
+	_id: string;
 	name: string;
 	description: string;
 	price: number;
@@ -131,8 +133,17 @@ export interface Tour {
 	rating: number;
 	num_of_ratings: number;
 	min_of_participants: number;
-	minimum: number;
-	language_offered: string;
+	tags?: Tag[];
+	minimum?: number;
+	language_offered?: string;
 	images: string[];
 }
 
+export enum Tag {
+	Adventure = 'Adventure',
+	Sightseeing = 'Sightseeing',
+	Relaxation = 'Relaxation',
+	Nature = 'Nature',
+	Cultural = 'Cultural',
+	Wildlife = 'Wildlife'
+}

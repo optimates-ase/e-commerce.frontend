@@ -5,7 +5,12 @@
 	import type { Tour } from '$lib/types';
 	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
 
-	export let tours: Tour[] | [];
+	export let tours: Tour[];
+
+	let currentIndex = 0;
+	// const handleSlideChange = (event: any) => {
+	// 	console.log(event.active_item);
+	// };
 
 	const swipeConfig = {
 		autoplay: false,
@@ -14,20 +19,23 @@
 		transitionDuration: 500,
 		defaultIndex: 0
 	};
+
+	$: {
+		console.log(currentIndex);
+	}
 </script>
 
-<div class="swipe-holder">
+<div class="w-full h-full">
 	<Swipe {...swipeConfig} is_vertical={true}>
-		{#each tours as tour}
+		{#each tours as tour, index}
 			<SwipeItem>
-				<ExploreCard {tour} />
+				<div class="">
+					<ExploreCard {tour} />
+				</div>
 			</SwipeItem>
 		{/each}
 	</Swipe>
 </div>
 
 <style>
-	.swipe-holder {
-		@apply w-full h-full;
-	}
 </style>
