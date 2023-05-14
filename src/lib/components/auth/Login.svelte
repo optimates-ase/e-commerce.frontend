@@ -3,13 +3,13 @@
 	import { signIn } from '@auth/sveltekit/client';
 </script>
 
-<div class="h-full flex items-center justify-center w-full max-w-md">
+<div class="h-full flex items-center justify-center h-full w-full max-w-md">
 	<div id="LoginContainer" class="card flex flex-col m-4 h-90 w-full">
 		<header>
 			<div class="w-max">
 				<h1 class="m-8">Login</h1>
 			</div>
-			<img src="/illustration/LoginImg.svg" class="m-8"/>
+			<img src="/illustration/LoginImg.svg" class="m-8" alt="Login"/>
 		</header>
 
 		<div id="authControls" class="m-auto">

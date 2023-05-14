@@ -2,7 +2,7 @@
 	import CountryLanding from '$comp/landing/Country.svelte';
 	import DistrictLanding from '$comp/landing/District.svelte';
 	import ClimateLanding from '$comp/landing/Climate.svelte';
-    import Chat from '$comp/chat/Chat.svelte';
+    import Chat from '$comp/Chat/Chat.svelte';
 	
 
 

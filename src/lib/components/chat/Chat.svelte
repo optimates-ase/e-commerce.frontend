@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+
+	import { onMount } from 'svelte/internal';
 	import ChatMessage from '$comp/chat/ChatMessage.svelte';
 
 	let nameMe='Me';
@@ -14,6 +16,47 @@ let todayMessages =[
 	{"messageId":418,"message":"hey","timestamp":1587139047495.052,"sentByMe":true,"timeRead":1587686514958},{"messageId":419,"message":"Yes!","timestamp":1587139312376.663,"sentByMe":true,"timeRead":0},
 ];
 
+
+let currentMessage = '';
+
+function addMessage(): void {
+    if(currentMessage != ''){
+        const currentDate = new Date(); 
+        const newMessage = {
+            messageId: 420,
+            message: currentMessage,
+            timestamp: currentDate.getTime(),
+            sentByMe: true,
+            timeRead: 0
+        };
+        // Append the new message to the message feed
+        todayMessages = [...todayMessages, newMessage];
+        // Clear the textarea message
+        currentMessage = '';
+        // Smoothly scroll to the bottom of the feed
+        setTimeout(() => { scrollChatBottom('smooth'); }, 0);
+    }
+    
+}
+
+function onPromptKeydown(event: KeyboardEvent): void {
+		if (['Enter'].includes(event.code)) {
+            
+            event.preventDefault();
+            addMessage();
+            
+		}
+	}
+    let elemChat: HTMLElement;
+
+    function scrollChatBottom(behavior?: ScrollBehavior): void {
+		elemChat.scrollTo({ top: elemChat.scrollHeight, behavior });
+	}
+
+    onMount(() => {
+		scrollChatBottom();
+	});
+
 </script>
 
 
@@ -27,8 +70,8 @@ let todayMessages =[
             <h2 class="contacts-name m-3">{nameChatPartner}</h2>
         </div>
     </header>
-    <div class="card-body overflow-scroll max-h-96 scrollbar-hide">
-        <div class="">
+    <div class="card-body ">
+        <section bind:this={elemChat} class="max-h-[450px] p-4 overflow-y-auto scrollbar-hide" >
             {#each messages as message}
                 <div class="m-2 mt-4">
                 <ChatMessage
@@ -62,13 +105,17 @@ let todayMessages =[
 										isToday={true} 														 
 										/>
             {/each}
-        </div>
-        </div>
+            </div>
+        </section>
     </div>
     <footer class="card-footer border-t border-gray-500 p-3">
         <div class="input-group grid-cols-8">
-            <input class="col-span-6" type="text" placeholder="Search..." />
-            <button class="variant-filled-primary  col-span-2">Send </button>
+            <textarea 
+            bind:value={currentMessage}
+            class="col-span-6 bg-transparent border-0 ring-0 overflow-y-auto scrollbar-hide"  
+            placeholder="Write a message..." 
+            on:keydown={onPromptKeydown}/>
+            <button  class={currentMessage ? 'variant-filled-primary col-span-2' : 'input-group-shim col-span-2'} on:click={addMessage}>Send </button>
         </div>
         
     </footer>
