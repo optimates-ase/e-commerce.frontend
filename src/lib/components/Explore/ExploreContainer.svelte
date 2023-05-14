@@ -7,32 +7,27 @@
 	import { children } from 'svelte/internal';
 
 	export let tours: Tour[];
-	let SwipeComp;
+
 	let currentIndex = 0;
-	const handleSlideChange = (event: any) => {
-		console.log(event.active_item);
-	};
-	$: console.log(currentIndex);
+	// const handleSlideChange = (event: any) => {
+	// 	console.log(event.active_item);
+	// };
 
 	const swipeConfig = {
 		autoplay: false,
 		delay: 0,
 		showIndicators: false,
 		transitionDuration: 500,
-		defaultIndex: 0,
-		callback: function (index: number) {
-			currentIndex = index;
-		}
+		defaultIndex: 0
 	};
+
+	$: {
+		console.log(currentIndex);
+	}
 </script>
 
 <div class="swipe-holder">
-	<Swipe
-		{...swipeConfig}
-		is_vertical={true}
-		bind:this={SwipeComp}
-		on:change={() => handleSlideChange}
-	>
+	<Swipe {...swipeConfig} is_vertical={true} bind:this={SwipeComp}>
 		{#each tours as tour, index}
 			<SwipeItem>
 				<ExploreCard {tour} />
