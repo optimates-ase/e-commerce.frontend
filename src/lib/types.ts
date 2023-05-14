@@ -133,7 +133,12 @@ export interface Tour {
 	rating: number;
 	num_of_ratings: number;
 	min_of_participants: number;
+	tags?: Tag[];
 	minimum?: number;
 	language_offered?: string;
 	images: string[];
+}
+
+export enum Tag {
+	'Water'
 }

@@ -8,7 +8,7 @@
 	};
 </script>
 
-<div class="flex justify-start sm:gap-2 flex-col sm:flex-row">
+<div class="flex items-baseline">
 	<StarRating {rating} on:click={displayExact} />
-	<div>{num_of_ratings} Ratings</div>
+	<div class="text-xs m-2">({num_of_ratings}) </div>
 </div>

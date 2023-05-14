@@ -5,6 +5,7 @@
 
 	export let data;
 	let tours: Tour[] = data.randomTours;
+	console.log(tours);
 </script>
 
 {#await data}

@@ -25,41 +25,41 @@
 	};
 </script>
 
-<div class="card">
-	<div class="title">{tour.name}</div>
-	<div class="descr">
-		<div class="w-full">
-			{tour.description}
+<div class="card mx-5 p-5 mt-5 max-w-md">
+	<div class="text-3xl m-3">{tour.name}</div>
+	<div class="flex justify-between font-mono text-gray-500 mx-3">
+		<div>
+			Price: {tour.price} USD
 		</div>
-		<div class="flex justify-end w-1/3">
-			<ul class="gap-5">
-				<li>
-					<Rating {rating} {num_of_ratings} />
-				</li>
-				<li>
-					Price: {tour.price}{tour.currency}
-				</li>
-				<li>
-					Minimum: {tour.minimum}
-				</li>
-			</ul>
+		<div>
+			Min Pers: {tour.minimum}
 		</div>
 	</div>
 	<div class="w-full">
-		<Carousel srcs={tour.images} />
+		{#if (tour.images = [''])}
+			<div class=" p-2">
+				<img
+					src="https://loremflickr.com/1000/1000/belize,tour"
+					alt="placeholder"
+					class="rounded-xl h-1/4"
+				/>
+			</div>
+		{:else}
+			<Carousel srcs={tour.images} />
+		{/if}
 	</div>
-	<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
+	<div class="">
+		<div class="m-4">
+			<div class="">
+				{tour.description}
+			</div>
+		</div>
+		<div class="" />
+	</div>
+	<div class="flex justify-between items-center">
+		<div class="mx-3"><Rating {rating} {num_of_ratings} /></div>
+		<div class="mx-4">
+			<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
+		</div>
+	</div>
 </div>
-
-<style>
-	.card {
-		@apply mx-5 p-5 mt-5;
-		@apply flex flex-col gap-1 items-center;
-	}
-	.title {
-		@apply text-3xl;
-	}
-	.descr {
-		@apply flex flex-row justify-between gap-2 w-full;
-	}
-</style>

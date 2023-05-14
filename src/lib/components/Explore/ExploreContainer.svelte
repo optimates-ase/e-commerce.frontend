@@ -4,7 +4,6 @@
 
 	import type { Tour } from '$lib/types';
 	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
-	import { children } from 'svelte/internal';
 
 	export let tours: Tour[];
 
@@ -26,18 +25,17 @@
 	}
 </script>
 
-<div class="swipe-holder">
-	<Swipe {...swipeConfig} is_vertical={true} bind:this={SwipeComp}>
+<div class="w-full h-full">
+	<Swipe {...swipeConfig} is_vertical={true}>
 		{#each tours as tour, index}
 			<SwipeItem>
-				<ExploreCard {tour} />
+				<div class="">
+					<ExploreCard {tour} />
+				</div>
 			</SwipeItem>
 		{/each}
 	</Swipe>
 </div>
 
 <style>
-	.swipe-holder {
-		@apply w-full h-full;
-	}
 </style>
