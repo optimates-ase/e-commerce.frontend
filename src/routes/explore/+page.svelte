@@ -6,6 +6,9 @@
 	export let data;
 	let tours: Tour[] = data.randomTours;
 </script>
+<svelte:head>
+	<title>OptiMates - Explore Tours</title>
+</svelte:head>
 
 {#await data}
 	<div class="flex justify-center items-center">
