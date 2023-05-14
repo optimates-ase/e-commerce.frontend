@@ -140,5 +140,10 @@ export interface Tour {
 }
 
 export enum Tag {
-	'Water'
+	Adventure = 'Adventure',
+	Sightseeing = 'Sightseeing',
+	Relaxation = 'Relaxation',
+	Nature = 'Nature',
+	Cultural = 'Cultural',
+	Wildlife = 'Wildlife'
 }
