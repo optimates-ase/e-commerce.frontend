@@ -32,6 +32,7 @@
 		icon.set(String(highlight?.icon));
 		keyExpr.set(highlight?.keyExpression);
 		// TODO fix landscape mode not all of modal is visible
+		// TODO fix overflow
 		const alert: ModalSettings = {
 			type: 'alert',
 			title: highlight?.name,
