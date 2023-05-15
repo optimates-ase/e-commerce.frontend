@@ -10,7 +10,13 @@
 
 </head>
 
-<body class="h-screen w-screen overscroll-none" data-sveltekit-preload-data="hover">
+<!-- 
+	h-screen h-[100svh]
+	svh is not always supported by all browser, h-screen will be fallback for browsers that do not support small view height (h-[100svh] excludes UI elements
+	like the search bar)
+-->
+
+<body class="h-screen h-[100svh] w-screen overscroll-none" data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
 
