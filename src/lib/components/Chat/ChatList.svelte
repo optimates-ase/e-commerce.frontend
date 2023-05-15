@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import type { Tour } from '$lib/types';
 
 
 
@@ -12,7 +13,7 @@
 
 <nav class="list-nav">
     <ul>
-        {#each tourList as tour (tour.id)}
+        {#each tourList as tour (tour._id)}
         <li>
             
             <button on:click={() => {
@@ -24,7 +25,7 @@
                     <div class="w-1/4"> 
                         {#if tour.images = [""]}
                             <div class="">
-                            <img src="https://loremflickr.com/1000/1000/belize,tour" alt="placeholder" class="badge-icon h-10 w-10">
+                            <img src="https://loremflickr.com/1000/1000/belize?random={tour._id}" alt="placeholder" class="badge-icon h-10 w-10">
                             </div>
                         {:else}
                             <img src = tour.images[0] alt="profile_picture" class="badge">

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import CheckoutButton from '$comp/Explore/CheckoutButton.svelte';
 	import ExploreContainer from '$comp/Explore/ExploreContainer.svelte';
+	import TagsButton from '$comp/Explore/TagsButton.svelte';
 	import type { Tour } from '$lib/types';
 	import type { PageData } from './$types';
 
@@ -30,6 +31,9 @@
 
 		<div class="fixed bottom-14 right-0 p-4 z-10">
 			<CheckoutButton />
+		</div>
+		<div class="fixed bottom-14 left-0 p-4 z-10">
+			<TagsButton />
 		</div>
 	{/if}
 {:catch error}
