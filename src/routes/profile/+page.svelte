@@ -60,7 +60,7 @@
 			</div>
 		{/if}
 		<div class="p-8">
-			{#each tourList as tour (tour.id)}
+			{#each tourList as tour (tour._id)}
 				<div class="p-2">
 					<CardSmall {tour} />
 				</div>
