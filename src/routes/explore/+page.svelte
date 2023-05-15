@@ -8,7 +8,7 @@
 	let tours: Tour[] = data.randomTours;
 
 	function handleShortage(): void {
-		throw new Error('Function not implemented.');
+		console.log('We are running out of tours to show.');
 	}
 </script>
 

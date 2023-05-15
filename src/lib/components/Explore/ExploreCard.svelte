@@ -32,7 +32,7 @@
 			Price: {tour.price} USD
 		</div>
 		<div>
-			Min Pers: {tour.minimum}
+			Min Pers: {tour.min_of_participants}
 		</div>
 	</div>
 	<div class="w-full">
