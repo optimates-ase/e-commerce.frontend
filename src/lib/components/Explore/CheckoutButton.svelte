@@ -8,7 +8,7 @@
 		favCount = items.length;
 	});
 
-	function handleClick(event: MouseEvent): void {
+	function handleClick(): void {
 		goto('/checkout');
 	}
 
@@ -19,7 +19,7 @@
 
 {#if favCount}
 	<div class="flex justify-center w-full">
-		<button class="btn variant-filled-primary relative" on:click={handleClick}>
+		<button class="btn variant-filled-primary relative" on:click={() => handleClick()}>
 			Checkout
 			<span
 				class="bg-white text-black rounded-full w-6 h-6 flex items-center justify-center absolute -top-2 -right-2"

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-
 	import { Map } from 'maplibre-gl';
 	import { PUBLIC_MAPTILER_STYLES } from '$env/static/public';
 	import type { FeatureCollection, MapBoundries, MapMarker } from '$lib/types';
@@ -13,7 +12,6 @@
 		resetFilter,
 		resetMap
 	} from '$comp/Map/utils';
-	import { writable, type Writable } from 'svelte/store';
 	import { selectedDistrict } from '$lib/stores';
 
 	export let countryName: string;
@@ -21,7 +19,6 @@
 	export let mapBoundaries: MapBoundries;
 	export let center: [number, number];
 	export let zoom: number;
-	export let markers: MapMarker[];
 
 	let mapContainer: string | HTMLElement;
 	let map: Map | undefined;

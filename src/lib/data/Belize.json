@@ -4,6 +4,7 @@
         "British Honduras"
     ],
     "hook": "Are you yearning to escape the hustle and bustle of modern life and ready for an adventure like no other?",
+    "initialMapDescription": "Belize, formerly British Honduras, is a Latin American country, located between Guatemala and Mexico. Surpisingly, its official language is English and a considerable part of the population speaks a variation of German. Newer heard of the unBELIZEable dream destination? Click the map on the right to view what attractions await you in each district.",
     "catchPhrase": "Look no further! Explore Belize, the gateway of the Carribeans and the Central American region. Listen to the real sound of life and dive into astonishing water scenery.",
     "socialProof": [
         {
@@ -112,13 +113,13 @@
                 },
                 {
                     "id": 2,
-                    "name": "Todo",
-                    "thumbnail": "https://i.imgur.com/WOgTG96.gif",
+                    "name": "La Milpa",
+                    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Maya-Maske.jpg/260px-Maya-Maske.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Explore the ruins of Belize's third biggest ancient Maya city.",
+                        "La Milpa's Main Plaza covers over 18'000 square meters.",
+                        "This site was discovered in March 1938 and is was built in the Classic Period (250 AD - 900 AD)."
                     ]
                 }
             ],
@@ -150,9 +151,8 @@
                     "thumbnail": "https://lp-cms-production.imgix.net/features/2015/08/GettyImages-451852-001_full_cs.png",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "This 300m wide and 135m deep kast-eroded sinkhole flows into a complex underwater network",
-                        "Caves, crevices, stalactites and stalagmites",
-                        "Swim in the perceived nothingness of it deep blue colour"
+                        "This 300m wide and 135m deep kast-eroded sinkhole flows into a complex underwater network.",
+                        "Explore its caves, crevices, stalactites and stalagmites with one of our guided dive tours or swim the perceived nothingness due to the hole's deep blue colour."
                     ]
                 },
                 {
@@ -161,10 +161,10 @@
                     "thumbnail": "https://cdn.projectexpedition.com/photos/560c13f6ab4cb_large.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "Its Mayan name translates into 'little channel'",
-                        "Marine Reserve",
-                        "Get amazed by vivid underwater scenery including coral reefs, seagrass bed and mangroves",
-                        "Encounter nurse sharks and watch gigantic stingrays glide effortlessly through the water"
+                        "Its Mayan name translates into 'little channel'.",
+                        "This Marine Reserve spans an area of 18 square kilometers right off the coast of Belize.",
+                        "Get amazed by vivid underwater scenery including coral reefs, seagrass bed and mangroves.",
+                        "You can encounter nurse sharks and watch gigantic stingrays glide effortlessly through the water within striking distance."
                     ]
                 },
                 {
@@ -173,8 +173,8 @@
                     "thumbnail": "https://static01.nyt.com/images/2015/04/05/realestate/20150405COVER-slide-OMAO/20150405COVER-slide-OMAO-superJumbo.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "Eco-resort Blackadore Cay",
-                        "Fully powered by renewable energy"
+                        "Located in the Belize Barrier Reef, the island Blackadore Cay is one of approximately 450 islands in the longest barrierreef of the western hemisphere.",
+                        "Leonardo DiCaprio aquired this island in 2005 and plans on building a luxury eco resort fully powered by renewable energy."
                     ]
                 }
             ],
@@ -197,50 +197,49 @@
             "id": "BLZ.5_1",
             "name": "Stann Creek",
             "map": "districts/Stann_Creek_in_Belize.png",
-            "keyphrase": "TODO",
+            "keyphrase": "Equipped with a trifecta of natural wonders, Stann Creek is a must for adventureous travellers. Discover why colonialist called this the save havens. Witness the enchanting bioluminescent beaches of Hopkins, relax on the stunning Placencia Peninsula, and explore the wildlife-rich Cockscomb Basin Sanctuary. Discover a world of magic, pristine beauty, and unforgettable adventures in one captivating destination. Stann Creek beckons you to immerse yourself in its unique blend of bioluminescence, breathtaking beaches, and captivating wildlife.",
             "highlights": [
                 {
                     "id": 0,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Glowing waters",
+                    "thumbnail": "https://thebelizecollection.com/wp-content/uploads/2022/12/Belize-Bioluminescence-Tourwebopd.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Experience the dazzling beauty of bioluminescence on Stann Creek's beaches in Belize, where nature's enchanting light show transforms the ocean into a captivating cosmic wonderland",
+                        "Walking along the glowing shoreline, you will immerse yourself in a mesmerizing cosmic wonderland, evoking a sense of pure magic and serenity.",
+                        "Don't miss this rare opportunity to witness a truly unforgettable spectacle."
                     ]
                 },
                 {
                     "id": 1,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Placencia Peninsula",
+                    "thumbnail": "https://belize.com/wp-content/uploads/2022/10/walking-placencia-beach-1024x628.webp",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Escape to paradise on the Placencia Peninsula, where pristine beaches meet turquoise waters, and charming seaside villages offer a taste of local culture and cuisine.",
+                        "Relax, indulge in water sports, and soak up the laid-back vibe of this tropical haven, where worries fade away, and blissful memories are made."
                     ]
                 },
                 {
                     "id": 2,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Jaguar Reserve",
+                    "thumbnail": "https://www.cahalpech.com/wp-content/uploads/Cockscomb-Basin-Wildlife-Sanctuary-things-to-do-in-belize.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Enter the world of jaguars and explore the untamed beauty of the Cockscomb Basin Wildlife Sanctuary.",
+                        "When you hike through the lust rainforests, you'll witness stunning waterfalls, spot diverse wildlife including tapirs and howler monkeys.",
+                        "Lucky adventurers may even catch a glimpses of jaguars, the largest cat of the Americas,  in its natural habitat."
                     ]
                 }
             ],
             "activities": [
                 {
-                    "name": "big creek",
-                    "icon": "/icons/landing/caye.svg"
+                    "name": "wildlife",
+                    "icon": "/icons/landing/big-cat.svg"
                 },
                 {
-                    "name": "fishing",
-                    "icon": "/icons/landing/fishing.svg"
+                    "name": "costal life",
+                    "icon": "/icons/landing/caye.svg"
                 },
                 {
                     "name": "sailing",
@@ -252,39 +251,39 @@
             "id": "BLZ.6_1",
             "name": "Toledo",
             "map": "districts/Toledo_in_Belize.png",
-            "keyphrase": "This district is home to traditional Maya farming villages. TODO",
+            "keyphrase": "Uncover the mysteries of the ancient Maya at Lubaantun in Toledo, Belize. Explore the impressive pyramids and ceremonial structures that whisper tales of a rich civilization. Immerse yourself in the lush wonders of Rio Blanco National Park, where pristine waterfalls, dense rainforests, and a vibrant array of wildlife await your discovery. Indulge your senses in the Golden Stream Corridor Preserve, where ecotourism thrives. Engage in birdwatching, hike nature trails, and witness the conservation efforts dedicated to preserving this natural paradise. Toledo beckons you to experience a captivating blend of history, nature, and sustainable tourism in one breathtaking destination.",
             "highlights": [
                 {
                     "id": 0,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Eco Toursim",
+                    "thumbnail": "https://caribbeanlifestyle.com/wp-content/uploads/2020/09/img-maya-forest-landscape-yaaxche.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "The Golden Strem Corridor Preserve is host to natural wonders and astonishing biodiversity.",
+                        "Indulge your senses in an ecotourism paradise, where diverse wildlife, tropical forests, and pristine rivers will enchant your soul.",
+                        "Discover the captivating beauty of this conservation area, engage in birdwatching, hike nature trails, and witness the conservation efforts dedicated to preserving this natural paradise."
                     ]
                 },
                 {
                     "id": 1,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Lubaantun",
+                    "thumbnail": "https://ninebelize.com/wp-content/uploads/2017/10/gtb-maya-lubaantun-map-belize.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Discover the enigmatic allure of Lubaantun, a captivating ancient Maya site in Toledo, Belize.",
+                        "This Maya city flourished in the Classic era from the AD 730s to the 890s.",
+                        "Immerse yourself in the fascinating history of this ceremonial center and explore the intricate stonework and towering pyramids that hold the secrets of this intriguing civilization."
                     ]
                 },
                 {
                     "id": 2,
-                    "name": "TODO",
-                    "thumbnail": "https://images.myguide-cdn.com/belize/companies/monkey-bay-national-park/large/monkey-bay-national-park-626037.jpg",
+                    "name": "Jungle Reservoir",
+                    "thumbnail": "https://rioblanconationalpark.org/wp-content/uploads/2018/06/DSC_1129-1000x600.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Step into a realm of natural splendor at Rio Blanco National Park in Toledo, Belize.",
+                        "This park was declared as an 'Indigenous People's Park in 1992' and its main attraction, a cascading waterfall in whose calm basins offer a chance to cool dow. ",
+                        "Soak in the amazing views in the lush rainforests that teem with exotic flora and fauna, creating an immersive sensory experience."
                     ]
                 }
             ],
@@ -307,7 +306,7 @@
             "id": "BLZ.2_1",
             "name": "Cayo",
             "map": "districts/Cayo_in_Belize.png",
-            "keyphrase": "This district truly is an island encircled by impregnable rain forest teeming with wildlife. Tranquil kayak rides allow you to watch the jaw-dropping scenery slide by and don't forget to experience the best the Mayan culture has to offer.",
+            "keyphrase": "This district truly is an island encircled by impregnable rain forest teeming with wildlife. Cayo entices adventurers to discover its captivating history and breathtaking landscapes. Tranquil kayak rides allow you to watch the jaw-dropping scenery slide by and don't forget to experience the best the Mayan culture has to offer.",
             "highlights": [
                 {
                     "id": 0,
@@ -315,9 +314,8 @@
                     "thumbnail": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/c6/98/b4.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Enter the mystical underworld of Actun Tunichil Muknal in Cayo, Belize, which is one of the world's most notable archaelogical sites, includes conserved skeletons, ceramic and mayan pottery.",
+                        "Here, you'll witness a captivating blend of adventure, history and natural beauty."
                     ]
                 },
                 {
@@ -326,20 +324,20 @@
                     "thumbnail": "https://belize.com/wp-content/uploads/2021/08/xunantunich-belize-maya-temple.webp",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Visited by Mayan people all around the central American region, you can experience the view that was reserved for shamans in the Late and Terminal Classic period.",
+                        "Its Mayan name translates into 'Maiden of the Rock'.",
+                        "Perched atop a hill, on top of the 40m tall temple you'll marvel at the majestic panoramic views of the surrounding jungle."
                     ]
                 },
                 {
                     "id": 2,
-                    "name": "Mountain Pine Ridge Forest Reserve",
-                    "thumbnail": "https://i1.wp.com/www.superbelize.com/wp-content/uploads/2013/10/Rio-On-Pools.jpg?fit=1600%2C1010",
+                    "name": "Wildlife oasis",
+                    "thumbnail": "https://belize.com/wp-content/uploads/2021/04/barton-creek-caves-belize.jpg",
                     "icon": "(icon)",
                     "keyExpression": [
-                        "TODO",
-                        "TODO",
-                        "TODO"
+                        "Discover a breathtaking oasis at the Mountain Pine Ridge Forest Reserve in Cayo, Belize.",
+                        "This wildlife sanctuary is home to the country's tallest waterfall, which is almost 500m high;",
+                        "Unleash your adventurous spirit as you explore nature trails, swim in refreshing pools, and soak in the natural beauty of this picturesque reserve."
                     ]
                 }
             ],

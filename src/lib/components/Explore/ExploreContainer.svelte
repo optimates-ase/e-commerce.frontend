@@ -4,8 +4,17 @@
 
 	import type { Tour } from '$lib/types';
 	import ExploreCard from '$comp/Explore/ExploreCard.svelte';
+	import { createEventDispatcher } from 'svelte';
 
-	export let tours: Tour[] | [];
+	const dispatch = createEventDispatcher();
+
+	const dispatchShortage = () => {
+		dispatch('shortage', { message: 'Shortage event occurred' });
+	};
+
+	export let tours: Tour[];
+
+	let active_item: number;
 
 	const swipeConfig = {
 		autoplay: false,
@@ -14,19 +23,25 @@
 		transitionDuration: 500,
 		defaultIndex: 0
 	};
+
+	$: {
+		if (tours.length - active_item <= 2) {
+			dispatchShortage();
+		}
+	}
 </script>
 
-<div class=" w-full h-full">
-	<Swipe {...swipeConfig} is_vertical={false}>
-		{#each tours as tour}
+<div class="w-full h-full">
+	<Swipe {...swipeConfig} is_vertical={true} bind:active_item>
+		{#each tours as tour, index}
 			<SwipeItem>
 				<div class="">
-				<ExploreCard {tour} />
+					<ExploreCard {tour} />
 				</div>
 			</SwipeItem>
 		{/each}
 	</Swipe>
 </div>
+
 <style>
-	
 </style>

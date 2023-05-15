@@ -1,18 +1,38 @@
+export interface Address {
+	steet: string;
+	streetNo: number;
+	streetNoExtra: string;
+	zipCode: string;
+	country: string;
+	validFrom: Date;
+	validTo?: Date;
+}
+
+export interface User {
+	firstName: string;
+	lastName: string;
+	birthdate: Date;
+	email: string;
+	phone: string;
+	billingAddress?: Address;
+	residenceAddress?: Address;
+}
+
 export interface Coordinate {
 	lng: number;
 	lat: number;
 }
 
 export interface MapBoundries {
-	maxLng: number,
-	minLng: number,
-	maxLat: number,
-	minLat: number
+	maxLng: number;
+	minLng: number;
+	maxLat: number;
+	minLat: number;
 }
 
 interface MapConfig {
 	coordinates: Coordinate;
-	boundaries: MapBoundries;
+	mapBoundaries: MapBoundries;
 	zoom: number;
 }
 
@@ -20,10 +40,17 @@ export interface Activity {
 	name: string;
 	icon: string;
 }
+
+interface Temperature {
+	avg: number,
+	unit: string,
+	month: string,
+	icon: string
+}
+
 interface MinorInfluence {
-	avg: number;
-	month: string;
-	unit: string;
+	min: Temperature
+	max: Temperature
 }
 
 interface Img {
@@ -39,10 +66,10 @@ export interface Highlight {
 	keyExpression: string[];
 }
 
-export interface ClimateInfluenceMinor {
+export interface ClimateInfluence {
 	name: string;
-	max: MinorInfluence;
-	min: MinorInfluence;
+	mainInflunece: string;
+	minorInfluence: MinorInfluence;
 }
 
 export interface MapMarker {
@@ -86,24 +113,24 @@ export interface District {
 	name: string;
 	map: string;
 	keyphrase: string;
-	activities: Activity;
+	activities: Activity[];
 	highlights: Highlight[];
 }
 
 export interface Country {
 	name: string;
 	hook: string;
+	initialMapDescription: string;
 	catchPhrase: string;
 	districts: District[];
 	keywords: string[];
 	keyphrase: string;
 	mapConfig: MapConfig;
-	carouselImg: CarouselImg[];
-	climateInfluenceMinor: ClimateInfluenceMinor;
+	climateInfluenceMinor: ClimateInfluence;
 	markedCities: MapMarker[];
 }
 export interface Tour {
-	id: string;
+	_id: string;
 	name: string;
 	description: string;
 	price: number;
@@ -111,8 +138,17 @@ export interface Tour {
 	rating: number;
 	num_of_ratings: number;
 	min_of_participants: number;
-	minimum: number;
-	language_offered: string;
+	tags?: Tag[];
+	minimum?: number;
+	language_offered?: string;
 	images: string[];
 }
 
+export enum Tag {
+	Adventure = 'Adventure',
+	Sightseeing = 'Sightseeing',
+	Relaxation = 'Relaxation',
+	Nature = 'Nature',
+	Cultural = 'Cultural',
+	Wildlife = 'Wildlife'
+}

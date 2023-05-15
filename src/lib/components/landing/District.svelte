@@ -32,6 +32,7 @@
 		icon.set(String(highlight?.icon));
 		keyExpr.set(highlight?.keyExpression);
 		// TODO fix landscape mode not all of modal is visible
+		// TODO fix overflow
 		const alert: ModalSettings = {
 			type: 'alert',
 			title: highlight?.name,
@@ -64,7 +65,7 @@
 					</div>
 				</svelte:fragment>
 				<div class="h-4/5 grid grid-cols-7">
-					<div class=" col-span-7 h-72 w-full p-2">
+					<div class=" col-span-7 h-72 w-full p-2 overflow-auto">
 						<div class="p-4">
 							{district.keyphrase}
 						</div>
@@ -77,7 +78,7 @@
 						/>
 					</div>
 					<div class="col-span-3 items-center h-full py-6">
-						<RadioGroup display="flex-col" class="border">
+						<RadioGroup display="flex-col">
 							{#each district.highlights as highlight}
 								<RadioItem
 									bind:group={$radioSet}

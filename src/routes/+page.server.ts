@@ -1,44 +1,35 @@
 import type { Country } from '$lib/types';
-import countryData from '$lib/data/Belize.json';
-import countryClimate from '$lib/data/Belize.weather.json';
+import { geoJSONCollection } from '$db/collections/geos';
+import { json } from '@sveltejs/kit';
+import { countryInfoCollection } from '$db/collections/countryInfo';
+import { countryWeatherCollection } from '$db/collections/countryWeather';
 
 export const load = async () => {
 
-	const fetchMapCountryData = async () => {
-		// TODO use environment variable instead of localhost
-		const geosRes = await fetch("http://localhost:8000/geos/districts/");
-		const geosData = await geosRes.json();
-		return geosData.data;
+	const jsonify = (el) => {
+		const {_id, ...rest} = el;
+		return rest;
 	}
 
-	const countryName = countryData.name;
+	const fetchMapCountryData = async () => {
 
-	const country: Country = {
-		name: countryData.name,
-		hook: countryData.hook,
-		catchPhrase: countryData.catchPhrase,
-		districts: countryData.districts,
-		keywords: countryData.keywords,
-		keyphrase: countryData.keyphrase,
-		mapConfig: {
-			coordinates: {
-				lat: countryData.mapConfig.lat,
-				lng: countryData.mapConfig.lng
-			},
-			boundaries: countryData.mapConfig.mapBoundaries,
-			zoom: countryData.mapConfig.zoom
-		},
-		carouselImg: countryData.carouselImages,
-		climateInfluenceMinor: {
-			name: "Temperature",
-			max: countryClimate.minorInfluence.max,
-			min: countryClimate.minorInfluence.min
-		},
-		markedCities: countryData.populationHotspots,
-	};
+		const data = await geoJSONCollection.findOne({name: "gadm41_BLZ_1"});
+		return jsonify(data);
+	}
 
-	let countryMap = fetchMapCountryData();
+	const fetchCountryInfo = async () => {
+		const data = await countryInfoCollection.findOne({name: "Belize"});
+		return jsonify(data);
+	}
+
+	const fetchCountryClimateInfo =async () => {
+		const data = await countryWeatherCollection.findOne({name: "Belize"});
+		return jsonify(data);
+	}
+
+	let countryMap = await fetchMapCountryData();
+	let countryInfo = await fetchCountryInfo();
+	let countryWeatherInfo = await fetchCountryClimateInfo();
 	
-	
-	return { country: country, countryName: countryName, countryMap: countryMap };
+	return { country: countryInfo, countryMap: countryMap, weatherInfo: countryWeatherInfo };
 };

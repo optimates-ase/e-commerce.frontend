@@ -5,9 +5,6 @@
 
 <div class="h-full flex items-center justify-center h-full w-full max-w-md">
 	<div id="LoginContainer" class="card flex flex-col m-4 h-90 w-full">
-		<!-- <div>01</div>
-        <div>02</div>
-        <div>03</div> -->
 		<header>
 			<div class="w-max">
 				<h1 class="m-8">Login</h1>

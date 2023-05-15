@@ -18,7 +18,7 @@
 	const unsubscribeToHighlightId = selectedDistrict.subscribe((val: string) => (highlighId = val));
 
 	$: {
-		let district: District | undefined = country.districts.filter((el: District[]) => {
+		let district: District | undefined = country.districts.filter((el: District) => {
 			return el.id === highlighId;
 		})[0];
 		if (district) {
@@ -27,7 +27,6 @@
 			countryMode = false;
 		} else {
 			countryMode = true;
-			
 		}
 	}
 
@@ -50,14 +49,14 @@
 
 	<div class="mt-4 py-5">
 		<div id="countryOverviewHeader" class="mt-4 py-2 grid gap-2 grid-cols-7">
-			<div class="col-span-4 py-18 w-[100%] h-64">
+			<div class="col-span-4 py-18 w-[100%] h-64 overflow-auto">
 				{#if countryMode}
 					<p class="text-center my-auto">
-						{@html country.hook}
+						{@html country.initialMapDescription}
 					</p>
 				{:else}
 					<div class="h-12">
-						<p class="text-left py-auto">{highlighdDistrict} offers:</p>
+						<p class="text-left py-auto">{highlighdDistrict} district offers:</p>
 					</div>
 					<ul class="list">
 						{#each activities as act}
@@ -78,10 +77,9 @@
 					<StaticMap
 						countryName={country.name}
 						countryGeoJSON={geoJSON}
-						mapBoundaries={country.mapConfig.boundaries}
+						mapBoundaries={country.mapConfig.mapBoundaries}
 						center={[country.mapConfig.coordinates.lng, country.mapConfig.coordinates.lat]}
 						zoom={country.mapConfig.zoom}
-						markers={country.markedCities}
 					/>
 				{/if}
 			</div>

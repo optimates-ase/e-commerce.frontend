@@ -12,7 +12,7 @@
 	const favoriteToggle = () => {
 		favorites.update((arr) => {
 			if (arr.some((f) => JSON.stringify(f) === JSON.stringify(tour))) {
-				arr = arr.filter((item) => item.id != tour.id);
+				arr = arr.filter((item) => item._id != tour._id);
 			} else {
 				arr = [...arr, tour];
 			}
@@ -25,42 +25,41 @@
 	};
 </script>
 
-
 <div class="card mx-5 p-5 mt-5 max-w-md">
-	<div class="text-3xl m-3 ">{tour.name}</div>
+	<div class="text-3xl m-3">{tour.name}</div>
 	<div class="flex justify-between font-mono text-gray-500 mx-3">
 		<div>
 			Price: {tour.price} USD
 		</div>
 		<div>
-			Min Pers: {tour.minimum}
+			Min Pers: {tour.min_of_participants}
 		</div>
-	
-</div>
-	<div class="w-full ">
-		{#if tour.images = [""]}
+	</div>
+	<div class="w-full">
+		{#if (tour.images = [''])}
 			<div class=" p-2">
-			<img src="https://loremflickr.com/1000/1000/belize,tour" alt="placeholder" class="rounded-xl h-1/4">
+				<img
+					src="https://loremflickr.com/1000/1000/belize?random={tour._id}"
+					alt="placeholder"
+					class="rounded-xl h-1/4"
+				/>
 			</div>
 		{:else}
-		<Carousel srcs={tour.images} />
+			<Carousel srcs={tour.images} />
 		{/if}
 	</div>
 	<div class="">
-
 		<div class="m-4">
 			<div class="">
-			{tour.description}
-		</div>
+				{tour.description}
+			</div>
 		</div>
 		<div class="" />
-		
 	</div>
 	<div class="flex justify-between items-center">
-	<div class="mx-3"> <Rating {rating} {num_of_ratings} /></div>
-	<div class="mx-4">
-	<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
+		<div class="mx-3"><Rating {rating} {num_of_ratings} /></div>
+		<div class="mx-4">
+			<Favorite favorite={isFavorited()} on:favorited={favoriteToggle} />
+		</div>
+	</div>
 </div>
-</div>
-</div>
-
