@@ -39,7 +39,7 @@
 		{#if (tour.images = [''])}
 			<div class=" p-2">
 				<img
-					src="https://loremflickr.com/1000/1000/belize,tour"
+					src="https://loremflickr.com/1000/1000/belize?random={tour._id}"
 					alt="placeholder"
 					class="rounded-xl h-1/4"
 				/>

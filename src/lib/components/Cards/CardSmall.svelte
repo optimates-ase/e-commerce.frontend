@@ -6,16 +6,17 @@
 	export let tour: Tour;
 
 	const { rating, num_of_ratings } = tour;
-
-	
-	
 </script>
 
 <div class="w-full">
 	<div class="card p-3 variant-soft-surface shadow-xl">
-		{#if tour.images = [""]}
+		{#if (tour.images = [''])}
 			<div class=" p-2 h-1/4">
-			<img src="https://loremflickr.com/1000/1000/belize,tour" alt="placeholder" class="rounded-xl h-1/4">
+				<img
+					src="https://loremflickr.com/1000/1000/belize?random={tour._id}"
+					alt="placeholder"
+					class="rounded-xl h-1/4"
+				/>
 			</div>
 		{:else}
 			<Carousel srcs={tour.images} />
