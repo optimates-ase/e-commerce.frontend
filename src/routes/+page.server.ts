@@ -19,6 +19,7 @@ export const load = async () => {
 	const country: Country = {
 		name: countryData.name,
 		hook: countryData.hook,
+		initialMapDescription: countryData.initialMapDescription,
 		catchPhrase: countryData.catchPhrase,
 		districts: countryData.districts,
 		keywords: countryData.keywords,

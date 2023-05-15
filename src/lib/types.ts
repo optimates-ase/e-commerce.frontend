@@ -115,6 +115,7 @@ export interface District {
 export interface Country {
 	name: string;
 	hook: string;
+	initialMapDescription: string,
 	catchPhrase: string;
 	districts: District[];
 	keywords: string[];
