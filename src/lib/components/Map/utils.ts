@@ -1,11 +1,9 @@
 import type { Coordinate, Feature, MapBoundries, MapMarker } from '$lib/types';
-import {
-	type Map,
-	type GeoJSONSourceSpecification,
-	type FillLayerSpecification,
-	type LineLayerSpecification,
-	Marker,
-	Popup
+import type {
+	Map,
+	GeoJSONSourceSpecification,
+	FillLayerSpecification,
+	LineLayerSpecification
 } from 'maplibre-gl';
 
 function createSource(features: Feature[]) {
@@ -110,17 +108,17 @@ export function resetMap(
 }
 
 export function addMarkers(map: Map, markers: MapMarker[]) {
-	markers.map((marker) => {
-		const lng = marker.coordinates.lng;
-		const lat = marker.coordinates.lat;
-		const coordinates: [number, number] = [lng, lat];
-		const mk = new Marker().setLngLat(coordinates).addTo(map);
-		// mk.getElement().addEventListener('click', () => {
-		// 	new Popup().setLngLat(coordinates)
-		// 	.setHTML('<h1>Hello World!</h1>')
-		// 	.addTo(map);
-		// })
-	});
+	// markers.map((marker) => {
+	// 	const lng = marker.coordinates.lng;
+	// 	const lat = marker.coordinates.lat;
+	// 	const coordinates: [number, number] = [lng, lat];
+	// 	const mk = new Marker().setLngLat(coordinates).addTo(map);
+	// 	// mk.getElement().addEventListener('click', () => {
+	// 	// 	new Popup().setLngLat(coordinates)
+	// 	// 	.setHTML('<h1>Hello World!</h1>')
+	// 	// 	.addTo(map);
+	// 	// })
+	// });
 }
 
 export function inBound(map: Map, mapBoundaries: MapBoundries) {
