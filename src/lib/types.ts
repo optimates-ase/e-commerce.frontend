@@ -1,5 +1,3 @@
-import type { WithId, Document, ObjectId } from 'mongodb';
-
 export interface Address {
 	steet: string;
 	streetNo: number;
@@ -34,7 +32,7 @@ export interface MapBoundries {
 
 interface MapConfig {
 	coordinates: Coordinate;
-	boundaries: MapBoundries;
+	mapBoundaries: MapBoundries;
 	zoom: number;
 }
 
@@ -42,10 +40,17 @@ export interface Activity {
 	name: string;
 	icon: string;
 }
+
+interface Temperature {
+	avg: number,
+	unit: string,
+	month: string,
+	icon: string
+}
+
 interface MinorInfluence {
-	avg: number;
-	month: string;
-	unit: string;
+	min: Temperature
+	max: Temperature
 }
 
 interface Img {
@@ -61,10 +66,10 @@ export interface Highlight {
 	keyExpression: string[];
 }
 
-export interface ClimateInfluenceMinor {
+export interface ClimateInfluence {
 	name: string;
-	max: MinorInfluence;
-	min: MinorInfluence;
+	mainInflunece: string;
+	minorInfluence: MinorInfluence;
 }
 
 export interface MapMarker {
@@ -108,7 +113,7 @@ export interface District {
 	name: string;
 	map: string;
 	keyphrase: string;
-	activities: Activity;
+	activities: Activity[];
 	highlights: Highlight[];
 }
 
@@ -121,7 +126,6 @@ export interface Country {
 	keywords: string[];
 	keyphrase: string;
 	mapConfig: MapConfig;
-	carouselImg: CarouselImg[];
 	climateInfluenceMinor: ClimateInfluenceMinor;
 	markedCities: MapMarker[];
 }

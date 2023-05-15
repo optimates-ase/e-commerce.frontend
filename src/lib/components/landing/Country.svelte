@@ -18,7 +18,7 @@
 	const unsubscribeToHighlightId = selectedDistrict.subscribe((val: string) => (highlighId = val));
 
 	$: {
-		let district: District | undefined = country.districts.filter((el: District[]) => {
+		let district: District | undefined = country.districts.filter((el: District) => {
 			return el.id === highlighId;
 		})[0];
 		if (district) {
@@ -77,10 +77,9 @@
 					<StaticMap
 						countryName={country.name}
 						countryGeoJSON={geoJSON}
-						mapBoundaries={country.mapConfig.boundaries}
+						mapBoundaries={country.mapConfig.mapBoundaries}
 						center={[country.mapConfig.coordinates.lng, country.mapConfig.coordinates.lat]}
 						zoom={country.mapConfig.zoom}
-						markers={country.markedCities}
 					/>
 				{/if}
 			</div>
