@@ -12,6 +12,7 @@
 		console.log('We are running out of tours to show.');
 	}
 </script>
+
 <svelte:head>
 	<title>OptiMates - Explore Tours</title>
 </svelte:head>
