@@ -9,7 +9,7 @@ const getUser = async (email: string) => {
 	}
 
 	return {
-		uid: String(user._id),
+		_id: String(user._id),
 		firstName: user.firstName,
 		lastName: user.lastName,
 		email: user.email,
@@ -32,7 +32,7 @@ export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
 
 	if (!uid) {
 		const user = getUser(email);
-		cookies.set('uid', (await user).uid, { path: '/' });
+		cookies.set('uid', (await user)._id, { path: '/' });
 		return {user: user};
 	}
 };

@@ -1,3 +1,5 @@
+import type { ObjectId } from "mongodb";
+
 export interface Address {
 	steet: string;
 	streetNo: number;
@@ -9,6 +11,7 @@ export interface Address {
 }
 
 export interface User {
+	_id: ObjectId | string;
 	firstName: string;
 	lastName: string;
 	birthdate: Date;

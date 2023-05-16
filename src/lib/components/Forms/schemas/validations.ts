@@ -5,14 +5,18 @@ export const signupSchema = zfd.formData({
     lastName: zfd.text(),
     phone: zfd.text(),
     birthdate: zfd.text(),
-    // residenceStreet: zfd.text(),
-    // residenceStreetNumber: zfd.text(),
-    // residenceZipCode: zfd.text(),
-    // residenceCity: zfd.text(),
-    // residenceCountry: zfd.text(),
+
     // billingStreet: zfd.text(),
     // billingStreetNumber: zfd.text(),
     // billingZipCode: zfd.text(),
     // billingCity: zfd.text(),
     // billingCountry: zfd..text(),
+});
+
+export const addressSchema = zfd.formData({
+    street: zfd.text(),
+    streetNumber: zfd.text(),
+    zipCode: zfd.text(),
+    city: zfd.text(),
+    country: zfd.text()
 });
