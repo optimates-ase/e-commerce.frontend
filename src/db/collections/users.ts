@@ -1,9 +1,10 @@
 import db from '$db/mongo'
 import type { User } from '$lib/types'
+import type { OptionalId } from 'mongodb';
 
 export const userCollection = db.collection("users")
 
-export const createUser = async (user:User) => {
+export const createUser = async (user:User | OptionalId<User>) => {
     let result;
     try{
         result = await userCollection.insertOne(user);
@@ -16,15 +17,11 @@ export const createUser = async (user:User) => {
 
 export const getUserIdByMail = async (mail:string)  => {
     let result;
-
     try{
-        result = (await userCollection.find({email: mail}).toArray()).map((usr) => {
-            return usr;
-        })[0];
+        result = await userCollection.findOne({email: mail})
     } catch (error:any){
         console.log("ERROR:", error);
     }
     return result;
-
 }
 
