@@ -4,6 +4,7 @@
 	import Payment from '$comp/Payment/Payment.svelte';
 	import { favorites } from '$lib/stores';
 	import type { Tour } from '$lib/types.js';
+	import { redirect } from '@sveltejs/kit';
 	import { onDestroy } from 'svelte';
 
 	const handleClick = (tour: Tour) => {
@@ -15,7 +16,7 @@
 
 	const unsubscribe = favorites.subscribe((value) => {
 		if (value.length <= 0) {
-			goto('/explore');
+			throw redirect(301, '/explore');
 		}
 		tourList = value;
 	});
