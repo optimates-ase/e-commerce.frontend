@@ -3,6 +3,7 @@ import type { PageServerLoad } from './$types';
 import { getUser } from '../utils';
 import { addAddress } from '$db/collections/providers';
 import { addressSchema } from '$comp/Forms/schemas/validations';
+import type { Address } from '$lib/types';
 
 export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
 	await parent();
@@ -18,7 +19,7 @@ export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
 	const uid = cookies.get('uid');
 
 	if (!uid) {
-		const provider = getUser(email);
+		const provider = getUser(email, '/providers/contact');
 		cookies.set('uid', (await provider)._id, { path: '/' });
 		return { provider: provider };
 	}
@@ -40,15 +41,15 @@ export const actions: Actions = {
 			return fail(400, data);
 		}
 
-		const address = {
+		const address: Address = {
 			street: String(formData.get('street')),
 			streetNumber: String(formData.get('streetNumber')),
 			zipCode: String(formData.get('zipCode')),
 			city: String(formData.get('city')),
-			country: String(formData.get('country'))
+			country: String(formData.get('country')),
+			validFrom: new Date(),
 		};
 		const _id = cookies.get('uid');
-		console.log(_id)
 		
         await addAddress(_id, address);
 
