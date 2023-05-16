@@ -1,10 +1,12 @@
 import type { ObjectId } from "mongodb";
 
 export interface Address {
-	steet: string;
-	streetNo: number;
-	streetNoExtra: string;
+	street: string;
+	// TODO streetNumber should be a number requires update in $comp/Forms/Address.svelte
+	streetNumber: string;
+	streetNoExtra?: string;
 	zipCode: string;
+	city: string;
 	country: string;
 	validFrom: Date;
 	validTo?: Date;
