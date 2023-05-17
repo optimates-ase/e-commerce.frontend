@@ -147,6 +147,7 @@ export interface Tour {
 	minimum?: number;
 	language_offered?: string;
 	images: string[];
+	providers: ObjectId[]
 }
 
 export enum Tag {
