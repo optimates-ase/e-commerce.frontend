@@ -15,7 +15,7 @@ const loadTours = async (providerId?: string) => {
 		const { _id, providers, ...tourData } = tour;
 		tourData._id = _id.toString();
 		return {
-			tourData	
+			tourData
 		};
 	});
 	return tours;
