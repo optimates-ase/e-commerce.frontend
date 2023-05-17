@@ -67,7 +67,7 @@
 						{/each}
 						<li>
 							<span><img class="block mx-auto h-6 w-6" src="/icons/landing/more.svg" alt="-" /></span>
-							<span>and more</span>
+							<span>more {highlighdDistrict} tours</span>
 						</li>
 					</ul>
 				{/if}

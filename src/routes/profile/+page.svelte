@@ -3,10 +3,12 @@
 	import CardSmall from '$comp/Cards/CardSmall.svelte';
 	import ChatList from '$comp/Chat/ChatList.svelte';
 	import Carousel from '$comp/UIUX/Carousel.svelte';
-
+	
 	import { favorites } from '$lib/stores';
 	import type { Tour } from '$lib/types.js';
 	import { onDestroy } from 'svelte';
+
+	export let data;
 
 	let tourList: Tour[] = [];
 
@@ -23,7 +25,7 @@
 	<title>OptiMates - My Page</title>
 </svelte:head>
 
-<div class="w-full max-w-md">
+<div class="w-full max-w-md mx-auto">
 	<div class="card p-5 m-5 mb-10">
 		<img
 			src="https://loremflickr.com/1000/1000/mountain"
@@ -32,11 +34,11 @@
 		/>
 		<div class="mb-3">
 			<h3>Name</h3>
-			<div class="font-mono text-sm text-gray-500">Optimates User</div>
+			<div class="font-mono text-sm text-gray-500">{data.user.firstName} {data.user.lastName}</div>
 		</div>
 		<div class="">
 			<h3>Email</h3>
-			<div class="font-mono text-sm text-gray-500">email@belize.bz</div>
+			<div class="font-mono text-sm text-gray-500">{data.user.email}</div>
 		</div>
 	</div>
 	<div>
