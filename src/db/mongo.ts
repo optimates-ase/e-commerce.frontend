@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
-import { MONGO_URL } from '$env/static/private';
+// import { PUBLIC_MONGO_URL } from '$env/static/public';
 
-const client = new MongoClient(MONGO_URL);
+const client = new MongoClient('mongodb://localhost:27017/optimates');
 
 export function startMongo() {
-	console.log('Starting mongo...');
+	console.log('Starting mongo client...');
 	return client.connect();
 }
 

@@ -2,8 +2,6 @@ import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
@@ -24,8 +22,7 @@ const config = {
 		alias: {
 			$comp: 'src/lib/components',
 			$db: 'src/db'
-		},
-		
+		}
 	}
 };
 
