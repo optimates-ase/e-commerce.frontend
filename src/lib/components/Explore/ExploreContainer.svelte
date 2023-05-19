@@ -20,7 +20,7 @@
 		autoplay: false,
 		delay: 0,
 		showIndicators: false,
-		transitionDuration: 500,
+		transitionDuration: 200,
 		defaultIndex: 0
 	};
 
@@ -35,9 +35,7 @@
 	<Swipe {...swipeConfig} is_vertical={true} bind:active_item>
 		{#each tours as tour, index}
 			<SwipeItem>
-				<div class="">
-					<ExploreCard {tour} />
-				</div>
+				<ExploreCard {tour} />
 			</SwipeItem>
 		{/each}
 	</Swipe>
