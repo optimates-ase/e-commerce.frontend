@@ -3,20 +3,17 @@
 import { chatsCollection } from '$db/collections/chats';
 import type { Conv, Message } from '$lib/types';
 import type {  PageServerLoad } from './$types';
-import type {Actions } from '@sveltejs/kit';
-import WebSocket from 'ws';
-import { io } from 'socket.io-client'
+import {redirect, type Actions } from '@sveltejs/kit';
 
-const socket = io()
+let email:string;
 
-socket.on('eventFromServer', (message) => {
-	console.log(message)
-})
-
-
-
-export const load: PageServerLoad = async () => {
-
+export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
+		await parent();
+		const session = await locals.getSession();
+	
+		if (!session) throw redirect(301, '/provider/login');
+		
+		email = String(session.user?.email);
 
 	const jsonify = (e) => {
 		const result = e.map(
@@ -67,8 +64,8 @@ export const actions: Actions = {
 		
 		
         const message: Message = {
-			content:String( formData.get('content')),
-			sender: String("string"),
+			content: String( formData.get('content')),
+			sender: email,
 			timestamp: timestamp
 		};
 		

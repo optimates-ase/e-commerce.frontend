@@ -1,15 +1,7 @@
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import injectSocketIO from './socketIoHandler.js';
-import { webSocketServer } from './webSocket.js';
 
-export const webSocketServer = {
-    name: 'webSocketServer',
-    configureServer(server) {
-        injectSocketIO(server.httpServer);
-    }
-};
 
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -34,9 +26,6 @@ const config = {
 			$db: 'src/db'
 		},
 		
-	},
-	vite: {
-		plugins: [webSocketServer],
 	}
 };
 

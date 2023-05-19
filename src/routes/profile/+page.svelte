@@ -55,9 +55,9 @@
 					No active chat at the moment. 
 				</div>
 			{/if}
-		
+			<form action="?/addConv" method="POST">
 			<ChatList {tourList}/>
-			
+			</form>
 		</div>
 	</div>
 	<h1 class="mx-5 mt-10">Liked Tours</h1>

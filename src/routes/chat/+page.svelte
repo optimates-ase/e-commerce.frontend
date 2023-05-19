@@ -14,12 +14,6 @@
 
 
 
-
-    
-
-
-
-
 	export let data;
 	const conv:Conv = data.chats[0];
 
