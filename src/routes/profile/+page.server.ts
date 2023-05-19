@@ -24,6 +24,7 @@ export const load: PageServerLoad = async ({ locals, parent, cookies }) => {
 	if (!session) throw redirect(301, '/login');
 	const email = session.user?.email;
 
+	
 	// TODO replace with reset onboarding page
 	// Should never reach here
 	if (!email) throw redirect(301, '/logout');

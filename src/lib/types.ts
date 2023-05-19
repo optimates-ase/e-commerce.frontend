@@ -146,7 +146,20 @@ export interface Tour {
 	tags?: Tag[];
 	minimum?: number;
 	language_offered?: string;
-	images: string[];
+	images?: string[];
+	providers?: ObjectId[] | string[];
+}
+
+export interface Conv {
+	provider: string;
+	user: string;
+	messages: Message[]
+}
+
+export interface Message {
+	content: string;
+	sender: string;
+	timestamp: number;
 }
 
 export enum Tag {
@@ -157,3 +170,5 @@ export enum Tag {
 	Cultural = 'Cultural',
 	Wildlife = 'Wildlife'
 }
+
+

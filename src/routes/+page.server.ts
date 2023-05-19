@@ -12,7 +12,6 @@ export const load = async () => {
 	}
 
 	const fetchMapCountryData = async () => {
-
 		const data = await geoJSONCollection.findOne({name: "gadm41_BLZ_1"});
 		return jsonify(data);
 	}
@@ -30,6 +29,7 @@ export const load = async () => {
 	let countryMap = await fetchMapCountryData();
 	let countryInfo = await fetchCountryInfo();
 	let countryWeatherInfo = await fetchCountryClimateInfo();
+
 	
 	return { country: countryInfo, countryMap: countryMap, weatherInfo: countryWeatherInfo };
 };
