@@ -2,31 +2,10 @@
 	import { stripe } from '$lib/stripe';
 	import type { Tour } from '$lib/types';
 	import { onMount } from 'svelte';
-
-	// transition imports
-	import { slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-
-	//layout
-	let expanded = false;
-	const up = '/icons/chevron-up.svg';
-	const down = '/icons/chevron-down.svg';
-	let chevron: string = up;
-
-	const slideParams = {
-		delay: 100,
-		duration: 400,
-		easing: quintOut,
-		axis: 'y'
-	};
-
-	function handleExpand(): void {
-		expanded = !expanded;
-		chevron = expanded ? down : up;
-	}
+	import Collapser from '$comp/UIUX/Collapser.svelte';
 
 	export let price: number;
-	export let currency: string;
+	export let currency = 'usd';
 	export let tourList: Tour[];
 
 	onMount(() => {
@@ -40,53 +19,40 @@
 	});
 </script>
 
-<div class="w-full">
-	<div class="card w-full p-3">
-		{#if expanded}
-			<div
-				transition:slide={{
-					delay: 100,
-					duration: 400,
-					easing: quintOut,
-					axis: 'y'
-				}}
-			>
-				<h2 class="mb-3">Purchase Overview</h2>
-				<div class="text-gray-500 font-mono p-3">
-					Recap:
-					<div class="m-2">
-						{#each tourList as tour (tour._id)}
-							<div class="flex justify-between">
-								<div>- {tour.name}</div>
-								<div>{tour.price} {currency}</div>
-							</div>
-						{/each}
-					</div>
+<div class="bg-surface-700 bg-inherit p-5 w-full">
+	<Collapser expandAbove={true}>
+		<span slot="expanded">
+			<h2 class="mb-3">Purchase Overview</h2>
+			<div class="text-gray-500 font-mono p-3">
+				Recap:
+				<div class="m-2">
+					{#each tourList as tour (tour._id)}
+						<div class="flex justify-between">
+							<div>- {tour.name}</div>
+							<div>$ {tour.price}</div>
+						</div>
+					{/each}
 				</div>
 			</div>
-		{/if}
+		</span>
+	</Collapser>
 
-		<button class="rounded w-full flex flex-row justify-center" on:click={() => handleExpand()}>
-			<img src={chevron} alt="chevrons" />
-		</button>
-
-		<div class="flex justify-between items-center w-full">
-			<div class="flex items-end">
-				<div class="mx-3 mb-1">Total:</div>
-				<div class="font-mono text-2xl">
-					{price}
-					{currency}
-				</div>
+	<div class="flex justify-between items-center w-full">
+		<div class="flex items-end">
+			<div class="mx-3 mb-1">Total:</div>
+			<div class="font-mono text-2xl">
+				{price}
+				{currency.toUpperCase()}
 			</div>
-			<button
-				class="btn variant-filled-primary"
-				on:click={() => {
-					console.log(price);
-				}}
-			>
-				Purchase
-			</button>
 		</div>
+		<button
+			class="btn variant-filled-primary"
+			on:click={() => {
+				console.log(price);
+			}}
+		>
+			Purchase
+		</button>
 	</div>
 </div>
 

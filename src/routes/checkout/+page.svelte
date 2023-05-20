@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import CardSmall from '$comp/Cards/CardSmall.svelte';
+	import CheckoutCard from '$comp/Cards/CheckoutCard.svelte';
 	import Payment from '$comp/Payment/Payment.svelte';
 	import { favorites } from '$lib/stores';
 	import type { Tour } from '$lib/types.js';
-	import { redirect } from '@sveltejs/kit';
 	import { onDestroy } from 'svelte';
 
-	const handleClick = (tour: Tour) => {
+	const handleRemove = (tour: Tour) => {
 		favorites.update((arr) => arr.filter((item) => item._id !== tour._id));
 		return undefined;
 	};
@@ -16,7 +15,7 @@
 
 	const unsubscribe = favorites.subscribe((value) => {
 		if (value.length <= 0) {
-			throw redirect(301, '/explore');
+			goto('/explore');
 		}
 		tourList = value;
 	});
@@ -24,34 +23,27 @@
 	onDestroy(() => {
 		unsubscribe();
 	});
-
-	let price: number = 0;
-	let currency: string = 'USD';
-	$: {
-		price = 0;
-		tourList.forEach((tour) => {
-			price += tour.price;
-		});
-	}
 </script>
 
-<div class="max-w-md mx-auto p-8">
+<div class="absolutemax-w-md mx-auto p-2">
+	<div class="p-5">
+		<h1 class="mt-1">Checkout</h1>
+		<div class="text-sm text-gray-500">Click on tours to choose a date and a guide</div>
+	</div>
 	<div class="mt-5 w-full">
-		<div class="">
-			<h2 class="mt-1">Selected Tours</h2>
-			<div class="text-sm text-gray-500">Click on tours to remove them</div>
-
-			<div class="p-3 max-w-md mx-auto">
-				{#each tourList as tour (tour._id)}
-					<button class="mb-1" on:click={() => handleClick(tour)}>
-						<CardSmall {tour} />
+		<div class="max-w-md mx-auto">
+			{#each tourList as tour (tour._id)}
+				<div class="relative mb-1">
+					<CheckoutCard {tour} />
+					<button
+						class="variant-filled-primary absolute top-2 right-2 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+						style="outline: none;"
+						on:click={handleRemove(tour)}
+					>
+						<img src="icons/x.svg" alt="Cross SVG" />
 					</button>
-				{/each}
-			</div>
-
-			<div class="sticky bottom-0 p-4 h-1/5">
-				<Payment {price} {currency} {tourList} />
-			</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 </div>

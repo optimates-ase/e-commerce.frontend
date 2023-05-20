@@ -19,7 +19,7 @@
 				on:click={() => signIn()}
 			>
 				<span>Login with Google</span>
-				<span><img src="icons/google.svg" alt="Google Icon" /></span>
+				<span><img src="/icons/google.svg" alt="Google Icon" /></span>
 			</button>
 		</div>
 	</div>
