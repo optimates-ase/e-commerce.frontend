@@ -35,7 +35,9 @@
 	<Swipe {...swipeConfig} is_vertical={true} bind:active_item>
 		{#each tours as tour, index}
 			<SwipeItem>
-				<ExploreCard {tour} />
+				<div class="sm:flex sm:justify-center">
+					<ExploreCard {tour} />
+				</div>
 			</SwipeItem>
 		{/each}
 	</Swipe>
