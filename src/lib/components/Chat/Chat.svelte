@@ -2,8 +2,9 @@
     
 
 	import { onMount } from 'svelte/internal';
-	import ChatMessage from './ChatMessage.svelte';
+	// import ChatMessage from '../chat/ChatMessage.svelte';
     import type { Conv, Message } from '$lib/types';
+	import ChatMessage from '$comp/Chat/ChatMessage.svelte';
 
 
     export let conversation: Conv;

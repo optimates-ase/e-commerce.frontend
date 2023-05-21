@@ -22,6 +22,9 @@ const config = {
 		alias: {
 			$comp: 'src/lib/components',
 			$db: 'src/db'
+		},
+		env: {
+			dir:'./'
 		}
 	}
 };
