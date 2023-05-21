@@ -24,15 +24,10 @@ export const load = async () => {
 		return {
 			...tourData,
 			_id: tour._id.toString(),
-			providers: tour.providers.map((provider: Document) => {
-				const providerData = provider as Provider;
-				return {
-					...providerData,
-					_id: provider._id.toString()
-				};
-			})
+			providers: tour.providers.toString()
 		};
 	});
+	console.log(randomTours)
 
 	return {
 		randomTours

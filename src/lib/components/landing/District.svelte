@@ -37,7 +37,7 @@
 			type: 'alert',
 			title: highlight?.name,
 			image: highlight?.thumbnail,
-			body: highlight?.keyExpression.join('\n\n')
+			body: highlight?.keyExpression.join('\n\n'),
 		};
 
 		modalStore.trigger(alert);
