@@ -41,10 +41,11 @@
 </script>
 
 <div id="countryOverview" class="w-[90%] max-w-screen-xl mx-auto mt-2">
-	<div class="hero py-10 text-center">
-		<div class="py-4 text-4xl mt-4">Explore Belize</div>
-		<p class="mx-12 py-4 px-8">{@html country.hook}</p>
-		<button class="btn variant-glass-primary text-xl mt-12" on:click={() => goto("/explore")}>view tours ↪</button>
+	<div class="py-10 text-center rounded-xl" style="background: url('/san-pedro/sp_2.jpg')   no-repeat; background-size: cover;">
+		
+		<div class="py-4 text-4xl mt-4 ">Explore Belize</div>
+		<p class="mx-12 py-4 px-8 ">{@html country.hook}</p>
+		<button class="btn bg-gradient-to-br variant-gradient-primary-secondary text-xl mt-12" on:click={() => goto("/explore")}>view tours ↪</button>
 	</div>
 
 	<div class="mt-4 py-5">
