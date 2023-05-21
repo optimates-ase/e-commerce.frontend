@@ -1,113 +1,138 @@
 <script lang="ts">
 	import { stripe } from '$lib/stripe';
-	import type { Tour } from '$lib/types';
+	import type { FinalOrder, Order, Tour } from '$lib/types';
 	import { onMount } from 'svelte';
-
-	// transition imports
-	import { slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-
-	//layout
-	let expanded = false;
-	const up = '/icons/chevron-up.svg';
-	const down = '/icons/chevron-down.svg';
-	let chevron: string = up;
-
-	const slideParams = {
-		delay: 100,
-		duration: 400,
-		easing: quintOut,
-		axis: 'y'
-	};
-
-	function handleExpand(): void {
-		expanded = !expanded;
-		chevron = expanded ? down : up;
-	}
+	import Collapser from '$comp/UIUX/Collapser.svelte';
+	import { orders } from '$lib/stores';
+	import { goto } from '$app/navigation';
 
 	export let price: number;
-	export let currency: string;
 	export let tourList: Tour[];
 
+	let ordersList: Order[];
+	let currency = 'usd';
+	let expanded: boolean;
+
+	let disabledPayment: boolean;
+	$: {
+		disabledPayment =
+			$orders.some((order: Order) => !order.provider_id || !order.date) || !complete;
+	}
+
+	const proceedeWithPayment = () => {
+		if (!expanded) {
+			expanded = true;
+			return undefined;
+		}
+
+		const finalOrder: FinalOrder = {
+			user_id: 'placeholder',
+			orders: $orders,
+			payed: false
+		};
+
+		submitPayment();
+	};
+
+	// Payment Variables
+	const api = 'http://localhost:5173/api/payment';
+
+	let elements = stripe?.elements();
+
+	let card: any;
+	let cardElement: any;
+	let complete = false;
+	let paymentIntent: any;
+	let clientSecret: string;
+
 	onMount(() => {
-		const payment = stripe
-			?.elements({
-				mode: 'payment',
-				currency: currency.toLowerCase(),
-				amount: price
-			})
-			.create('payment');
+		orders.subscribe((orders) => (ordersList = orders));
+		paymentIntent = createIntent();
+		clientSecret = paymentIntent.client_secret;
+		createCardForm();
 	});
+
+	//API
+
+	const createIntent = async () => {
+		const data = { price };
+		const response = await fetch('/api/payment/intents', {
+			method: 'POST',
+			body: JSON.stringify(data)
+		});
+		return response.json();
+	};
+
+	const createCardForm = async () => {
+		cardElement = elements?.create('card');
+		cardElement?.mount(card);
+		cardElement?.on('change', (e: any) => (complete = e.complete));
+	};
+
+	const submitPayment = async () => {
+		const intent = await createIntent();
+		const clientSecret = intent.client_secret;
+		const result = await stripe?.confirmCardPayment(clientSecret, {
+			payment_method: {
+				card: cardElement,
+				billing_details: {
+					name: 'Jenny Rosen'
+				}
+			}
+		});
+
+		paymentIntent = result?.paymentIntent;
+
+		console.log(paymentIntent);
+
+		if (result?.error) {
+			console.error(result.error);
+			alert('We ran into an error!');
+			goto('/checkout/fail');
+		} else {
+			goto('/checkout/success');
+		}
+	};
 </script>
 
-<div class="w-full">
-	<div class="card w-full p-3">
-		{#if expanded}
-			<div
-				transition:slide={{
-					delay: 100,
-					duration: 400,
-					easing: quintOut,
-					axis: 'y'
-				}}
-			>
-				<h2 class="mb-3">Purchase Overview</h2>
-				<div class="text-gray-500 font-mono p-3">
-					Recap:
-					<div class="m-2">
-						{#each tourList as tour (tour._id)}
-							<div class="flex justify-between">
-								<div>- {tour.name}</div>
-								<div>{tour.price} {currency}</div>
-							</div>
-						{/each}
-					</div>
+<div class="bg-surface-700 bg-inherit p-5 w-full">
+	<Collapser bind:expanded expandAbove={true}>
+		<span slot="expanded">
+			<h2 class="mb-3">Purchase Overview</h2>
+			<div class="text-gray-500 font-mono p-3">
+				Recap:
+				<div class="m-2">
+					{#each tourList as tour (tour._id)}
+						<div class="flex justify-between">
+							<div>{tour.name}</div>
+							<div>$ {tour.price}</div>
+						</div>
+					{/each}
 				</div>
 			</div>
-		{/if}
+		</span>
+	</Collapser>
 
-		<button class="rounded w-full flex flex-row justify-center" on:click={() => handleExpand()}>
-			<img src={chevron} alt="chevrons" />
-		</button>
+	<div class="flex flex-col">
+		<div class="elements flex flex-col h-10" bind:this={card} />
+	</div>
 
-		<div class="flex justify-between items-center w-full">
-			<div class="flex items-end">
-				<div class="mx-3 mb-1">Total:</div>
-				<div class="font-mono text-2xl">
-					{price}
-					{currency}
-				</div>
+	<div class="flex justify-between items-center w-full">
+		<div class="flex items-end">
+			<div class="mx-3 mb-1">Total:</div>
+			<div class="font-mono text-2xl">
+				{price}
+				{currency.toUpperCase()}
 			</div>
-			<button
-				class="btn variant-filled-primary"
-				on:click={() => {
-					console.log(price);
-				}}
-			>
-				Purchase
-			</button>
 		</div>
+		<button
+			disabled={disabledPayment}
+			class="btn variant-filled-primary"
+			on:click={() => {
+				proceedeWithPayment();
+			}}
+		>
+			Purchase
+		</button>
 	</div>
 </div>
-
-<style>
-	.fade-transition {
-		transition: opacity 0.3s ease;
-	}
-
-	.fade-enter {
-		opacity: 0;
-	}
-
-	.fade-enter-active {
-		opacity: 1;
-	}
-
-	.fade-exit {
-		opacity: 1;
-	}
-
-	.fade-exit-active {
-		opacity: 0;
-	}
-</style>

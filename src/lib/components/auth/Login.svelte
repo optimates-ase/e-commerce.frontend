@@ -9,15 +9,17 @@
 			<div class="w-max">
 				<h1 class="m-8">Login</h1>
 			</div>
-			<img src="/illustration/LoginImg.svg" class="m-8" alt="Login"/>
+			<img src="/illustration/LoginImg.svg" class="m-8" alt="Login" />
 		</header>
 
 		<div id="authControls" class="m-auto">
-
-			
-			<button type="button" class="btn variant-filled-primary w-56 mb-10 mt-4" on:click={() => signIn()}>
+			<button
+				type="button"
+				class="btn variant-filled-primary w-56 mb-10 mt-4"
+				on:click={() => signIn()}
+			>
 				<span>Login with Google</span>
-				<span>(icon1)</span>
+				<span><img src="/icons/google.svg" alt="Google Icon" /></span>
 			</button>
 		</div>
 	</div>

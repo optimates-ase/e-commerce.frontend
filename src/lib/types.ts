@@ -1,4 +1,4 @@
-import type { ObjectId } from "mongodb";
+import type { ObjectId } from 'mongodb';
 
 export interface Address {
 	street: string;
@@ -47,15 +47,15 @@ export interface Activity {
 }
 
 interface Temperature {
-	avg: number,
-	unit: string,
-	month: string,
-	icon: string
+	avg: number;
+	unit: string;
+	month: string;
+	icon: string;
 }
 
 interface MinorInfluence {
-	min: Temperature
-	max: Temperature
+	min: Temperature;
+	max: Temperature;
 }
 
 interface Img {
@@ -146,7 +146,46 @@ export interface Tour {
 	tags?: Tag[];
 	minimum?: number;
 	language_offered?: string;
-	images: string[];
+	images?: string[];
+	providers: Provider[];
+}
+
+export interface Provider {
+	_id: string;
+	firstName: string;
+	lastName: string;
+	birthdate: Date;
+	email: string;
+	phone: string;
+	city: string;
+	country: string;
+	street: string;
+	streetNumber: number;
+	validFrom: Date;
+	zipCode: number;
+}
+
+export interface Order {
+	tour_id: string;
+	provider_id?: string;
+	date?: string;
+}
+export interface FinalOrder {
+	user_id: string;
+	payed: boolean;
+	orders: Order[];
+}
+
+export interface Conv {
+	provider: string;
+	user: string;
+	messages: Message[];
+}
+
+export interface Message {
+	content: string;
+	sender: string;
+	timestamp: number;
 }
 
 export enum Tag {
