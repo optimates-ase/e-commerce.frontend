@@ -4,7 +4,7 @@
 	};
 </script>
 
-<div id="contactInfo" class="max-w-md flex flex-col">
+<div id="contactInfo" class="max-w-md flex flex-col mx-auto">
 	<label for="firstName">first name</label>
 	<input
 		class="input"
