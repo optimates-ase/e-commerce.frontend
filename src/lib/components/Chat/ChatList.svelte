@@ -2,11 +2,21 @@
 	import { goto } from '$app/navigation';
 	import type { Tour } from '$lib/types';
 
+    import { sender } from '$lib/stores'; 
+	import { onDestroy } from 'svelte';
 
+    let  send:string ;
+
+	const unsubscribe = sender.subscribe((value) => {
+		send = value;
+	});
+
+	onDestroy(() => {
+		unsubscribe();
+	});
 
 	
 	export let tourList: Tour []|[];
-
 
 
 </script>
@@ -17,8 +27,11 @@
         <li>
             
             <button on:click={() => {
+                sender.set(tour._id);
                 goto('/chat');
             }} 
+
+
             class="w-full"
             >
                 <div class="w-full flex">
