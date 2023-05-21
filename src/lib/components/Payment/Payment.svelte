@@ -1,14 +1,25 @@
 <script lang="ts">
 	import { stripe } from '$lib/stripe';
-	import type { Tour } from '$lib/types';
+	import type { FinalOrder, Order, Tour } from '$lib/types';
 	import { onMount } from 'svelte';
 	import Collapser from '$comp/UIUX/Collapser.svelte';
+	import { orders } from '$lib/stores';
 
 	export let price: number;
-	export let currency = 'usd';
 	export let tourList: Tour[];
 
+	let ordersList: Order[];
+	let currency = 'usd';
+	let expanded: boolean;
+
+	let disabledPayment: boolean;
+	$: {
+		disabledPayment = $orders.some((order: Order) => !order.provider_id || !order.date);
+	}
+
 	onMount(() => {
+		orders.subscribe((orders) => (ordersList = orders));
+
 		const payment = stripe
 			?.elements({
 				mode: 'payment',
@@ -17,10 +28,23 @@
 			})
 			.create('payment');
 	});
+
+	function proceedeWithPayment() {
+		if (!expanded) {
+			expanded = true;
+			return undefined;
+		}
+
+		const finalOrder: FinalOrder = {
+			user_id: 'placeholder',
+			orders: $orders,
+			payed: false
+		};
+	}
 </script>
 
 <div class="bg-surface-700 bg-inherit p-5 w-full">
-	<Collapser expandAbove={true}>
+	<Collapser bind:expanded expandAbove={true}>
 		<span slot="expanded">
 			<h2 class="mb-3">Purchase Overview</h2>
 			<div class="text-gray-500 font-mono p-3">
@@ -28,7 +52,7 @@
 				<div class="m-2">
 					{#each tourList as tour (tour._id)}
 						<div class="flex justify-between">
-							<div>- {tour.name}</div>
+							<div>{tour.name}</div>
 							<div>$ {tour.price}</div>
 						</div>
 					{/each}
@@ -46,34 +70,13 @@
 			</div>
 		</div>
 		<button
+			disabled={disabledPayment}
 			class="btn variant-filled-primary"
 			on:click={() => {
-				console.log(price);
+				proceedeWithPayment();
 			}}
 		>
 			Purchase
 		</button>
 	</div>
 </div>
-
-<style>
-	.fade-transition {
-		transition: opacity 0.3s ease;
-	}
-
-	.fade-enter {
-		opacity: 0;
-	}
-
-	.fade-enter-active {
-		opacity: 1;
-	}
-
-	.fade-exit {
-		opacity: 1;
-	}
-
-	.fade-exit-active {
-		opacity: 0;
-	}
-</style>

@@ -1,22 +1,18 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import CheckoutCard from '$comp/Cards/CheckoutCard.svelte';
-	import Payment from '$comp/Payment/Payment.svelte';
-	import { favorites } from '$lib/stores';
+	import { favorites, orders } from '$lib/stores';
 	import type { Tour } from '$lib/types.js';
 	import { onDestroy } from 'svelte';
 
 	const handleRemove = (tour: Tour) => {
 		favorites.update((arr) => arr.filter((item) => item._id !== tour._id));
+		orders.update((arr) => arr.filter((item) => item.tour_id !== tour._id));
 		return undefined;
 	};
 
-	let tourList: Tour[] = [];
+	export let tourList: Tour[] = [];
 
 	const unsubscribe = favorites.subscribe((value) => {
-		if (value.length <= 0) {
-			goto('/explore');
-		}
 		tourList = value;
 	});
 

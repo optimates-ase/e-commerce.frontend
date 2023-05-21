@@ -1,13 +1,17 @@
 <script lang="ts">
+	import type { Order, Provider, Tour } from '$lib/types';
+	import { writable } from 'svelte/store';
 	import DatePicker from './Pickers/DatePicker.svelte';
 	import GuidePicker from './Pickers/GuidePicker.svelte';
 
+	export let tour: Tour;
+
 	const steps = [
-		{ title: 'Pick a Date', content: DatePicker, props: { name: 'hello' } },
+		{ title: 'Pick a Date', content: DatePicker, props: { tour_id: tour._id } },
 		{
 			title: 'Pick a Guide',
 			content: GuidePicker,
-			props: { guides: ['Andy', 'Filip', 'Alberto', 'Ali', 'David'] }
+			props: { providers: tour.providers, tour_id: tour._id }
 		}
 	];
 
@@ -36,8 +40,9 @@
 
 <div>
 	<h3>{title}</h3>
-
-	<svelte:component this={component} {...props} />
+	<div class=" mt-5 mb-8">
+		<svelte:component this={component} {...props} />
+	</div>
 
 	{#if wizzard > 0}
 		<div class="flex justify-start">

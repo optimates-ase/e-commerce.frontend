@@ -4,12 +4,15 @@
 	import type { Tour } from '$lib/types.js';
 	import { onDestroy } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { browser } from '$app/environment';
 
 	let tourList: Tour[] = [];
 
 	const unsubscribe = favorites.subscribe((value) => {
 		if (value.length <= 0) {
-			goto('/explore');
+			if (browser) {
+				goto('/explore');
+			}
 		}
 		tourList = value;
 	});
