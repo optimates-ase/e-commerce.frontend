@@ -1,0 +1,50 @@
+services:
+  reverse-proxy:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - fe
+    networks:
+      - optimates-net
+    
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    ports:
+      - 8081:8081
+    networks:
+      - optimates-net
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - optimates-net
+    ports:
+      - 27017:27017
+  fe:
+    image: ase-svelte-docker-node
+    container_name: fe-client
+    networks:
+      - optimates-net
+    ports:
+      - 3000:3000
+
+networks:
+  optimates-net:
+    driver: bridge
+
+volumes:
+  mongo_data:
+    driver: local

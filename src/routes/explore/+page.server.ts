@@ -15,7 +15,8 @@ export const load = async () => {
 		const tourData = tour as Tour;
 		return {
 			...tourData,
-			_id: tour._id.toString()
+			_id: tour._id.toString(),
+			providers: tour.providers.toString()
 		};
 	});
 
