@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import Collapser from '$comp/UIUX/Collapser.svelte';
 	import { orders } from '$lib/stores';
+	import { goto } from '$app/navigation';
 
 	export let price: number;
 	export let tourList: Tour[];
@@ -87,6 +88,9 @@
 		if (result?.error) {
 			console.error(result.error);
 			alert('We ran into an error!');
+			goto('/checkout/fail');
+		} else {
+			goto('/checkout/success');
 		}
 	};
 </script>
