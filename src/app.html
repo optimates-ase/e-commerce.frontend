@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+	<script src="https://js.stripe.com/v3/"></script>
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-	<meta name="viewport" content="width=device-width" />
-	%sveltekit.head%
-	<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
+		<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+	</head>
 
-</head>
-
-<!-- 
-	h-screen h-[100svh]
-	svh is not always supported by all browser, h-screen will be fallback for browsers that do not support small view height (h-[100svh] excludes UI elements
-	like the search bar)
--->
-
-<body class="h-screen h-[100svh] w-screen overscroll-none" data-sveltekit-preload-data="hover">
-	<div style="display: contents">%sveltekit.body%</div>
-</body>
-
+	<body class="h-screen h-[100svh] w-screen overscroll-none" data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>

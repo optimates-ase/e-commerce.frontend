@@ -17,19 +17,7 @@
 		disabledPayment = $orders.some((order: Order) => !order.provider_id || !order.date);
 	}
 
-	onMount(() => {
-		orders.subscribe((orders) => (ordersList = orders));
-
-		const payment = stripe
-			?.elements({
-				mode: 'payment',
-				currency: currency.toLowerCase(),
-				amount: price
-			})
-			.create('payment');
-	});
-
-	function proceedeWithPayment() {
+	const proceedeWithPayment = () => {
 		if (!expanded) {
 			expanded = true;
 			return undefined;
@@ -40,7 +28,68 @@
 			orders: $orders,
 			payed: false
 		};
-	}
+
+		submitPayment();
+	};
+
+	// Payment Variables
+	const api = 'http://localhost:5173/api/payment';
+
+	let elements = stripe?.elements();
+
+	let card: any;
+	let cardElement: any;
+	let complete = false;
+	let paymentIntent: any;
+	let clientSecret: any;
+
+	onMount(() => {
+		orders.subscribe((orders) => (ordersList = orders));
+		paymentIntent = createIntent();
+		clientSecret = paymentIntent.client_secret;
+		createCardForm();
+	});
+
+	//API
+
+	const createIntent = async () => {
+		console.log(price);
+		const data = { price };
+		const response = await fetch('/api/payment/intents', {
+			method: 'POST',
+			body: JSON.stringify(data)
+		});
+
+		console.log(response.json());
+
+		return response.json();
+	};
+
+	const createCardForm = async () => {
+		cardElement = elements?.create('card');
+		cardElement?.mount(card);
+		cardElement?.on('change', (e: any) => (complete = e.complete));
+	};
+
+	const submitPayment = async () => {
+		const result = await stripe?.confirmCardPayment(clientSecret, {
+			payment_method: {
+				card: cardElement,
+				billing_details: {
+					name: 'Jenny Rosen'
+				}
+			}
+		});
+
+		paymentIntent = result?.paymentIntent;
+
+		console.log(paymentIntent);
+
+		if (result?.error) {
+			console.error(result.error);
+			alert('We ran into an error!');
+		}
+	};
 </script>
 
 <div class="bg-surface-700 bg-inherit p-5 w-full">
@@ -60,6 +109,8 @@
 			</div>
 		</span>
 	</Collapser>
+
+	<div class="elements" bind:this={card} />
 
 	<div class="flex justify-between items-center w-full">
 		<div class="flex items-end">
