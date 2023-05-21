@@ -41,7 +41,7 @@
 	let cardElement: any;
 	let complete = false;
 	let paymentIntent: any;
-	let clientSecret: any;
+	let clientSecret: string;
 
 	onMount(() => {
 		orders.subscribe((orders) => (ordersList = orders));
@@ -53,15 +53,11 @@
 	//API
 
 	const createIntent = async () => {
-		console.log(price);
 		const data = { price };
 		const response = await fetch('/api/payment/intents', {
 			method: 'POST',
 			body: JSON.stringify(data)
 		});
-
-		console.log(response.json());
-
 		return response.json();
 	};
 
@@ -72,6 +68,8 @@
 	};
 
 	const submitPayment = async () => {
+		const intent = await createIntent();
+		const clientSecret = intent.client_secret;
 		const result = await stripe?.confirmCardPayment(clientSecret, {
 			payment_method: {
 				card: cardElement,
