@@ -3,7 +3,7 @@
 	import type { Tour } from '$lib/types';
 	import Carousel from '$comp/UIUX/Carousel.svelte';
 
-	export let tour: Tour;
+	export let tour;
 
 	const { rating, num_of_ratings } = tour;
 </script>
