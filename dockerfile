@@ -18,5 +18,5 @@ COPY --from=build /app/package.json .
 COPY --from=build /app/build ./build
 RUN npm install -omit:dev
 
-EXPOSE 8080
-ENTRYPOINT ["npm", "run", "start"]
+EXPOSE 3000
+CMD ["npm", "run", "start"]

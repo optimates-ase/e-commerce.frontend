@@ -1,13 +1,10 @@
 import { Server } from 'socket.io';
-import { MongoClient } from 'mongodb';
-// import { PUBLIC_MONGO_URL } from '$env/static/public';
+import client from '../db/mongo'
 
-const client = new MongoClient('mongodb://0.0.0.0:27017/optimates');
 
 export default function injectSocketIO(server) {
 	const io = new Server(server);
-	client.connect();
-	const chatsCollection = client.db().collection('chats');
+	const chatsCollection = client.collection('chats');
 
 	io.on('connection', (socket) => {
 		let username = `User ${Math.round(Math.random() * 999999)}`;
