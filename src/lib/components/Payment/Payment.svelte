@@ -14,7 +14,8 @@
 
 	let disabledPayment: boolean;
 	$: {
-		disabledPayment = $orders.some((order: Order) => !order.provider_id || !order.date);
+		disabledPayment =
+			$orders.some((order: Order) => !order.provider_id || !order.date) || !complete;
 	}
 
 	const proceedeWithPayment = () => {
@@ -108,7 +109,9 @@
 		</span>
 	</Collapser>
 
-	<div class="elements" bind:this={card} />
+	<div class="flex flex-col">
+		<div class="elements flex flex-col h-10" bind:this={card} />
+	</div>
 
 	<div class="flex justify-between items-center w-full">
 		<div class="flex items-end">

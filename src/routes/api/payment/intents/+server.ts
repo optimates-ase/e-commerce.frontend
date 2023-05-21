@@ -1,7 +1,6 @@
 import Stripe from 'stripe';
-import type { RequestHandler } from '../$types';
 import { SECRET_STRIPE_TEST_KEY } from '$env/static/private';
-import { json } from '@sveltejs/kit';
+import { json, type RequestHandler } from '@sveltejs/kit';
 
 const stripe = new Stripe(SECRET_STRIPE_TEST_KEY, {
 	apiVersion: '2022-11-15'
