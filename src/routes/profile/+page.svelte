@@ -27,7 +27,7 @@
 	<title>OptiMates - My Page</title>
 </svelte:head>
 
-<div class="flex items-center w-full max-w-md">
+<div class="w-full max-w-md">
 	<div class="card p-5 m-5 mb-10">
 		<img
 			src="https://loremflickr.com/1000/1000/mountain"
