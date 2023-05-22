@@ -34,8 +34,6 @@ export const load = async () => {
 		};
 	});
 
-	console.log(randomTours[0].providers);
-
 	return {
 		randomTours
 	};

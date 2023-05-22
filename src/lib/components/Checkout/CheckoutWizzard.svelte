@@ -5,7 +5,6 @@
 	import GuidePicker from './Pickers/GuidePicker.svelte';
 
 	export let tour: Tour;
-	console.log(tour.providers.length);
 
 	const steps = [
 		{ title: 'Pick a Date', content: DatePicker, props: { tour_id: tour._id } },
