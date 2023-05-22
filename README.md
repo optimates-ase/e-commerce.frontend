@@ -97,7 +97,7 @@ you should now be able to add tours to your basket and even perform a mock check
 
 ### Contact Brokerage
 
-**TODO explain the motivation for socket.io**
+Socket.io would have been used for live communication during chat conversations. Due to time constraints, it was not possible to fully implement its functionality, so it is currently not used, but will be implemented soon. In the project you can find the files to set it up and implement it for the first time.
 
 ### docker-compose
 
