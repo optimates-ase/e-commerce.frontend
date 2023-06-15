@@ -30,7 +30,7 @@ This ultimately led to only three of the five team members contributing to this 
 
 ## Product Demo:
 
-You can find a running [Production Version](https://optimates.ch). It's filled with mock data and shows what a live version could look like.
+You can find a running [Production Version](https://optimates.ch) (*15.06.2023* SSL certificates has expired). It's filled with mock data and shows what a live version could look like.
 
 ![Alt text](readMeImages/mobileFirst.jpg)
 
